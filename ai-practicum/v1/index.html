@@ -242,6 +242,35 @@ footer{border-top:1px solid var(--border-1);padding:48px 0 40px;background:var(-
   .bonus .gift{margin:0 auto}
   nav .links{display:none}
 }
+/* ===== MOBILE FIX v3: header on small screens (gutters, compact brand, one-line CTA) ===== */
+@media (max-width:640px){
+  nav .wrap{padding-left:20px;padding-right:20px;gap:10px;flex-wrap:nowrap}
+  nav .brand{font-size:15px;gap:9px;min-width:0}
+  nav .brand .mark{width:22px;height:22px;flex:0 0 auto}
+  nav .btn-sm{font-size:12.5px;padding:8px 13px;white-space:nowrap;flex:0 0 auto}
+}
+@media (max-width:360px){
+  nav .wrap{padding-left:16px;padding-right:16px;gap:8px}
+  nav .brand{font-size:14px}
+  nav .brand .mark{width:20px;height:20px}
+  nav .btn-sm{font-size:11.5px;padding:7px 11px}
+}
+@media (min-width:641px){
+  nav .btn-sm{font-size:14px;padding:9px 18px}
+}
+/* ===== MOBILE FIX v3: hero mock must not force page min-width ===== */
+.hero .grid>*{min-width:0}
+.hero-ui{min-width:0;overflow:hidden}
+.hero-ui .bar,.hero-ui .metrics,.hero-ui .metric,.hero-ui .legend,.hero-ui .crumb{min-width:0}
+.hero-ui .bar .url{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.hero-ui .metric b,.hero-ui .metric span,.hero-ui .legend span{min-width:0;overflow-wrap:anywhere}
+@media (max-width:400px){
+  .hero{padding-top:48px}
+  .strip .wrap{gap:14px}
+  .strip .wrap>*{min-width:0}
+  .hero-cta{flex-wrap:wrap}
+  .eyebrow{font-size:11px}
+}
 </style>
 </head>
 <body>
@@ -257,7 +286,7 @@ footer{border-top:1px solid var(--border-1);padding:48px 0 40px;background:var(-
       <a href="#next">Продолжение</a>
       <a href="#faq">Вопросы</a>
     </div>
-    <a href="#form" class="btn btn-primary btn-sm" data-cta="nav">Записаться бесплатно</a>
+    <a href="#form" class="btn btn-primary btn-sm" data-cta="nav">Зарегистрироваться</a>
   </div>
 </nav>
 
