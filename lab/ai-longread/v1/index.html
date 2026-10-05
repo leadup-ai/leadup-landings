@@ -205,7 +205,7 @@ section+section{padding-top:40px}
 .proc.inbubble .pc{background:rgba(255,255,255,.03)}
 .proc.inbubble .pc.wide{background:rgba(255,140,59,.08)}
 
-/* вопросы ведущего: приглушены, проясняются по мере приближения */
+/* вопросы участника: приглушены, проясняются по мере приближения */
 .say.host.dim{opacity:.22;transition:opacity .18s linear;will-change:opacity}
 
 .dialog>.say:not(.host){width:80%}
@@ -510,9 +510,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>Почему именно четыре вечера?</p></div>
         </div>
       </div>
@@ -542,9 +542,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>Что изменится после практикума?</p></div>
         </div>
       </div>
@@ -591,9 +591,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>А если я не разбираюсь в технике?</p></div>
         </div>
       </div>
@@ -609,9 +609,9 @@ window.__LANDING__ = {
     </div>
     <div class="dialog" style="margin-top:28px">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>Как проходит вечер?</p></div>
         </div>
       </div>
@@ -650,9 +650,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>А кто со мной будет заниматься?</p></div>
         </div>
       </div>
@@ -682,9 +682,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>А на своих данных пробовать можно?</p></div>
         </div>
       </div>
@@ -706,9 +706,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>Какие навыки я заберу с практикума?</p></div>
         </div>
       </div>
@@ -751,9 +751,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>А что после практикума?</p></div>
         </div>
       </div>
@@ -814,9 +814,9 @@ window.__LANDING__ = {
   <div class="wrap">
     <div class="dialog">
       <div class="say host dim">
-        <span class="ava">В</span>
+        <span class="ava">У</span>
         <div class="stack">
-          <div class="who">Ведущий</div>
+          <div class="who">Участник</div>
           <div class="bubble"><p>А что мне делать прямо сейчас?</p></div>
         </div>
       </div>
@@ -944,7 +944,7 @@ document.querySelectorAll('section').forEach(s=>secIO.observe(s));
 document.getElementById('s1').classList.add('sec-in');
 
 /* ─── ДИАЛОГ ПО ШАГАМ ───
-   Ведущий печатает → появляется его вопрос → ментор печатает →
+   Участник печатает → появляется его вопрос → ментор печатает →
    его реплики открываются по одной → затем блоки экрана → следующий экран.
    Пока экран не дочитан, следующие экраны скрыты. Прочитанное остаётся открытым. */
 const TYPE_MS=1400, BUBBLE_MS=720, ASK_MS=750, BLOCK_MS=380, PTYPE_MS=1100;
@@ -960,7 +960,7 @@ flow.forEach((s,i)=>{
   items=items.filter(el=>!el.classList.contains('late')).concat(items.filter(el=>el.classList.contains('late')));   /* стрелки — в конце экрана */
   s._beats=items.map((el,k)=>{
     if(el.classList.contains('host')){
-      el.querySelector('.stack').appendChild(tbox('Ведущий'));
+      el.querySelector('.stack').appendChild(tbox('Участник'));
       el.classList.add('typing-on','queued');        /* скрыт, пока не закончится всё, что выше */
       return {el,type:'host',state:'wait'};
     }
@@ -1055,7 +1055,7 @@ addEventListener('scroll',()=>{
 },{passive:true});
 addEventListener('resize',tick);
 
-/* вопросы ведущего, до которых ещё не дошли, приглушены и проясняются по мере приближения */
+/* вопросы участника, до которых ещё не дошли, приглушены и проясняются по мере приближения */
 const dims=[...document.querySelectorAll('.say.host')];
 let dimTick=false;
 function updateDims(){
