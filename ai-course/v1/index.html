@@ -296,6 +296,26 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
   .program{padding:24px}
   .review{padding:24px}
 }
+/* ===== MOBILE FIX v3: nav gutters (all widths) + compact one-line CTA ===== */
+.container.nav-inner{padding:14px var(--gutter)}
+@media (max-width:767px){
+  .container.nav-inner{padding:14px var(--gutter-mobile)}
+}
+@media (max-width:640px){
+  .nav-inner{gap:10px;flex-wrap:nowrap}
+  .nav-inner>div{min-width:0}
+  .nav-logo{font-size:15px;gap:8px}
+  .nav-mark{width:22px;height:22px;font-size:13px}
+  .nav-inner .btn-primary{white-space:nowrap;flex:0 0 auto;font-size:12.5px;padding:8px 12px}
+  .nav-inner .btn-ghost{font-size:12.5px;padding:8px 8px;white-space:nowrap}
+}
+@media (max-width:480px){
+  .nav-inner .btn-ghost{display:none}
+}
+@media (min-width:641px){
+  .nav-inner .btn-primary{font-size:13px;padding:8px 16px}
+  .nav-inner .btn-ghost{font-size:13px;padding:8px 10px}
+}
 </style>
 <!-- ===== Meta Pixel (для кампаний Meta Ads) =====
      Пиксель подключается автоматически, если в window.__LANDING__.pixel_id ниже указан ID.
@@ -319,7 +339,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
     </div>
     <div style="display:flex;align-items:center;gap:10px;">
       <a href="#program" class="btn-ghost">Программа</a>
-      <a href="#form" class="btn-primary" style="text-decoration:none;">Записаться →</a>
+      <a href="#form" class="btn-primary" style="text-decoration:none;">Зарегистрироваться</a>
     </div>
   </div>
 </nav>
