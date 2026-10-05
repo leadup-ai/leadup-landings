@@ -316,6 +316,22 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
   .nav-inner .btn-primary{font-size:13px;padding:8px 16px}
   .nav-inner .btn-ghost{font-size:13px;padding:8px 10px}
 }
+/* ===== BRAND: реальный логотип LeadUp AI + автор ===== */
+.brand-logo{display:block;height:30px;width:auto;flex:0 0 auto}
+.author-card{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:center;background:var(--bg-2);border:1px solid var(--border-2);border-radius:var(--r-3xl);padding:36px}
+.author-photo{width:220px;height:220px;object-fit:cover;border-radius:var(--r-2xl);border:1px solid var(--border-2);background:var(--bg-3);display:block}
+.author-card h2{font-size:clamp(26px,3vw,36px);font-weight:700;letter-spacing:var(--tracking-tight);color:var(--fg-1);line-height:1.1}
+.author-role{font-family:var(--font-mono);font-size:12px;letter-spacing:.04em;color:var(--teal);margin:10px 0 16px}
+.author-card p{font-size:15px;line-height:1.62;color:var(--fg-2);max-width:640px}
+.author-stats{display:flex;gap:32px;margin-top:22px;flex-wrap:wrap}
+.author-stats b{display:block;font-size:23px;font-weight:700;letter-spacing:-.02em;color:var(--fg-1)}
+.author-stats span{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-4)}
+@media (max-width:767px){
+  .brand-logo{height:26px}
+  .author-card{grid-template-columns:1fr;gap:22px;padding:24px}
+  .author-photo{width:100%;max-width:260px;height:auto;aspect-ratio:1/1}
+  .author-stats{gap:22px}
+}
 </style>
 <!-- ===== Meta Pixel (для кампаний Meta Ads) =====
      Пиксель подключается автоматически, если в window.__LANDING__.pixel_id ниже указан ID.
@@ -328,7 +344,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
 <nav class="nav">
   <div class="container nav-inner">
     <div style="display:flex;align-items:center;gap:32px;">
-      <a class="nav-logo" href="#top"><span class="nav-mark">AI</span> LeadUp&nbsp;AI</a>
+      <a class="nav-logo" href="#top"><img class="brand-logo" src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60"></a>
       <div class="nav-links">
         <a href="#benefits">Формат</a>
         <a href="#program">Программа</a>
@@ -350,7 +366,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
   <div class="container hero-inner">
     <div class="hero-eyebrow"><span class="dot"></span>AI-Профессия · поток стартует 26 октября · 12 мест</div>
     <h1>Освой ИИ за&nbsp;<span class="accent">8&nbsp;недель</span><br>и доведи навык до&nbsp;оплаты</h1>
-    <p class="lead">Практическая программа для тех, кто применяет нейросети в работе и собирает собственные AI-проекты. Старт с нуля, без опыта в программировании: готовые инструменты, 12 проектов в портфолио и куратор, который разбирает каждую работу.</p>
+    <p class="lead">Практическая программа для тех, кто применяет нейросети в работе и собирает собственные AI-проекты. Старт с нуля, без опыта в программировании: готовые инструменты, 12 проектов в портфолио и куратор, который разбирает каждую работу. Автор программы — Владимир Нагин.</p>
     <div class="hero-cta">
       <a class="btn-primary lg" href="#form">Занять место <span class="hero-kbd">↵</span></a>
       <a class="btn-default lg" href="#program">Смотреть программу</a>
@@ -474,6 +490,25 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
         <div class="program-step"><div class="tick"></div><div class="num">07 · AGENTS</div><h4>AI-агенты</h4><p>Автономные сценарии, которые работают по цепочке и без ручного запуска.</p><div class="days">неделя 7</div></div>
         <div class="program-step"><div class="tick"></div><div class="num">08 · MONETIZE</div><h4>Монетизация навыка</h4><p>Упаковка портфолио, поиск заказов, работа с клиентами и ставками.</p><div class="days">неделя 8</div></div>
         <div class="program-step final" style="grid-column:1 / -1;"><div class="tick"></div><div class="num">★ ДИПЛОМНЫЙ ПРОЕКТ</div><h4>Собственный AI-продукт под руководством ментора</h4><p>Собираем проект на реальной задаче, защищаем перед командой LeadUp AI и получаем сертификат об окончании программы.</p><div class="days">недели 7–8 · защита</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="section" id="author" style="padding-top:12px;">
+  <div class="container">
+    <div class="author-card">
+      <img class="author-photo" src="../../assets/mentor-nagin.svg" alt="Владимир Нагин — автор LeadUp AI" width="480" height="472" loading="lazy">
+      <div>
+        <h2>Владимир Нагин</h2>
+        <div class="author-role">Автор всех интенсивов и курсов LeadUp AI · основатель LeadUp AI</div>
+        <p>Не пересказываю чужие курсы. С 2019 года применяю нейросети в маркетинге, продажах и операционке — и на программе показываю ровно те приёмы, которыми пользуюсь сам. Мой трек: от «попробовал промпт» до проекта, который приносит деньги.</p>
+        <div class="author-stats">
+          <div><b>2 400+</b><span>выпускников</span></div>
+          <div><b>4.9 / 5</b><span>средняя оценка</span></div>
+          <div><b>с 2019</b><span>внедряю ИИ в бизнес</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -648,7 +683,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="nav-logo" style="margin-bottom:14px;"><span class="nav-mark">AI</span> LeadUp&nbsp;AI</div>
+        <div class="nav-logo" style="margin-bottom:14px;"><img class="brand-logo" src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60"></div>
         <p>Экосистема AI-трансформации бизнеса. Программа AI-Профессия — практика, портфолио и первые заказы за 8 недель.</p>
       </div>
       <div class="footer-col">
