@@ -242,6 +242,20 @@ h2.heading{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2re
   .stats{grid-template-columns:1fr 1fr}
   .btn-primary,.btn-outline{padding:12px 22px;font-size:15px}
 }
+/* ===== BRAND: реальный логотип LeadUp AI + автор ===== */
+.brand-logo{display:block;height:30px;width:auto}
+.author-card{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center;
+  background:linear-gradient(135deg,var(--panel-purple),rgba(10,26,32,.92));
+  border:1px solid var(--hairline);border-radius:24px;padding:36px}
+.author-photo{width:200px;height:200px;object-fit:cover;border-radius:20px;border:1px solid var(--border-pill);background:var(--panel-teal);display:block}
+.author-card .kicker{margin-bottom:10px}
+.author-card .heading{margin-bottom:12px}
+.author-card p{color:var(--text-muted);font-size:.98rem;max-width:62ch}
+@media (max-width:767px){
+  .brand-logo{height:24px}
+  .author-card{grid-template-columns:1fr;gap:20px;padding:24px}
+  .author-photo{width:150px;height:150px}
+}
 </style>
 </head>
 <body>
@@ -250,7 +264,7 @@ h2.heading{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2re
 
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#hero">AI<span class="dot">·</span>ПРОФЕССИЯ</a>
+      <a class="brand" href="#hero" aria-label="LeadUp AI"><img class="brand-logo" src="../../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60"></a>
       <div class="nav-links">
         <a href="#catalog">Программа</a>
         <a href="#strip">8 недель</a>
@@ -387,6 +401,19 @@ h2.heading{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2re
     </div>
   </section>
 
+  <section class="section" id="author">
+    <div class="container">
+      <div class="author-card reveal">
+        <img class="author-photo" src="../../../assets/mentor-nagin.svg" alt="Владимир Нагин — автор LeadUp AI" width="480" height="472" loading="lazy">
+        <div>
+          <p class="mono kicker">Автор курса</p>
+          <h2 class="heading">Владимир Нагин</h2>
+          <p>Автор всех интенсивов и курсов LeadUp AI. С 2019 года внедряю нейросети в маркетинг, продажи и операционку — на курсе показываю приёмы, которыми пользуюсь каждый день.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section light" id="schools">
     <div class="container">
       <div class="light-grid">
@@ -485,7 +512,7 @@ h2.heading{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2re
     <div class="container">
       <div class="foot-grid">
         <div class="foot-col">
-          <a class="brand" href="#hero">AI<span class="dot">·</span>ПРОФЕССИЯ</a>
+          <a class="brand" href="#hero" aria-label="LeadUp AI"><img class="brand-logo" src="../../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60"></a>
           <p class="muted" style="margin-top:16px;max-width:34ch">Курс по искусственному интеллекту для тех, кто хочет применять его в работе уже сейчас.</p>
         </div>
         <div class="foot-col">
