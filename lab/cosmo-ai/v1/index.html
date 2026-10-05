@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI·Профессия — курс по искусственному интеллекту за 8 недель</title>
+<meta name="description" content="Онлайн-курс по ИИ: 8 недель, 12 проектов, живые разборы и менторство. Старт 27 октября." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=B612+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --accent-orange:#FF6B35; --accent-lime:#A8E63A; --accent-gold:#F5C842;
+  --bg-primary:#0C1A32; --bg-secondary:#1A2E5A; --surface:#1D3464;
+  --text-primary:#F5F0E0; --text-muted:#8BAAD4; --text-on-light:#2A3F6A;
+  --hairline:rgba(139,170,212,.1); --border-pill:rgba(139,170,212,.2);
+  --panel-purple:#1A0A2E; --panel-teal:#0A1A20;
+  --xs:4px; --sm:8px; --md:16px; --lg:24px; --xl:48px; --2xl:80px;
+  --max:1240px; --gutter:24px; --gutter-mobile:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg-primary); color:var(--text-primary);
+  font-family:'Nunito',sans-serif; font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ---------- star field ---------- */
+.stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+.stars::before,.stars::after{content:"";position:absolute;inset:-50%}
+.stars::before{
+  background-image:
+    radial-gradient(1.4px 1.4px at 20% 30%, rgba(245,240,224,.9), transparent 60%),
+    radial-gradient(1.2px 1.2px at 70% 12%, rgba(245,240,224,.7), transparent 60%),
+    radial-gradient(1.6px 1.6px at 42% 68%, rgba(245,200,66,.8), transparent 60%),
+    radial-gradient(1.1px 1.1px at 88% 54%, rgba(139,170,212,.8), transparent 60%),
+    radial-gradient(1.3px 1.3px at 12% 82%, rgba(245,240,224,.6), transparent 60%),
+    radial-gradient(1.1px 1.1px at 60% 92%, rgba(168,230,58,.7), transparent 60%),
+    radial-gradient(1.5px 1.5px at 33% 8%, rgba(245,240,224,.75), transparent 60%),
+    radial-gradient(1.1px 1.1px at 80% 78%, rgba(245,240,224,.55), transparent 60%);
+  background-size:600px 600px;
+  animation:twinkle 7s ease-in-out infinite alternate;
+}
+.stars::after{
+  background-image:
+    radial-gradient(1px 1px at 15% 55%, rgba(245,240,224,.5), transparent 60%),
+    radial-gradient(1px 1px at 55% 35%, rgba(245,240,224,.45), transparent 60%),
+    radial-gradient(1px 1px at 92% 25%, rgba(168,230,58,.5), transparent 60%),
+    radial-gradient(1px 1px at 40% 88%, rgba(139,170,212,.5), transparent 60%);
+  background-size:420px 420px;
+  animation:twinkle 5s ease-in-out infinite alternate-reverse;
+}
+@keyframes twinkle{from{opacity:.45}to{opacity:1}}
+
+.wrap{position:relative;z-index:1}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+
+/* ---------- type ---------- */
+.display{font-family:'Abril Fatface',serif;font-weight:400;letter-spacing:-.02em;line-height:.9}
+h1.display{font-size:clamp(3.5rem,12vw,10rem)}
+h2.heading{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;letter-spacing:-.01em}
+.mono{font-family:'B612 Mono',monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem}
+.kicker{color:var(--accent-lime)}
+.muted{color:var(--text-muted)}
+.lead{font-size:1.1rem;color:var(--text-muted);max-width:60ch}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,26,50,.72);border-bottom:1px solid var(--hairline)}
+.nav-inner{display:flex;align-items:center;gap:var(--lg);padding:16px 0}
+.brand{font-family:'Abril Fatface',serif;font-size:22px;letter-spacing:.02em;white-space:nowrap}
+.brand .dot{color:var(--accent-orange)}
+.nav-links{display:flex;gap:var(--lg);margin-left:auto}
+.nav-links a{font-size:15px;color:var(--text-muted);transition:color .2s}
+.nav-links a:hover{color:var(--text-primary)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:100px;font-family:'Nunito',sans-serif;font-weight:700;cursor:pointer;border:1px solid transparent;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent-orange);color:#0C1A32;padding:14px 30px;font-size:16px}
+.btn-primary:hover{background:#ff8156}
+.btn-outline{background:transparent;color:var(--text-primary);border-color:var(--border-pill);padding:14px 30px;font-size:16px}
+.btn-outline:hover{border-color:var(--accent-lime);color:var(--accent-lime)}
+.btn-sm{padding:10px 22px;font-size:14px}
+.btn-dark{background:#0C1A32;color:var(--text-primary);padding:13px 28px;font-size:15px;border-radius:100px}
+.btn-outline-dark{background:transparent;color:var(--text-on-light);border:1px solid rgba(42,63,106,.35);padding:12px 26px;font-size:15px;border-radius:100px}
+.nav-cta{background:var(--accent-orange);color:#0C1A32;padding:10px 22px;font-size:14px;border-radius:100px;font-weight:700;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:var(--2xl) 0 var(--xl);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero-bg::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(60% 55% at 78% 12%, rgba(255,107,53,.22), transparent 60%),
+    radial-gradient(50% 50% at 15% 25%, rgba(168,230,58,.14), transparent 60%),
+    radial-gradient(70% 60% at 50% 108%, rgba(26,10,46,.9), transparent 70%);
+}
+.hero-bg::after{
+  content:"";position:absolute;right:-8%;top:6%;width:44vw;height:44vw;min-width:340px;min-height:340px;border-radius:50%;
+  background:radial-gradient(circle at 38% 34%, #F5C842 0%, #FF6B35 34%, #8B3A1E 62%, transparent 72%);
+  opacity:.5;filter:blur(2px);
+}
+.hero-card{
+  position:relative;text-align:center;padding:clamp(28px,6vw,64px) clamp(20px,5vw,56px);
+  background:rgba(29,52,100,.38);border:1px solid var(--border-pill);border-radius:16px;
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  max-width:920px;margin:0 auto;
+}
+.hero h1{margin:22px 0 0}
+.hero .sub{font-size:clamp(1rem,2.4vw,1.35rem);color:var(--text-primary);max-width:46ch;margin:20px auto 0;font-weight:600}
+.hero .lead{margin:16px auto 0;text-align:center}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--lg);margin-top:var(--xl);border-top:1px solid var(--hairline);padding-top:var(--lg)}
+.stat .num{font-family:'Abril Fatface',serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--accent-gold);line-height:1}
+.stat .lbl{margin-top:8px}
+
+/* ---------- sections ---------- */
+.section{padding:var(--2xl) 0}
+.section-head{max-width:720px;margin-bottom:var(--xl)}
+.section-head .heading{margin-top:14px}
+.section-head p{margin-top:16px}
+
+/* bento catalog */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--md)}
+.tile{background:var(--surface);border:1px solid var(--hairline);grid-column:span 2;display:flex;flex-direction:column;overflow:hidden;border-radius:0}
+.tile.wide{grid-column:span 3}
+.tile.tall{grid-column:span 2}
+.tile-media{height:132px;position:relative;display:flex;align-items:flex-end;padding:14px}
+.tile-media .mk{position:absolute;inset:0;background:linear-gradient(135deg,var(--c1),var(--c2));opacity:.85}
+.tile-media .code{position:relative;color:#0C1A32;font-weight:700}
+.tile-body{padding:20px}
+.tile-body .heading-sm{font-family:'Abril Fatface',serif;font-size:1.35rem;line-height:1.15;margin-top:10px}
+.tile-body p{color:var(--text-muted);font-size:.95rem;margin-top:10px}
+.chip{display:inline-block;margin-top:16px;padding:5px 14px;border:1px solid var(--border-pill);border-radius:100px;color:var(--accent-lime)}
+.tile:hover{border-color:var(--border-pill);transform:translateY(-2px);transition:.25s}
+
+/* horizontal strip */
+.strip-wrap{position:relative}
+.strip{display:flex;gap:var(--md);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:var(--sm);scrollbar-width:thin}
+.strip::-webkit-scrollbar{height:8px}
+.strip::-webkit-scrollbar-thumb{background:rgba(139,170,212,.25);border-radius:100px}
+.week{scroll-snap-align:start;flex:0 0 300px;padding:26px;border-radius:0;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--hairline)}
+.week:nth-child(3n+1){background:var(--bg-secondary)}
+.week:nth-child(3n+2){background:var(--panel-purple)}
+.week:nth-child(3n+3){background:var(--panel-teal)}
+.week .w-no{font-family:'Abril Fatface',serif;font-size:3rem;line-height:1;color:var(--accent-gold)}
+.week .w-title{font-family:'Abril Fatface',serif;font-size:1.4rem;margin-top:14px}
+.week p{color:var(--text-muted);font-size:.92rem;margin-top:10px}
+
+/* timeline */
+.timeline{position:relative;max-width:820px;margin:0 auto}
+.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--hairline);transform:translateX(-50%)}
+.t-item{position:relative;width:50%;padding:0 34px 44px}
+.t-item:nth-child(odd){margin-left:0;text-align:right}
+.t-item:nth-child(even){margin-left:50%;text-align:left}
+.t-dot{position:absolute;top:6px;width:14px;height:14px;border-radius:50%}
+.t-item:nth-child(odd) .t-dot{right:-7px}
+.t-item:nth-child(even) .t-dot{left:-7px}
+.t-item:nth-child(1) .t-dot{background:var(--accent-orange)}
+.t-item:nth-child(2) .t-dot{background:var(--accent-lime)}
+.t-item:nth-child(3) .t-dot{background:var(--accent-gold)}
+.t-item:nth-child(4) .t-dot{background:var(--accent-orange)}
+.t-item .heading-sm{font-family:'Abril Fatface',serif;font-size:1.5rem;margin-top:10px}
+.t-item p{color:var(--text-muted);font-size:.95rem;margin-top:10px}
+
+/* light panel */
+.light{background:var(--text-primary);color:var(--text-on-light);border-radius:0}
+.light .heading,.light .kicker{color:var(--text-on-light)}
+.light .kicker{color:var(--accent-orange)}
+.light p{color:rgba(42,63,106,.8)}
+.light-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--2xl);align-items:center}
+.light-list{display:grid;gap:var(--md);margin-top:var(--lg)}
+.light-list li{list-style:none;display:flex;gap:12px;align-items:flex-start}
+.light-list .b{width:10px;height:10px;border-radius:50%;background:var(--accent-orange);margin-top:8px;flex:0 0 auto}
+.light-card{background:var(--bg-secondary);color:var(--text-primary);padding:var(--xl);border-radius:0}
+.light-card .heading-sm{font-family:'Abril Fatface',serif;font-size:1.6rem;margin-top:12px}
+.light-card p{color:var(--text-muted)}
+.light-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--lg)}
+.light-card .btn-dark{background:var(--accent-orange);color:#0C1A32}
+
+/* form */
+.form-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--2xl);align-items:start}
+.reg-form{background:var(--surface);border:1px solid var(--border-pill);padding:clamp(24px,4vw,40px);border-radius:0}
+.field{margin-bottom:16px}
+.field label{display:block;margin-bottom:8px}
+.field input,.field select,.field textarea{
+  width:100%;background:rgba(12,26,50,.6);color:var(--text-primary);
+  border:1px solid var(--border-pill);border-radius:100px;padding:13px 20px;
+  font-family:'Nunito',sans-serif;font-size:16px;outline:none;transition:border-color .2s;
+}
+.field textarea{border-radius:16px;min-height:88px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent-lime)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.consent{display:flex;gap:10px;align-items:flex-start;margin:8px 0 20px}
+.consent input{width:auto;margin-top:5px;accent-color:var(--accent-orange)}
+.consent label{margin:0;font-size:.85rem;color:var(--text-muted)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.submit{width:100%;justify-content:center;font-size:16px;padding:16px}
+.form-note{margin-top:14px;color:var(--text-muted);font-size:.82rem;text-align:center}
+.form-msg{margin-top:16px;padding:14px 18px;border-radius:16px;font-size:.92rem;display:none}
+.form-msg.ok{display:block;background:rgba(168,230,58,.12);border:1px solid rgba(168,230,58,.4);color:var(--accent-lime)}
+.form-msg.err{display:block;background:rgba(255,107,53,.12);border:1px solid rgba(255,107,53,.4);color:#ff9b73}
+.form-side .heading{margin-top:16px}
+.form-side ul{margin-top:var(--lg);display:grid;gap:14px}
+.form-side li{list-style:none;display:flex;gap:12px;color:var(--text-muted)}
+.form-side .b{width:10px;height:10px;border-radius:50%;background:var(--accent-gold);margin-top:9px;flex:0 0 auto}
+
+/* footer */
+.footer{border-top:1px solid var(--hairline);padding:var(--xl) 0 var(--lg);margin-top:var(--2xl)}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:var(--lg)}
+.foot-col h4{font-family:'B612 Mono',monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:var(--text-muted);margin-bottom:16px;font-weight:400}
+.foot-col a{display:block;color:var(--text-muted);font-size:.92rem;margin-bottom:10px;transition:color .2s}
+.foot-col a:hover{color:var(--text-primary)}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:var(--xl);padding-top:var(--lg);border-top:1px solid var(--hairline)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.2,0,0,1),transform .6s cubic-bezier(.2,0,0,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .tile,.tile.wide,.tile.tall{grid-column:span 1}
+  .light-grid,.form-wrap{grid-template-columns:1fr;gap:var(--xl)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:var(--md)}
+}
+@media(max-width:767px){
+  .container{padding:0 var(--gutter-mobile)}
+  .nav-links{display:none}
+  .nav-inner{padding:14px 0;gap:12px}
+  .brand{font-size:18px}
+  .section{padding:var(--xl) 0}
+  .t-item,.t-item:nth-child(even){width:100%;margin-left:0;text-align:left;padding:0 0 34px 30px}
+  .timeline::before{left:7px}
+  .t-item:nth-child(odd){text-align:left}
+  .t-item .t-dot,.t-item:nth-child(odd) .t-dot,.t-item:nth-child(even) .t-dot{left:0;right:auto}
+  .grid2{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media(max-width:400px){
+  .stats{grid-template-columns:1fr 1fr}
+  .btn-primary,.btn-outline{padding:12px 22px;font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="wrap">
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#hero">AI<span class="dot">·</span>ПРОФЕССИЯ</a>
+      <div class="nav-links">
+        <a href="#catalog">Программа</a>
+        <a href="#strip">8 недель</a>
+        <a href="#events">Формат</a>
+        <a href="#schools">Компаниям</a>
+      </div>
+      <a href="#form" class="nav-cta">Записаться</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-card reveal">
+        <p class="mono kicker">Онлайн-курс · поток 12 · старт 27 октября</p>
+        <h1 class="display">ОСВОЙ ИИ</h1>
+        <p class="sub">От первых промптов до собственных агентов за 8 недель — с живыми разборами и ментором.</p>
+        <p class="lead">12 практических проектов, которые остаются у тебя в портфолио. Без воды и без «магии» — только то, что реально работает в работе и бизнесе.</p>
+        <div class="hero-cta">
+          <a href="#form" class="btn btn-primary">Занять место</a>
+          <a href="#catalog" class="btn btn-outline">Смотреть программу</a>
+        </div>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><div class="num">2 400+</div><p class="mono muted lbl">выпускников</p></div>
+        <div class="stat"><div class="num">4.9/5</div><p class="mono muted lbl">средняя оценка</p></div>
+        <div class="stat"><div class="num">8</div><p class="mono muted lbl">недель обучения</p></div>
+        <div class="stat"><div class="num">12</div><p class="mono muted lbl">проектов в портфолио</p></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono kicker">Программа по модулям</p>
+        <h2 class="heading">Шесть модулей — от промпта до своего инструмента</h2>
+        <p class="lead">Каждый модуль — короткая теория и сразу практика. Ты не смотришь вебинары «на будущее», а делаешь задачи под свою работу.</p>
+      </div>
+
+      <div class="bento">
+        <article class="tile wide reveal">
+          <div class="tile-media" style="--c1:#FF6B35;--c2:#F5C842"><div class="mk"></div><span class="mono code">модуль 01</span></div>
+          <div class="tile-body">
+            <h3 class="heading-sm">Промпты и контекст</h3>
+            <p>Как формулировать задачи так, чтобы модель попадала в цель с первого раза. Структура промпта, роли, примеры, работа с длинным контекстом.</p>
+            <span class="mono chip">недели 1–2</span>
+          </div>
+        </article>
+
+        <article class="tile reveal">
+          <div class="tile-media" style="--c1:#A8E63A;--c2:#0A1A20"><div class="mk"></div><span class="mono code">модуль 02</span></div>
+          <div class="tile-body">
+            <h3 class="heading-sm">Текст и контент</h3>
+            <p>Статьи, лендинги, рассылки и сценарии — в твоём голосе.</p>
+            <span class="mono chip">неделя 2</span>
+          </div>
+        </article>
+
+        <article class="tile reveal">
+          <div class="tile-media" style="--c1:#F5C842;--c2:#FF6B35"><div class="mk"></div><span class="mono code">модуль 03</span></div>
+          <div class="tile-body">
+            <h3 class="heading-sm">Изображения и видео</h3>
+            <p>Визуал для рекламы и соцсетей: генерация, стиль, консистентность.</p>
+            <span class="mono chip">неделя 3</span>
+          </div>
+        </article>
+
+        <article class="tile wide reveal">
+          <div class="tile-media" style="--c1:#1A0A2E;--c2:#FF6B35"><div class="mk"></div><span class="mono code">модуль 04</span></div>
+          <div class="tile-body">
+            <h3 class="heading-sm">Автоматизация и агенты</h3>
+            <p>Связываем модели с таблицами, почтой и мессенджерами. Собираешь первого агента, который сам выполняет повторяющиеся задачи: собирает отчёты, отвечает на заявки, готовит черновики.</p>
+            <span class="mono chip">недели 4–5</span>
+          </div>
+        </article>
+
+        <article class="tile reveal">
+          <div class="tile-media" style="--c1:#1A2E5A;--c2:#A8E63A"><div class="mk"></div><span class="mono code">модуль 05</span></div>
+          <div class="tile-body">
+            <h3 class="heading-sm">Свои инструменты</h3>
+            <p>API, базы знаний, RAG — собираешь ассистента под свою нишу.</p>
+            <span class="mono chip">недели 6–7</span>
+          </div>
+        </article>
+
+        <article class="tile reveal">
+          <div class="tile-media" style="--c1:#FF6B35;--c2:#1A0A2E"><div class="mk"></div><span class="mono code">модуль 06</span></div>
+          <div class="tile-body">
+            <h3 class="heading-sm">Финальный проект</h3>
+            <p>Свой рабочий инструмент на ИИ + защита перед группой и ментором.</p>
+            <span class="mono chip">неделя 8</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="strip">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="mono kicker">Расписание потока</p>
+        <h2 class="heading">8 недель, по одному понятному шагу</h2>
+        <p class="lead">Прокрути вбок, чтобы увидеть весь путь — от знакомства с моделями до защиты проекта.</p>
+      </div>
+      <div class="strip-wrap reveal">
+        <div class="strip">
+          <div class="week"><div><span class="mono muted">неделя 01</span><div class="w-title">Промпты</div><p>Учимся ставить задачу модели: структура, контекст, примеры.</p></div><span class="mono chip">старт 27 окт</span></div>
+          <div class="week"><div><span class="mono muted">неделя 02</span><div class="w-title">Текст</div><p>Контент в твоём голосе: посты, письма, лендинги.</p></div><span class="mono chip">практика</span></div>
+          <div class="week"><div><span class="mono muted">неделя 03</span><div class="w-title">Визуал</div><p>Изображения и видео для рекламы и соцсетей.</p></div><span class="mono chip">практика</span></div>
+          <div class="week"><div><span class="mono muted">неделя 04</span><div class="w-title">Автоматизация</div><p>Первый сценарий, который работает без тебя.</p></div><span class="mono chip">агенты</span></div>
+          <div class="week"><div><span class="mono muted">неделя 05</span><div class="w-title">Агенты</div><p>Связки с таблицами, почтой и мессенджерами.</p></div><span class="mono chip">агенты</span></div>
+          <div class="week"><div><span class="mono muted">неделя 06</span><div class="w-title">API</div><p>Подключаем модели к своим сервисам.</p></div><span class="mono chip">инструменты</span></div>
+          <div class="week"><div><span class="mono muted">неделя 07</span><div class="w-title">База знаний</div><p>Ассистент, который знает твой продукт.</p></div><span class="mono chip">инструменты</span></div>
+          <div class="week"><div><span class="mono muted">неделя 08</span><div class="w-title">Защита</div><p>Финальный проект и разбор с ментором.</p></div><span class="mono chip">финал</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <div class="container">
+      <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+        <p class="mono kicker">Как проходит обучение</p>
+        <h2 class="heading">Живые разборы, ментор и своя группа</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal"><span class="t-dot"></span><span class="mono muted">27 октября</span><h3 class="heading-sm">Старт потока</h3><p>Знакомимся, настраиваем доступы, ставим личную цель на 8 недель.</p></div>
+        <div class="t-item reveal"><span class="t-dot"></span><span class="mono muted">каждую среду</span><h3 class="heading-sm">Живые разборы</h3><p>Разбираем задачи группы в прямом эфире, запись остаётся на 12 месяцев.</p></div>
+        <div class="t-item reveal"><span class="t-dot"></span><span class="mono muted">по запросу</span><h3 class="heading-sm">Сессии 1:1</h3><p>Персональная встреча с ментором: разбор твоего проекта и точек роста.</p></div>
+        <div class="t-item reveal"><span class="t-dot"></span><span class="mono muted">неделя 8</span><h3 class="heading-sm">Защита проектов</h3><p>Показываешь рабочий инструмент, получаешь обратную связь и сертификат.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" id="schools">
+    <div class="container">
+      <div class="light-grid">
+        <div class="reveal">
+          <p class="mono kicker">Для команд и компаний</p>
+          <h2 class="heading" style="margin-top:14px">Обучаем команды работе с ИИ</h2>
+          <p style="margin-top:16px">Корпоративный формат: программа под ваши процессы, закрытый поток и отчётность по прогрессу сотрудников.</p>
+          <ul class="light-list">
+            <li><span class="b"></span><span>Программа под ваши задачи и инструменты</span></li>
+            <li><span class="b"></span><span>Закрытый поток только для команды</span></li>
+            <li><span class="b"></span><span>Метрики прогресса и итоговый отчёт</span></li>
+            <li><span class="b"></span><span>Куратор и поддержка на всём курсе</span></li>
+          </ul>
+          <div class="light-cta">
+            <a href="#form" class="btn btn-outline-dark">Запросить программу</a>
+            <a href="#form" class="btn btn-dark">Обсудить поток</a>
+          </div>
+        </div>
+        <div class="light-card reveal">
+          <p class="mono muted">от 8 человек</p>
+          <h3 class="heading-sm">Корпоративный поток</h3>
+          <p style="margin-top:12px">Стартуем в удобные вам даты. Программа собирается под отдел: маркетинг, продажи, поддержка или продукт.</p>
+          <div class="light-cta"><a href="#form" class="btn btn-dark">Оставить заявку</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="form">
+    <div class="container">
+      <div class="form-wrap">
+        <div class="form-side reveal">
+          <p class="mono kicker">Запись на поток</p>
+          <h2 class="heading">Оставь заявку — вернёмся с деталями</h2>
+          <p class="lead" style="margin-top:16px">Заполни форму, и мы пришлём программу, стоимость и условия рассрочки. Мест в потоке — 12.</p>
+          <ul>
+            <li><span class="b"></span><span>Ответим в течение рабочего дня</span></li>
+            <li><span class="b"></span><span>Пришлём программу и стоимость в EUR</span></li>
+            <li><span class="b"></span><span>Подскажем формат рассрочки на 12 месяцев</span></li>
+          </ul>
+        </div>
+
+        <form class="reg-form reveal" id="reg-form" novalidate>
+          <div class="grid2">
+            <div class="field">
+              <label class="mono muted" for="f-name">Имя</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Как к тебе обращаться" required />
+            </div>
+            <div class="field">
+              <label class="mono muted" for="f-email">E-mail</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="field">
+              <label class="mono muted" for="f-phone">Телефон</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+34 …" />
+            </div>
+            <div class="field">
+              <label class="mono muted" for="f-messenger">Telegram / WhatsApp</label>
+              <input id="f-messenger" name="messenger" type="text" placeholder="@username" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="mono muted" for="f-plan">Формат</label>
+            <select id="f-plan" name="plan">
+              <option value="individual">Личное участие — поток с ментором</option>
+              <option value="team">Корпоративный поток — для команды</option>
+              <option value="unknown">Пока не решил(а)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="mono muted" for="f-goal">Цель на курс</label>
+            <textarea id="f-goal" name="goal" placeholder="Что хочешь уметь через 8 недель?"></textarea>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label for="f-hp">Не заполняй</label>
+            <input id="f-hp" name="honeypot" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="consent">
+            <input id="f-consent" name="consent" type="checkbox" />
+            <label for="f-consent">Согласен(а) на обработку персональных данных и получение ответа по заявке.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit">Отправить заявку</button>
+          <p class="form-note">Нажимая кнопку, ты отправляешь заявку и соглашаешься на обработку данных.</p>
+          <div class="form-msg" id="form-msg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <a class="brand" href="#hero">AI<span class="dot">·</span>ПРОФЕССИЯ</a>
+          <p class="muted" style="margin-top:16px;max-width:34ch">Курс по искусственному интеллекту для тех, кто хочет применять его в работе уже сейчас.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Курс</h4>
+          <a href="#catalog">Программа</a>
+          <a href="#strip">8 недель</a>
+          <a href="#events">Формат</a>
+          <a href="#schools">Компаниям</a>
+        </div>
+        <div class="foot-col">
+          <h4>Помощь</h4>
+          <a href="#form">Записаться</a>
+          <a href="#form">Рассрочка</a>
+          <a href="#form">Вопросы</a>
+        </div>
+        <div class="foot-col">
+          <h4>Контакты</h4>
+          <a href="mailto:hello@leadup.guru">hello@leadup.guru</a>
+          <a href="#form">Telegram</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span class="mono muted">© <span id="year"></span> AI·Профессия · LeadUp AI</span>
+        <span class="mono muted">Онлайн · русский язык · EUR</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- landing config ---------- */
+  var LANDING = {
+    landing_id: 'cosmo-ai',
+    variant_id: 'v1',
+    page_lang: 'ru',
+    webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
+    consent_text_version: '2026-10-privacy-v1',
+    pixel_id: '' /* TODO: вставить Meta Pixel ID */
+  };
+  window.__LANDING__ = LANDING;
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- reveal on scroll ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---------- funnel events ---------- */
+  function uuid(){
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c){
+      var r = Math.random()*16|0, v = c==='x' ? r : (r&0x3|0x8); return v.toString(16);
+    });
+  }
+  function cookie(name){
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/[.$?*|{}()[\]\\/+^]/g,'\\$&') + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : '';
+  }
+  function urlParam(name){
+    try { return new URLSearchParams(location.search).get(name) || ''; } catch(e){ return ''; }
+  }
+  function getUtm(){
+    var key = 'leadup_attr_' + LANDING.landing_id + '_' + LANDING.variant_id;
+    var stored = null;
+    try { stored = JSON.parse(localStorage.getItem(key) || 'null'); } catch(e){}
+    if (stored && stored.utm_source) return stored;
+
+    var fbclid = urlParam('fbclid');
+    var attr = {
+      utm_source: urlParam('utm_source'),
+      utm_medium: urlParam('utm_medium'),
+      utm_campaign: urlParam('utm_campaign'),
+      utm_content: urlParam('utm_content'),
+      utm_term: urlParam('utm_term'),
+      fbclid: fbclid,
+      referrer: document.referrer || '',
+      landing_url_first: location.href
+    };
+    if (attr.utm_source || fbclid) {
+      try { localStorage.setItem(key, JSON.stringify(attr)); } catch(e){}
+    }
+    return attr;
+  }
+  var ATTR = getUtm();
+
+  function buildFbc(fbclid){
+    if (!fbclid) return cookie('_fbc');
+    var c = cookie('_fbc');
+    if (c) return c;
+    return 'fb.1.' + Date.now() + '.' + fbclid;
+  }
+
+  function track(eventName, extra){
+    var payload = {
+      event_name: eventName,
+      event_id: uuid(),
+      ts: new Date().toISOString(),
+      landing_id: LANDING.landing_id,
+      variant_id: LANDING.variant_id,
+      page_url: location.href,
+      page_lang: LANDING.page_lang,
+      honeypot: '',
+      utm_source: ATTR.utm_source, utm_medium: ATTR.utm_medium,
+      utm_campaign: ATTR.utm_campaign, utm_content: ATTR.utm_content,
+      utm_term: ATTR.utm_term, fbclid: ATTR.fbclid, referrer: ATTR.referrer,
+      fbp: cookie('_fbp'),
+      fbc: buildFbc(ATTR.fbclid)
+    };
+    if (extra) for (var k in extra) payload[k] = extra[k];
+
+    try {
+      fetch(LANDING.webhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(function(){});
+    } catch(e){}
+
+    if (LANDING.pixel_id && window.fbq) {
+      try { window.fbq('track', eventName === 'lead' ? 'Lead' : eventName, {}, { eventID: payload.event_id }); } catch(e){}
+    }
+    return payload.event_id;
+  }
+
+  /* page_view */
+  track('page_view', { page_height: document.body.scrollHeight });
+
+  /* cta_click */
+  document.querySelectorAll('a[href="#form"], .btn-primary, [data-cta]').forEach(function(el){
+    el.addEventListener('click', function(){
+      track('cta_click', { cta_text: (el.textContent || '').trim().slice(0, 60) });
+    });
+  });
+
+  /* scroll_50 */
+  var sc50 = false;
+  window.addEventListener('scroll', function(){
+    if (sc50) return;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (h > 0 && window.scrollY / h >= 0.5) { sc50 = true; track('scroll_50'); }
+  }, { passive: true });
+
+  /* ---------- form ---------- */
+  var form = document.getElementById('reg-form');
+  var msg = document.getElementById('form-msg');
+  var started = false;
+
+  ['f-name','f-email','f-phone','f-messenger','f-goal','f-plan'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('input', function(){
+      if (!started) { started = true; track('form_start'); }
+    });
+  });
+
+  function showMsg(type, text){ msg.className = 'form-msg ' + type; msg.textContent = text; }
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+
+    var hp = document.getElementById('f-hp').value;
+    if (hp) { return; } /* bot */
+
+    var name = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var messenger = document.getElementById('f-messenger').value.trim();
+    var plan = document.getElementById('f-plan').value;
+    var goal = document.getElementById('f-goal').value.trim();
+    var consent = document.getElementById('f-consent').checked;
+
+    if (!name || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      showMsg('err', 'Проверь имя и e-mail — без них не сможем ответить.');
+      track('form_error', { reason: 'validation', field: (!name ? 'name' : 'email') });
+      return;
+    }
+    if (!consent) {
+      showMsg('err', 'Нужно согласие на обработку данных.');
+      track('form_error', { reason: 'consent' });
+      return;
+    }
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    var oldLabel = btn.textContent;
+    btn.textContent = 'Отправляем…';
+
+    var eventId = track('lead', {
+      name: name, email: email, messenger: messenger || phone,
+      plan: plan, consent: consent, consent_text_version: LANDING.consent_text_version,
+      goal: goal, phone: phone
+    });
+
+    var payload = {
+      event_name: 'lead',
+      event_id: eventId,
+      ts: new Date().toISOString(),
+      landing_id: LANDING.landing_id,
+      variant_id: LANDING.variant_id,
+      page_url: location.href,
+      page_lang: LANDING.page_lang,
+      name: name, email: email, messenger: messenger || phone,
+      plan: plan, consent: consent, consent_text_version: LANDING.consent_text_version,
+      honeypot: '',
+      utm_source: ATTR.utm_source, utm_medium: ATTR.utm_medium,
+      utm_campaign: ATTR.utm_campaign, utm_content: ATTR.utm_content,
+      utm_term: ATTR.utm_term, fbclid: ATTR.fbclid, referrer: ATTR.referrer,
+      fbp: cookie('_fbp'), fbc: buildFbc(ATTR.fbclid)
+    };
+
+    fetch(LANDING.webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok: r.ok, body: j }; }); })
+    .then(function(res){
+      if (res.ok && res.body && res.body.ok !== false) {
+        showMsg('ok', 'Заявка отправлена. Ответим в течение рабочего дня — проверь почту и Telegram.');
+        form.reset(); started = false;
+        btn.textContent = 'Отправлено';
+        setTimeout(function(){ btn.disabled = false; btn.textContent = oldLabel; }, 4000);
+      } else {
+        throw new Error('bad');
+      }
+    })
+    .catch(function(){
+      showMsg('err', 'Не получилось отправить. Напиши нам на hello@leadup.guru — примем заявку вручную.');
+      btn.disabled = false; btn.textContent = oldLabel;
+      track('form_error', { reason: 'network' });
+    });
+  });
+})();
+</script>
+</body>
+</html>
