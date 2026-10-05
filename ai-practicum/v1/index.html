@@ -271,6 +271,11 @@ footer{border-top:1px solid var(--border-1);padding:48px 0 40px;background:var(-
   .hero-cta{flex-wrap:wrap}
   .eyebrow{font-size:11px}
 }
+/* ===== BRAND: реальный логотип LeadUp AI + автор ===== */
+.brand-logo{display:block;height:28px;width:auto;flex:0 0 auto}
+.author .ph{padding:0;overflow:hidden}
+.author .ph img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-2xl);display:block}
+@media (max-width:640px){.brand-logo{height:24px}}
 </style>
 </head>
 <body>
@@ -278,10 +283,10 @@ footer{border-top:1px solid var(--border-1);padding:48px 0 40px;background:var(-
 <!-- ===== NAV ===== -->
 <nav>
   <div class="wrap">
-    <a href="#top" class="brand"><span class="mark"><i></i></span>LeadUp <span class="ai">AI</span></a>
+    <a href="#top" class="brand" aria-label="LeadUp AI"><img class="brand-logo" src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60"></a>
     <div class="links">
       <a href="#program">Программа</a>
-      <a href="#author">Менторы</a>
+      <a href="#author">Автор</a>
       <a href="#reviews">Отзывы</a>
       <a href="#next">Продолжение</a>
       <a href="#faq">Вопросы</a>
@@ -297,7 +302,7 @@ footer{border-top:1px solid var(--border-1);padding:48px 0 40px;background:var(-
       <div>
         <span class="eyebrow"><span class="dot"></span>Бесплатный 4-дневный практикум · старт 27 октября</span>
         <h1>Освой нейросети за <span class="accent">4 вечера</span> — бесплатно</h1>
-        <p class="lead">Живой практикум для русскоязычных предпринимателей и специалистов в Испании. Каждый вечер — один рабочий навык и задание, которое сразу применяешь в своём деле. Без кода и лишней теории.</p>
+        <p class="lead">Живой практикум для русскоязычных предпринимателей и специалистов в Испании. Каждый вечер — один рабочий навык и задание, которое сразу применяешь в своём деле. Без кода и лишней теории. Ведёт практикум Владимир Нагин — автор всех интенсивов и курсов LeadUp AI.</p>
         <div class="hero-cta">
           <a href="#form" class="btn btn-primary" data-cta="hero">Записаться бесплатно</a>
           <a href="#program" class="btn btn-ghost">Программа 4 дней</a>
@@ -463,14 +468,14 @@ footer{border-top:1px solid var(--border-1);padding:48px 0 40px;background:var(-
   <div class="wrap">
     <div class="section-h">
       <div class="k">Кто ведёт</div>
-      <h2>Менторы-практики LeadUp AI</h2>
+      <h2>Автор практикума — Владимир Нагин</h2>
     </div>
     <div class="author">
-      <div class="ph">AI</div>
+      <div class="ph"><img src="../../assets/mentor-nagin.svg" alt="Владимир Нагин — автор LeadUp AI" width="480" height="472"></div>
       <div>
-        <h3>Команда LeadUp AI</h3>
-        <div class="role">Менторы-практики · внедряют нейросети в бизнес с 2019 года</div>
-        <p>Мы не пересказываем чужие курсы. Каждый ментор сам каждый день применяет нейросети в маркетинге, продажах и операционке — и на практикуме показывает ровно те приёмы, которыми пользуется сам.</p>
+        <h3>Владимир Нагин</h3>
+        <div class="role">Автор всех интенсивов и курсов LeadUp AI · внедряю нейросети в бизнес с 2019 года</div>
+        <p>Не пересказываю чужие курсы: каждый день применяю нейросети в маркетинге, продажах и операционке — и на практикуме показываю ровно те приёмы, которыми пользуюсь сам.</p>
         <div class="stats">
           <div><b>2 400+</b><span>выпускников</span></div>
           <div><b>4.9 / 5</b><span>средняя оценка</span></div>
@@ -675,7 +680,7 @@ footer{border-top:1px solid var(--border-1);padding:48px 0 40px;background:var(-
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a href="#top" class="brand"><span class="mark"><i></i></span>LeadUp <span class="ai">AI</span></a>
+      <a href="#top" class="brand" aria-label="LeadUp AI"><img class="brand-logo" src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60"></a>
       <div class="links">
         <a href="#program">Программа</a>
         <a href="#form">Регистрация</a>
