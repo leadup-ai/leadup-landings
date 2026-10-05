@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Профессия · LeadUp AI — освой искусственный интеллект за 8 недель</title>
+  <meta name="description" content="AI-Профессия — 8-недельный курс LeadUp AI по искусственному интеллекту: 12 проектов в портфолио, разборы 1:1 с наставником, рассрочка от 17 €/мес. Старт 26 октября, 12 мест." />
+  <meta property="og:title" content="AI-Профессия · LeadUp AI" />
+  <meta property="og:description" content="Освой ИИ за 8 недель и начни зарабатывать. 2 400+ выпускников, рейтинг 4.9/5, 87% доходят до финального проекта." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=B612+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+    /* ===== CSS CUSTOM PROPERTIES ===== */
+    :root {
+      --bg-primary: #0C1A32;
+      --bg-secondary: #1A2E5A;
+      --text-primary: #F5F0E0;
+      --text-muted: #8BAAD4;
+      --accent-orange: #FF6B35;
+      --accent-lime: #A8E63A;
+      --accent-gold: #F5C842;
+      --surface: #1D3464;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      border: none;
+    }
+
+    /* ===== REDUCED MOTION ===== */
+        /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 3rem;
+      background: linear-gradient(to bottom, rgba(12,26,50,0.95) 0%, rgba(12,26,50,0) 100%);
+      pointer-events: none;
+    }
+
+    .nav-logo {
+      font-family: 'Abril Fatface', serif;
+      font-size: 1.6rem;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+      pointer-events: all;
+    }
+
+    .nav-logo span {
+      color: var(--accent-orange);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      pointer-events: all;
+    }
+
+    .nav-links a {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: color 200ms ease;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-cta {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: var(--accent-orange);
+      color: #fff;
+      padding: 0.6rem 1.5rem;
+      border-radius: 100px;
+      transition: transform 200ms ease, background 200ms ease;
+      pointer-events: all;
+    }
+
+    .nav-cta:hover {
+      background: #ff5520;
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      background: var(--bg-primary);
+    }
+
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.7;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 0;
+      z-index: 1;
+      opacity: 0.5;
+    }
+
+    .hero-tile {
+      position: relative;
+      overflow: hidden;
+      will-change: transform, opacity;
+      transition:
+        transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 400ms ease;
+    }
+
+    .hero-tile.scattered {
+      transform: translate(var(--dx, 0px), var(--dy, 0px)) rotate(var(--r, 0deg));
+      opacity: 0;
+    }
+
+    .hero-tile.settled {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+
+    .hero-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-tile .tile-bg {
+      width: 100%;
+      height: 100%;
+      background: var(--surface);
+    }
+
+    /* Tile hover effects */
+    .hero-grid.hover-active .hero-tile:not(.tile-hovered) {
+      opacity: 0.7;
+    }
+
+    .hero-tile.tile-hovered {
+      transform: scale(1.05) !important;
+      z-index: 2;
+    }
+
+    /* Dark vignette over grid */
+    .hero-vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at center, transparent 20%, rgba(12,26,50,0.7) 100%),
+        linear-gradient(to bottom, rgba(12,26,50,0.4) 0%, transparent 40%, transparent 60%, rgba(12,26,50,0.8) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Hero content overlay */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 600ms ease 1.2s;
+    }
+
+    .hero-overlay.visible {
+      opacity: 1;
+    }
+
+    .hero-overlay-inner {
+      position: relative;
+      background: rgba(12,26,50,.55);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      padding: 3rem 4rem;
+      border-radius: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(3.5rem, 12vw, 10rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      color: #F5F0E0;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.6);
+    }
+
+    .hero-tagline {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 400;
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      color: var(--text-primary);
+      max-width: 44ch;
+      margin: 0 auto 2.4rem;
+      opacity: 0.9;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      background: var(--accent-orange);
+      color: #fff;
+      padding: 0.85rem 2.2rem;
+      border-radius: 100px;
+      transition: transform 200ms ease, background 200ms ease;
+      border: 2px solid var(--accent-orange);
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #e85820;
+      border-color: #e85820;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      background: transparent;
+      color: var(--text-primary);
+      padding: 0.85rem 2.2rem;
+      border-radius: 100px;
+      border: 2px solid rgba(245,240,224,0.5);
+      transition: transform 200ms ease, border-color 200ms ease, color 200ms ease;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: 3rem;
+      opacity: 0;
+      transition: opacity 600ms ease 1.6s;
+    }
+
+    .hero-stats.visible {
+      opacity: 1;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      font-family: 'Abril Fatface', serif;
+      font-size: 2rem;
+      color: var(--accent-gold);
+      display: block;
+    }
+
+    .hero-stat-label {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ===== SECTION STYLES ===== */
+    .section-kicker {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent-lime);
+      margin-bottom: 1rem;
+    }
+
+    .section-heading {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    /* Word reveal animation */
+    .word-reveal {
+      display: inline-block;
+      opacity: 0;
+      filter: blur(8px);
+      transform: translateY(12px);
+      transition: opacity 500ms ease, filter 500ms ease, transform 500ms ease;
+    }
+
+    .word-reveal.revealed {
+      opacity: 1;
+      filter: blur(0px);
+      transform: translateY(0);
+    }
+
+    /* ===== CATALOG SECTION ===== */
+    .catalog-section {
+      background: var(--bg-primary);
+      padding: 8rem 3rem 6rem;
+    }
+
+    .catalog-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .filter-pill {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      background: var(--surface);
+      color: var(--text-muted);
+      border: 1px solid rgba(139,170,212,0.2);
+      cursor: pointer;
+      transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+    }
+
+    .filter-pill.active,
+    .filter-pill:hover {
+      background: var(--accent-orange);
+      color: #fff;
+      border-color: var(--accent-orange);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1.2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .book-tile {
+      position: relative;
+      overflow: hidden;
+      background: var(--surface);
+      cursor: pointer;
+      transition: transform 300ms ease, opacity 300ms ease, box-shadow 300ms ease;
+      /* Unique card design: angled bottom border */
+    }
+
+    .book-tile::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,26,50,0.95) 0%, rgba(12,26,50,0.4) 50%, transparent 100%);
+      z-index: 1;
+    }
+
+    .book-tile::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-orange);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease;
+      z-index: 3;
+    }
+
+    .book-tile:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Bento layout */
+    .book-tile:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 1;
+      min-height: 340px;
+    }
+
+    .book-tile:nth-child(2) {
+      grid-column: span 1;
+      grid-row: span 2;
+      min-height: 340px;
+    }
+
+    .book-tile:nth-child(3) {
+      grid-column: span 1;
+      grid-row: span 1;
+      min-height: 280px;
+    }
+
+    .book-tile:nth-child(4) {
+      grid-column: span 1;
+      grid-row: span 1;
+      min-height: 280px;
+    }
+
+    .book-tile:nth-child(5) {
+      grid-column: span 1;
+      grid-row: span 1;
+      min-height: 280px;
+    }
+
+    .book-tile:nth-child(6) {
+      grid-column: span 1;
+      grid-row: span 1;
+      min-height: 280px;
+    }
+
+    .book-tile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 400ms ease;
+    }
+
+    .book-tile:hover .book-tile-img {
+      transform: scale(1.04);
+    }
+
+    .book-tile-content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-age-badge {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #0C1A32;
+      background: var(--accent-gold);
+      padding: 0.25rem 0.6rem;
+      display: inline-block;
+      margin-left: auto;
+      font-weight: 700;
+    }
+
+    .book-genre {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-lime);
+      margin-top: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-title {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(1.1rem, 2vw, 1.6rem);
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .book-meta {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .book-price {
+      color: var(--accent-orange);
+      font-weight: 700;
+    }
+
+    .book-desc {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(245,240,224,0.7);
+      margin-top: 0.5rem;
+      line-height: 1.4;
+    }
+
+    /* Hover dim siblings */
+    .catalog-grid:has(.book-tile:hover) .book-tile:not(:hover) {
+      opacity: 0.6;
+      transform: scale(0.99);
+    }
+
+    /* ===== PREVIEW SECTION ===== */
+    .preview-outer {
+      position: relative;
+      height: 400vh;
+    }
+
+    .preview-section-heading {
+      text-align: center;
+      padding: 6rem 2rem 0;
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+    }
+
+    .preview-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .preview-strip {
+      display: flex;
+      width: 300vw;
+      height: 100vh;
+      will-change: transform;
+    }
+
+    .preview-panel {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 4rem 5rem;
+      flex-shrink: 0;
+      gap: 4rem;
+    }
+
+    .preview-panel:nth-child(1) { background: #0C1A32; }
+    .preview-panel:nth-child(2) { background: #1A0A2E; }
+    .preview-panel:nth-child(3) { background: #0A1A20; }
+
+    .preview-quote-block {
+      position: relative;
+    }
+
+    .preview-quote-mark {
+      font-family: 'Abril Fatface', serif;
+      font-size: 8rem;
+      line-height: 1;
+      color: var(--accent-orange);
+      opacity: 0.3;
+      position: absolute;
+      top: -2rem;
+      left: -1.5rem;
+    }
+
+    .preview-quote {
+      font-family: 'Abril Fatface', serif;
+      font-style: italic;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      line-height: 1.25;
+      color: var(--text-primary);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .preview-source {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+    }
+
+    .preview-image-wrap {
+      position: relative;
+      height: 60vh;
+      background: var(--surface);
+    }
+
+    .preview-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Decorative corner accent */
+    .preview-image-wrap::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 48px;
+      height: 48px;
+      border-top: 3px solid var(--accent-orange);
+      border-left: 3px solid var(--accent-orange);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .preview-image-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: -8px;
+      width: 48px;
+      height: 48px;
+      border-bottom: 3px solid var(--accent-lime);
+      border-right: 3px solid var(--accent-lime);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Mobile preview fallback */
+    @media (max-width: 768px) {
+      .preview-outer {
+        height: auto;
+      }
+
+      .preview-sticky {
+        position: static;
+        height: auto;
+        overflow: visible;
+      }
+
+      .preview-strip {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+      }
+
+      .preview-panel {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        padding: 4rem 2rem;
+        gap: 2rem;
+        scroll-snap-align: start;
+      }
+
+      .preview-image-wrap {
+        height: 40vh;
+      }
+    }
+
+    /* ===== CLASSROOM SECTION ===== */
+    .classroom-section {
+      background: var(--text-primary);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 80vh;
+      overflow: hidden;
+    }
+
+    .classroom-photo-wrap {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-secondary);
+    }
+
+    .classroom-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      clip-path: inset(0 0 100% 0);
+      transition: clip-path 900ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .classroom-photo.revealed {
+      clip-path: inset(0 0 0% 0);
+    }
+
+    .classroom-text-side {
+      background: var(--text-primary);
+      padding: 5rem 4rem 5rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .classroom-text-line {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .classroom-text-line.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .classroom-kicker {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent-orange);
+      margin-bottom: 1rem;
+    }
+
+    .classroom-heading {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      line-height: 1.1;
+      color: var(--bg-primary);
+      margin-bottom: 1.5rem;
+      margin-left: -2rem;
+    }
+
+    .classroom-body {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #2A3F6A;
+      max-width: 42ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .classroom-stats {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .classroom-stat-num {
+      font-family: 'Abril Fatface', serif;
+      font-size: 3rem;
+      color: var(--accent-orange);
+      display: block;
+      line-height: 1;
+    }
+
+    .classroom-stat-label {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #2A3F6A;
+    }
+
+    .classroom-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-dark {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: var(--accent-orange);
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 100px;
+      border: 2px solid var(--accent-orange);
+      transition: transform 200ms ease, background 200ms ease;
+      display: inline-block;
+    }
+
+    .btn-dark:hover {
+      background: #e85820;
+      border-color: #e85820;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-dark {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: transparent;
+      color: var(--bg-primary);
+      padding: 0.8rem 2rem;
+      border-radius: 100px;
+      border: 2px solid var(--bg-primary);
+      transition: transform 200ms ease, background 200ms ease, color 200ms ease;
+      display: inline-block;
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .classroom-section {
+        grid-template-columns: 1fr;
+      }
+
+      .classroom-photo-wrap {
+        min-height: 40vh;
+      }
+
+      .classroom-text-side {
+        padding: 3rem 2rem;
+      }
+
+      .classroom-heading {
+        margin-left: 0;
+      }
+    }
+
+    /* ===== EVENTS SECTION ===== */
+    .events-outer {
+      position: relative;
+      height: 300vh;
+      background: var(--bg-primary);
+    }
+
+    .events-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 3rem 2rem 2rem;
+    }
+
+    .events-heading-wrap {
+      text-align: center;
+      margin-bottom: 2rem;
+      flex-shrink: 0;
+    }
+
+    .events-heading {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .events-timeline {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+    }
+
+    /* Central axis line */
+    .timeline-axis {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(139,170,212,0.2);
+      transform: translateX(-50%);
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--accent-orange), var(--accent-gold), var(--accent-lime));
+      transform: translateX(-50%) scaleY(0);
+      transform-origin: top;
+      will-change: transform;
+    }
+
+    .events-list {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+
+    .event-row {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      align-items: center;
+      gap: 0;
+    }
+
+    .event-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      margin: 0 auto;
+      border: 3px solid var(--accent-orange);
+      background: var(--accent-orange);
+      position: relative;
+      z-index: 2;
+      transition: background 300ms ease;
+      box-shadow: 0 0 0 4px rgba(255,107,53,0.2);
+    }
+
+    .event-dot.dot-lime { border-color: var(--accent-lime); background: var(--accent-lime); box-shadow: 0 0 0 4px rgba(168,230,58,0.2); }
+    .event-dot.dot-gold { border-color: var(--accent-gold); background: var(--accent-gold); box-shadow: 0 0 0 4px rgba(245,200,66,0.2); }
+
+    .event-card {
+      background: var(--surface);
+      padding: 0.7rem 1.2rem;
+      position: relative;
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .event-card.revealed {
+      clip-path: inset(0 0% 0 0);
+    }
+
+    /* Card left-side triangle pointer */
+    .event-card-left::before {
+      content: '';
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 8px solid var(--surface);
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+    }
+
+    .event-card-right {
+      clip-path: inset(0 0 0 100%);
+    }
+
+    .event-card-right.revealed {
+      clip-path: inset(0 0% 0 0%);
+    }
+
+    .event-card-right::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right: 8px solid var(--surface);
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+    }
+
+    /* Right-side cards: clip from left */
+    .event-row:nth-child(even) .event-card {
+      clip-path: inset(0 0 0 100%);
+    }
+
+    .event-row:nth-child(even) .event-card.revealed {
+      clip-path: inset(0 0% 0 0%);
+    }
+
+    .event-empty {
+      /* empty grid cell for alternating layout */
+    }
+
+    .event-date {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-orange);
+      margin-bottom: 0.4rem;
+    }
+
+    .event-date.date-lime { color: var(--accent-lime); }
+    .event-date.date-gold { color: var(--accent-gold); }
+
+    .event-name {
+      font-family: 'Abril Fatface', serif;
+      font-size: 1rem;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+
+    .event-author {
+      font-family: 'Nunito', sans-serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .event-venue {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 768px) {
+      .events-outer {
+        height: auto;
+      }
+
+      .events-sticky {
+        position: static;
+        height: auto;
+        overflow: visible;
+      }
+
+      .events-list {
+        gap: 1rem;
+      }
+
+      .event-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .event-dot {
+        display: none;
+      }
+
+      .timeline-axis,
+      .timeline-line {
+        display: none;
+      }
+
+      .event-card,
+      .event-card-right {
+        clip-path: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+    /* ===== NEWSLETTER / FOOTER CTA ===== */
+    .newsletter-section {
+      background: var(--bg-primary);
+      border-top: 1px solid rgba(139,170,212,0.1);
+      padding: 8rem 3rem 5rem;
+      text-align: center;
+    }
+
+    .newsletter-heading {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .newsletter-sub {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 50ch;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      max-width: 520px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      min-width: 200px;
+      background: var(--surface);
+      border: 1px solid rgba(139,170,212,0.3);
+      border-radius: 100px;
+      padding: 0.85rem 1.5rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 200ms ease;
+    }
+
+    .newsletter-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--accent-orange);
+    }
+
+    .newsletter-btn {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: var(--accent-orange);
+      color: #fff;
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      border: 2px solid var(--accent-orange);
+      transition: transform 200ms ease, background 200ms ease;
+    }
+
+    .newsletter-btn:hover {
+      background: #e85820;
+      border-color: #e85820;
+      transform: translateY(-2px);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--bg-primary);
+      border-top: 1px solid rgba(139,170,212,0.1);
+      padding: 4rem 3rem 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+    }
+
+    .footer-brand {
+      /* First column */
+    }
+
+    .footer-logo {
+      font-family: 'Abril Fatface', serif;
+      font-size: 1.8rem;
+      color: var(--text-primary);
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-logo span {
+      color: var(--accent-orange);
+    }
+
+    .footer-tagline {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      max-width: 28ch;
+    }
+
+    .footer-col h4 {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-primary);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-col a {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      transition: color 200ms ease;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-col a:hover {
+      color: var(--text-primary);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(139,170,212,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .footer-reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+
+    .footer-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .nav {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .catalog-section {
+        padding: 5rem 1.5rem 4rem;
+      }
+
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .book-tile:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .newsletter-section {
+        padding: 5rem 1.5rem 3rem;
+      }
+
+      .footer {
+        padding: 3rem 1.5rem 2rem;
+      }
+    }
+
+    /* ===== STAR FIELD (decorative background) ===== */
+    .star-field {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: #fff;
+      animation: twinkle var(--dur, 3s) ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: var(--min-op, 0.1); }
+      50% { opacity: var(--max-op, 0.8); }
+    }
+
+    /* ===== LETTER SPACING WIND-UP ===== */
+    .letter-windup {
+      letter-spacing: 0.6em;
+      opacity: 0;
+      transition: letter-spacing 800ms ease, opacity 600ms ease;
+    }
+
+    .letter-windup.wound {
+      letter-spacing: -0.01em;
+      opacity: 1;
+    }
+    /* ===== LEAD FORM (добавлено для LeadUp AI: приём заявок) ===== */
+    :root { --warning: var(--accent-orange); --teal: var(--accent-lime); }
+    .newsletter-section .reg-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .reg-form .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .reg-form .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .reg-form label {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+    .reg-form input,
+    .reg-form select {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid rgba(139, 170, 212, 0.3);
+      border-radius: 12px;
+      padding: 0.85rem 1.1rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 200ms ease;
+    }
+    .reg-form input::placeholder {
+      color: var(--text-muted);
+    }
+    .reg-form input:focus,
+    .reg-form select:focus {
+      border-color: var(--accent-lime);
+    }
+    .reg-form .consent {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.82rem;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--text-muted);
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .reg-form .consent input {
+      width: auto;
+      flex: 0 0 auto;
+      margin-top: 0.15rem;
+      accent-color: var(--accent-lime);
+    }
+    .reg-form .btn-primary {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: var(--accent-orange);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      border: 2px solid var(--accent-orange);
+      cursor: pointer;
+      transition: transform 200ms ease, background 200ms ease;
+    }
+    .reg-form .btn-primary:hover {
+      background: #e85820;
+      border-color: #e85820;
+      transform: translateY(-2px);
+    }
+    .reg-form .btn-primary[disabled] {
+      opacity: 0.6;
+      cursor: default;
+      transform: none;
+    }
+    .reg-form .form-status {
+      min-height: 1.1rem;
+      font-size: 0.85rem;
+      color: var(--accent-lime);
+      text-align: center;
+    }
+    .reg-form .form-note {
+      font-family: 'B612 Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 560px) {
+      .reg-form .grid2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Star field background -->
+  <div class="star-field" id="starField" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo">LeadUp<span> AI</span></a>
+    <ul class="nav-links">
+      <li><a href="#catalog">Программа</a></li>
+      <li><a href="#classroom">Формат</a></li>
+      <li><a href="#events">Тарифы</a></li>
+    </ul>
+    <a href="#form" class="nav-cta">Записаться</a>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="https://kombai-assets-dev.b-cdn.net/generated_assets/a993fd29-0101-46bc-9b8b-13bc576c1070/9482cff02fa44f7595b20eeb6404cc90.mp4" type="video/mp4">
+    </video>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <div class="hero-overlay" id="heroOverlay">
+      <div class="hero-overlay-inner">
+        <h1 class="hero-title">LEADUP<br>AI</h1>
+        <p class="hero-tagline">AI-Профессия — освой ИИ за 8 недель. 12 практических проектов в портфолио, разборы 1:1 с наставником и 12 месяцев доступа к материалам.</p>
+        <div class="hero-ctas">
+          <a href="#form" class="btn-primary">Выбрать тариф</a>
+          <a href="#catalog" class="btn-outline">Программа</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats" id="heroStats" aria-label="Показатели курса">
+      <div class="hero-stat">
+        <span class="hero-stat-num">2 400+</span>
+        <span class="hero-stat-label">выпускников</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">4.9</span>
+        <span class="hero-stat-label">из 5 — рейтинг</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">8</span>
+        <span class="hero-stat-label">недель обучения</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATALOG SECTION ===== -->
+  <section class="catalog-section" id="catalog" aria-label="Программа курса">
+    <div class="catalog-header">
+      <div class="section-kicker">Программа</div>
+      <h2 class="section-heading" id="catalogHeading">Модули программы</h2>
+      <div class="filter-pills" role="group" aria-label="Фильтр модулей">
+        <button class="filter-pill active" data-filter="all">Все</button>
+        <button class="filter-pill" data-filter="work">Для работы</button>
+        <button class="filter-pill" data-filter="business">Для бизнеса</button>
+        <button class="filter-pill" data-filter="content">Для контента</button>
+      </div>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid">
+
+      <!-- Module 1 -->
+      <article class="book-tile" data-age="week-1" data-genre="work" aria-label="Основы промптов">
+        <img class="book-tile-img" src="https://kombai-assets-dev.b-cdn.net/generated_assets/a993fd29-0101-46bc-9b8b-13bc576c1070/cf0509c7e3074a8fbb8a57d9ae2c4b7b.png" alt="Модуль курса: основы промптов">
+        <div class="book-tile-content">
+          <span class="book-age-badge">Неделя 1</span>
+          <span class="book-genre">Для работы</span>
+          <h3 class="book-title">Основы промптов и нейросетей</h3>
+          <div class="book-meta">
+            <span>Практикум</span>
+            <span class="book-price">5 уроков</span>
+          </div>
+          <p class="book-desc">Разбираем, как устроены LLM и как писать точные промпты, чтобы получать результат с первого раза.</p>
+        </div>
+      </article>
+
+      <!-- Module 2 -->
+      <article class="book-tile" data-age="week-2" data-genre="content" aria-label="Генерация текста">
+        <img class="book-tile-img" src="https://kombai-assets-dev.b-cdn.net/generated_assets/a993fd29-0101-46bc-9b8b-13bc576c1070/38a41329d2b04273a796a994cb833edf.png" alt="Модуль курса: генерация текста">
+        <div class="book-tile-content">
+          <span class="book-age-badge">Неделя 2</span>
+          <span class="book-genre">Для контента</span>
+          <h3 class="book-title">Генерация текста</h3>
+          <div class="book-meta">
+            <span>Практикум</span>
+            <span class="book-price">4 урока</span>
+          </div>
+          <p class="book-desc">Тексты для соцсетей, лендингов и рассылок — под свой tone of voice и без потери смысла.</p>
+        </div>
+      </article>
+
+      <!-- Module 3 -->
+      <article class="book-tile" data-age="week-3" data-genre="content" aria-label="Визуал и видео">
+        <img class="book-tile-img" src="https://kombai-assets-dev.b-cdn.net/generated_assets/a993fd29-0101-46bc-9b8b-13bc576c1070/5a9b52a054da48caab845c3f41fde839.png" alt="Модуль курса: визуал и видео">
+        <div class="book-tile-content">
+          <span class="book-age-badge">Неделя 3</span>
+          <span class="book-genre">Для контента</span>
+          <h3 class="book-title">Визуал и видео</h3>
+          <div class="book-meta">
+            <span>Практикум</span>
+            <span class="book-price">5 уроков</span>
+          </div>
+          <p class="book-desc">Изображения, обложки и короткие видео для рекламы, блога и презентаций.</p>
+        </div>
+      </article>
+
+      <!-- Module 4 -->
+      <article class="book-tile" data-age="week-4" data-genre="business" aria-label="Автоматизация процессов">
+        <img class="book-tile-img" src="https://kombai-assets-dev.b-cdn.net/generated_assets/a993fd29-0101-46bc-9b8b-13bc576c1070/1dc2f69e04274a489444b655f7929580.png" alt="Модуль курса: автоматизация процессов">
+        <div class="book-tile-content">
+          <span class="book-age-badge">Неделя 4</span>
+          <span class="book-genre">Для бизнеса</span>
+          <h3 class="book-title">Автоматизация процессов</h3>
+          <div class="book-meta">
+            <span>Практикум</span>
+            <span class="book-price">6 уроков</span>
+          </div>
+          <p class="book-desc">Связываем сервисы и убираем рутину: заявки, отчёты и дайджесты работают сами.</p>
+        </div>
+      </article>
+
+      <!-- Module 5 -->
+      <article class="book-tile" data-age="week-5" data-genre="business" aria-label="AI-агенты и ассистенты">
+        <img class="book-tile-img" src="https://kombai-assets-dev.b-cdn.net/generated_assets/a993fd29-0101-46bc-9b8b-13bc576c1070/2365c976a1a4475ba6ac11e8d6b921c9.png" alt="Модуль курса: AI-агенты и ассистенты">
+        <div class="book-tile-content">
+          <span class="book-age-badge">Неделя 5</span>
+          <span class="book-genre">Для бизнеса</span>
+          <h3 class="book-title">AI-агенты и ассистенты</h3>
+          <div class="book-meta">
+            <span>Практикум</span>
+            <span class="book-price">5 уроков</span>
+          </div>
+          <p class="book-desc">Собираем ассистента с базой знаний и цепочкой автономных шагов под свою задачу.</p>
+        </div>
+      </article>
+
+      <!-- Module 6 -->
+      <article class="book-tile" data-age="week-8" data-genre="work" aria-label="Финальный проект">
+        <img class="book-tile-img" src="https://kombai-assets-dev.b-cdn.net/generated_assets/a993fd29-0101-46bc-9b8b-13bc576c1070/37ee2feea9c3417bb4d22e4b880a9445.png" alt="Модуль курса: финальный проект">
+        <div class="book-tile-content">
+          <span class="book-age-badge">Неделя 8</span>
+          <span class="book-genre">Для работы</span>
+          <h3 class="book-title">Финальный проект</h3>
+          <div class="book-meta">
+            <span>Защита проекта</span>
+            <span class="book-price">1:1 с ментором</span>
+          </div>
+          <p class="book-desc">Собираем AI-продукт на реальной задаче и защищаем его перед командой и наставником.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== PREVIEW SECTION ===== -->
+  <div class="preview-outer" id="previewOuter" aria-label="Превью программы">
+    <div class="preview-section-heading">
+      <div class="section-kicker" style="color:var(--accent-lime)">Что даёт программа</div>
+    </div>
+    <div class="preview-sticky" id="previewSticky">
+      <div class="preview-strip" id="previewStrip">
+
+        <!-- Statement 1 -->
+        <div class="preview-panel">
+          <div class="preview-quote-block">
+            <span class="preview-quote-mark" aria-hidden="true">"</span>
+            <blockquote class="preview-quote">За 8 недель — 12 проектов в портфолио</blockquote>
+            <cite class="preview-source">— Портфолио</cite>
+          </div>
+          <div class="preview-image-wrap">
+            <img src="https://images.pexels.com/photos/7105576/pexels-photo-7105576.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Практика на курсе AI-Профессия">
+          </div>
+        </div>
+
+        <!-- Statement 2 -->
+        <div class="preview-panel">
+          <div class="preview-quote-block">
+            <span class="preview-quote-mark" aria-hidden="true">"</span>
+            <blockquote class="preview-quote">Разборы 1:1 с наставником каждую неделю</blockquote>
+            <cite class="preview-source">— Формат</cite>
+          </div>
+          <div class="preview-image-wrap">
+            <img src="https://images.pexels.com/photos/5561176/pexels-photo-5561176.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Разбор проекта с наставником LeadUp AI">
+          </div>
+        </div>
+
+        <!-- Statement 3 -->
+        <div class="preview-panel">
+          <div class="preview-quote-block">
+            <span class="preview-quote-mark" aria-hidden="true">"</span>
+            <blockquote class="preview-quote">2 400+ выпускников уже зарабатывают на ИИ</blockquote>
+            <cite class="preview-source">— Результаты</cite>
+          </div>
+          <div class="preview-image-wrap">
+            <img src="https://images.pexels.com/photos/7476135/pexels-photo-7476135.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Выпускники курса LeadUp AI">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CLASSROOM SECTION ===== -->
+  <section class="classroom-section" id="classroom" aria-label="Формат обучения">
+    <div class="classroom-photo-wrap">
+      <img
+        class="classroom-photo"
+        id="classroomPhoto"
+        src="https://images.pexels.com/photos/37131664/pexels-photo-37131664.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80"
+        alt="Участники курса LeadUp AI на разборе проекта"
+      >
+    </div>
+    <div class="classroom-text-side">
+      <p class="classroom-kicker classroom-text-line" style="transition-delay:0ms">Формат обучения</p>
+      <h2 class="classroom-heading classroom-text-line" style="transition-delay:80ms">Как проходит обучение</h2>
+      <p class="classroom-body classroom-text-line" style="transition-delay:160ms">
+        8 недель, 12 практических проектов и разборы 1:1 с наставником. Каждую неделю — живой вебинар, домашняя работа
+        и обратная связь по твоему проекту. Учишься на реальных задачах, а не на абстрактных примерах.
+      </p>
+      <p class="classroom-body classroom-text-line" style="transition-delay:200ms; font-size:0.9rem; margin-bottom:0">
+        12 месяцев доступа к материалам · <strong>рассрочка от 17 €/мес</strong>
+      </p>
+      <div class="classroom-stats classroom-text-line" style="transition-delay:240ms; margin-top:1.5rem">
+        <div>
+          <span class="classroom-stat-num">2 400+</span>
+          <span class="classroom-stat-label">выпускников</span>
+        </div>
+        <div>
+          <span class="classroom-stat-num">87%</span>
+          <span class="classroom-stat-label">доходят до финального проекта</span>
+        </div>
+      </div>
+      <div class="classroom-ctas classroom-text-line" style="transition-delay:320ms">
+        <a href="#form" class="btn-dark">Выбрать тариф</a>
+        <a href="#catalog" class="btn-outline-dark">Смотреть программу</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS SECTION ===== -->
+  <span id="events" aria-hidden="true"></span>
+  <div class="events-outer" id="eventsOuter" aria-label="Расписание потока">
+    <div class="events-sticky" id="eventsSticky">
+      <div class="events-heading-wrap">
+        <div class="section-kicker">Онлайн-поток</div>
+        <h2 class="events-heading letter-windup" id="eventsHeading">Расписание потока</h2>
+      </div>
+
+      <div class="events-timeline">
+        <div class="timeline-axis" aria-hidden="true"></div>
+        <div class="timeline-line" id="timelineLine" aria-hidden="true"></div>
+
+        <div class="events-list">
+
+          <!-- Event 1 — left -->
+          <div class="event-row">
+            <div>
+              <div class="event-card event-card-left" data-event-index="0">
+                <div class="event-date">26 окт · Онлайн</div>
+                <div class="event-name">Открытие потока</div>
+                <div class="event-author">Команда LeadUp AI</div>
+                <div class="event-venue">Вводный вебинар · 19:00 МСК</div>
+              </div>
+            </div>
+            <div><div class="event-dot" aria-hidden="true"></div></div>
+            <div class="event-empty"></div>
+          </div>
+
+          <!-- Event 2 — right -->
+          <div class="event-row">
+            <div class="event-empty"></div>
+            <div><div class="event-dot dot-lime" aria-hidden="true"></div></div>
+            <div>
+              <div class="event-card event-card-right" data-event-index="1">
+                <div class="event-date date-lime">2 ноя · Неделя 2</div>
+                <div class="event-name">Практикум по промптам</div>
+                <div class="event-author">Ментор потока</div>
+                <div class="event-venue">Разбор 1:1 · 18:00 МСК</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 — left -->
+          <div class="event-row">
+            <div>
+              <div class="event-card event-card-left" data-event-index="2">
+                <div class="event-date date-gold">16 ноя · Неделя 4</div>
+                <div class="event-name">Сессия по автоматизации</div>
+                <div class="event-author">Ментор потока</div>
+                <div class="event-venue">Вебинар и воркшоп · 19:00 МСК</div>
+              </div>
+            </div>
+            <div><div class="event-dot dot-gold" aria-hidden="true"></div></div>
+            <div class="event-empty"></div>
+          </div>
+
+          <!-- Event 4 — right -->
+          <div class="event-row">
+            <div class="event-empty"></div>
+            <div><div class="event-dot" aria-hidden="true"></div></div>
+            <div>
+              <div class="event-card event-card-right" data-event-index="3">
+                <div class="event-date">21 дек · Финал</div>
+                <div class="event-name">Защита проектов</div>
+                <div class="event-author">Команда LeadUp AI</div>
+                <div class="event-venue">Питчи и разбор · 18:00 МСК</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEWSLETTER CTA ===== -->
+  <section class="newsletter-section" id="form" aria-label="Заявка на курс">
+    <h2 class="newsletter-heading footer-reveal">Оставить заявку</h2>
+    <p class="newsletter-sub footer-reveal" style="transition-delay:100ms">
+      Оставь заявку — пришлём программу, условия и доступ к первому уроку без оплаты. Старт потока 26 октября, 12 мест.
+    </p>
+    <form class="reg-form footer-reveal" id="reg-form" data-endpoint="https://n8n.flowstudio.cloud/webhook/landing-leads" style="transition-delay:200ms" novalidate>
+      <input type="text" name="honeypot" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true"
+             style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"/>
+      <div class="grid2">
+        <div class="field">
+          <label for="f-name">Имя</label>
+          <input id="f-name" name="name" type="text" placeholder="Как тебя зовут" required autocomplete="name"/>
+        </div>
+        <div class="field">
+          <label for="f-email">E-mail</label>
+          <input id="f-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"/>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-contact">Telegram или WhatsApp</label>
+        <input id="f-contact" name="messenger" type="text" placeholder="@username или +7 ..." required/>
+      </div>
+      <div class="field">
+        <label for="f-plan">Тариф</label>
+        <select id="f-plan" name="plan">
+          <option>Стандарт — 199 €</option>
+          <option selected>С ментором — 399 €</option>
+          <option>VIP + трудоустройство — 899 €</option>
+          <option>Ещё не выбрал(а), нужна консультация</option>
+        </select>
+      </div>
+      <label class="consent">
+        <input type="checkbox" name="consent" required/>
+        <span>Согласен(на) с обработкой персональных данных и политикой конфиденциальности</span>
+      </label>
+      <button class="btn-primary" type="submit">Отправить заявку →</button>
+      <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+      <div class="form-note">Куратор свяжется в течение рабочего дня · данные не передаём третьим лицам</div>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand footer-reveal">
+        <div class="footer-logo">LeadUp<span> AI</span></div>
+        <p class="footer-tagline">Практическая программа по ИИ для работы, бизнеса и контента — с 2017 года.</p>
+      </div>
+
+      <div class="footer-col footer-reveal" style="transition-delay:80ms">
+        <h4>Программа</h4>
+        <ul>
+          <li><a href="#catalog">Модули</a></li>
+          <li><a href="#events">Расписание</a></li>
+          <li><a href="#classroom">Формат</a></li>
+          <li><a href="#form">Тарифы</a></li>
+          <li><a href="#catalog">Проекты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-reveal" style="transition-delay:160ms">
+        <h4>Обучение</h4>
+        <ul>
+          <li><a href="#classroom">Разборы 1:1</a></li>
+          <li><a href="#catalog">Портфолио</a></li>
+          <li><a href="#form">Сертификат</a></li>
+          <li><a href="#form">Вопросы и ответы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-reveal" style="transition-delay:240ms">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="#classroom">О курсе</a></li>
+          <li><a href="#form">Блог</a></li>
+          <li><a href="mailto:hello@leadup.guru">Контакты</a></li>
+          <li><a href="#form">Политика данных</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© <span id="y">2026</span> LeadUp AI. Все права защищены.</span>
+      <span class="footer-copy"><a href="mailto:hello@leadup.guru">hello@leadup.guru</a></span>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    'use strict';
+
+    // ===== STAR FIELD =====
+    (function buildStarField() {
+      const container = document.getElementById('starField');
+      const count = 120;
+      const frag = document.createDocumentFragment();
+      for (let i = 0; i < count; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = [
+          'width:' + size + 'px',
+          'height:' + size + 'px',
+          'top:' + (Math.random() * 100) + '%',
+          'left:' + (Math.random() * 100) + '%',
+          '--dur:' + (2 + Math.random() * 4) + 's',
+          '--delay:' + (-Math.random() * 4) + 's',
+          '--min-op:' + (0.05 + Math.random() * 0.2),
+          '--max-op:' + (0.5 + Math.random() * 0.5)
+        ].join(';');
+        frag.appendChild(s);
+      }
+      container.appendChild(frag);
+    })();
+
+    // ===== HERO OVERLAY REVEAL =====
+    (function revealHero() {
+      setTimeout(function() {
+        document.getElementById('heroOverlay').classList.add('visible');
+        document.getElementById('heroStats').classList.add('visible');
+      }, 600);
+    })();
+
+    // ===== RAf LOOP — single loop for all scroll animations =====
+    let lastScrollY = 0;
+    let ticking = false;
+
+    function onScroll() {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    function update() {
+      const sy = lastScrollY;
+
+      // --- Hero tile drift on scroll ---
+      const heroTiles = document.querySelectorAll('.hero-tile');
+      heroTiles.forEach(function(tile, i) {
+        const drift = sy * 0.03 * ((i % 3) - 1);
+        tile.style.setProperty('--scroll-drift', drift + 'px');
+        if (!tile.classList.contains('tile-hovered')) {
+          tile.style.transform = 'translate(0px,' + drift + 'px)';
+        }
+      });
+
+      // --- Horizontal pin scroll (preview section) ---
+      const previewOuter = document.getElementById('previewOuter');
+      const previewStrip = document.getElementById('previewStrip');
+      if (previewOuter && previewStrip) {
+        const rect = previewOuter.getBoundingClientRect();
+        const outerHeight = previewOuter.offsetHeight;
+        const vh = window.innerHeight;
+        // How far we've scrolled into the pin section
+        const scrollStart = previewOuter.offsetTop;
+        const scrollRange = outerHeight - vh;
+        const scrolled = sy - scrollStart;
+        const progress = Math.max(0, Math.min(1, scrolled / scrollRange));
+        // Strip translates: 0 to -200vw over the scroll range
+        const translateX = progress * 200;
+        previewStrip.style.transform = 'translateX(-' + translateX + 'vw)';
+      }
+
+      // --- Events timeline axis ---
+      const eventsOuter = document.getElementById('eventsOuter');
+      const timelineLine = document.getElementById('timelineLine');
+      if (eventsOuter && timelineLine) {
+        const evTop = eventsOuter.offsetTop;
+        const evHeight = eventsOuter.offsetHeight;
+        const vh = window.innerHeight;
+        const scrollInto = sy - evTop + vh * 0.5;
+        const progress = Math.max(0, Math.min(1, scrollInto / (evHeight * 0.8)));
+        timelineLine.style.transform = 'translateX(-50%) scaleY(' + progress + ')';
+
+        // Reveal event cards at thresholds
+        const cards = document.querySelectorAll('.event-card');
+        cards.forEach(function(card, idx) {
+          const threshold = idx / (cards.length + 1);
+          if (progress > threshold) {
+            card.classList.add('revealed');
+          }
+        });
+      }
+
+      ticking = false;
+    }
+
+    // ===== INTERSECTION OBSERVER for section animations =====
+
+    // Catalog heading word-reveal
+    (function setupWordReveal() {
+      const heading = document.getElementById('catalogHeading');
+      if (!heading) return;
+      const text = heading.textContent;
+      const words = text.split(' ');
+      heading.innerHTML = words.map(function(w, i) {
+        return '<span class="word-reveal" style="transition-delay:' + (i * 80) + 'ms">' + w + '</span>';
+      }).join(' ');
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            heading.querySelectorAll('.word-reveal').forEach(function(el) {
+              el.classList.add('revealed');
+            });
+            observer.unobserve(heading);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(heading);
+    })();
+
+    // Events heading letter-spacing wind-up
+    (function setupLetterWindup() {
+      const heading = document.getElementById('eventsHeading');
+      if (!heading) return;
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            heading.classList.add('wound');
+            observer.unobserve(heading);
+          }
+        });
+      }, { threshold: 0.5 });
+      observer.observe(heading);
+    })();
+
+    // Classroom reveal
+    (function setupClassroomReveal() {
+      const photo = document.getElementById('classroomPhoto');
+      const textLines = document.querySelectorAll('.classroom-text-line');
+
+      if (!photo) return;
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            photo.classList.add('revealed');
+            textLines.forEach(function(el) {
+              el.classList.add('revealed');
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(photo.parentElement);
+    })();
+
+    // Footer reveals
+    (function setupFooterReveal() {
+      const els = document.querySelectorAll('.footer-reveal');
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // ===== FILTER PILLS =====
+    (function setupFilterPills() {
+      const pills = document.querySelectorAll('.filter-pill');
+      const books = document.querySelectorAll('.book-tile');
+
+      pills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          pills.forEach(function(p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+
+          const filter = pill.dataset.filter;
+
+          books.forEach(function(book) {
+            if (filter === 'all') {
+              book.style.display = '';
+            } else if (filter === 'work') {
+              book.style.display = book.dataset.genre === 'work' ? '' : 'none';
+            } else if (filter === 'business') {
+              book.style.display = book.dataset.genre === 'business' ? '' : 'none';
+            } else if (filter === 'content') {
+              book.style.display = book.dataset.genre === 'content' ? '' : 'none';
+            }
+          });
+        });
+      });
+    })();
+
+    // ===== INITIAL SCROLL STATE =====
+    // Run update once on load
+    requestAnimationFrame(update);
+  </script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  /* ===== Конфигурация лендинга: используется вебхуком и аналитикой =====
+     landing_id = папка первого уровня, variant_id = папка варианта (A/B).
+     pixel_id оставьте пустым, пока не задан Meta Pixel ID в Events Manager. */
+  window.__LANDING__ = {
+    landing_id: 'cosmo-ai',
+    variant_id: 'v2',
+    page_lang: 'ru',
+    webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
+    consent_text_version: '2026-10-privacy-v1',
+    pixel_id: ''
+  };
+
+  /* --- Meta Pixel: подключается только если задан pixel_id --- */
+  (function(){
+    var id = window.__LANDING__.pixel_id;
+    if (!id) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id); fbq('track', 'PageView');
+  })();
+
+  (function(){
+    var L = window.__LANDING__;
+    var ATTR_KEY = 'lai_attr_v1';
+
+    function qs(){ return new URLSearchParams(window.location.search); }
+    function cookie(name){
+      var m = document.cookie.match('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\\/\+^])/g,'\\$1') + '=([^;]*)');
+      return m ? decodeURIComponent(m[1]) : null;
+    }
+    function uuid(){
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c){
+        var r = Math.random()*16|0, v = (c === 'x') ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+
+    /* first-touch атрибуция: UTM/fbclid фиксируем при первом заходе и храним в localStorage */
+    function collectAttribution(){
+      var p = qs();
+      var saved = null;
+      try { saved = JSON.parse(localStorage.getItem(ATTR_KEY) || 'null'); } catch(e){}
+      var fresh = p.has('utm_source') || p.has('fbclid') || p.has('gclid');
+      if (!saved || (fresh && !saved.has_new)){
+        saved = {
+          has_new: true,
+          utm_source: p.get('utm_source'),
+          utm_medium: p.get('utm_medium'),
+          utm_campaign: p.get('utm_campaign'),
+          utm_content: p.get('utm_content'),
+          utm_term: p.get('utm_term'),
+          fbclid: p.get('fbclid'),
+          referrer: document.referrer || null,
+          landing_url_first: window.location.href,
+          first_seen: new Date().toISOString()
+        };
+        try { localStorage.setItem(ATTR_KEY, JSON.stringify(saved)); } catch(e){}
+      }
+      return saved;
+    }
+    var ATTR = collectAttribution();
+
+    function fbCookies(){
+      var fbp = cookie('_fbp'), fbc = cookie('_fbc');
+      if (!fbc && ATTR.fbclid) fbc = 'fb.1.' + Date.now() + '.' + ATTR.fbclid;
+      return {fbp: fbp, fbc: fbc};
+    }
+    function page(){
+      return {landing_id: L.landing_id, variant_id: L.variant_id,
+              page_url: window.location.href, page_lang: L.page_lang};
+    }
+    function attribution(){
+      return {utm_source: ATTR.utm_source, utm_medium: ATTR.utm_medium,
+              utm_campaign: ATTR.utm_campaign, utm_content: ATTR.utm_content,
+              utm_term: ATTR.utm_term, fbclid: ATTR.fbclid, referrer: ATTR.referrer};
+    }
+
+    /* отправка события в n8n-вебхук (только поля, которые принимает workflow) */
+    function send(payload){
+      var body = Object.assign({
+        event_name: 'page_view',
+        event_id: uuid(),
+        ts: new Date().toISOString()
+      }, page(), attribution(), fbCookies(), payload);
+      try {
+        fetch(L.webhook, {method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify(body), keepalive: true}).catch(function(){});
+      } catch(e){}
+      return body.event_id;
+    }
+
+    function pixel(eventName, eventId){
+      if (window.fbq) window.fbq('track', eventName, {}, eventId ? {eventID: eventId} : undefined);
+    }
+
+    /* --- воронка --- */
+    send({event_name:'page_view'});
+    pixel('ViewContent');
+
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[href="#form"]') : null;
+      if (a) send({event_name:'cta_click'});
+    }, true);
+
+    var form = document.getElementById('reg-form');
+    if (!form) return;
+    var status = document.getElementById('form-status');
+    var btn = form.querySelector('button[type=submit]');
+    var okText = btn.textContent;
+    var started = false;
+
+    function setStatus(msg, warn){
+      status.style.color = warn ? 'var(--warning)' : 'var(--teal)';
+      status.textContent = msg;
+    }
+
+    form.addEventListener('focusin', function(){
+      if (started) return; started = true; send({event_name:'form_start'});
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var d = Object.fromEntries(new FormData(form).entries());
+      if (d.honeypot){ return; } /* анти-спам: скрытое поле заполнено ботом */
+      if (!d.name || !d.email || !d.messenger || !d.consent){
+        setStatus('Заполните все поля и отметьте согласие', true);
+        send({event_name:'form_error'});
+        return;
+      }
+
+      var eventId = uuid();
+      var endpoint = form.dataset.endpoint || L.webhook;
+      var payload = {
+        event_name: 'lead',
+        event_id: eventId,
+        name: d.name, email: d.email, messenger: d.messenger,
+        plan: d.plan || null, consent: true,
+        consent_text_version: L.consent_text_version, honeypot: ''
+      };
+      var body = Object.assign({
+        event_name:'lead', event_id: eventId, ts: new Date().toISOString()
+      }, page(), attribution(), fbCookies(), payload);
+
+      if (!endpoint){  /* аварийный fallback на e-mail */
+        window.location.href = 'mailto:hello@leadup.guru?subject=' +
+          encodeURIComponent('Заявка на курс AI-Профессия') + '&body=' + encodeURIComponent(
+            'Имя: ' + d.name + '\nE-mail: ' + d.email + '\nTelegram/WhatsApp: ' + d.messenger +
+            '\nТариф: ' + (d.plan || '—') + '\nИсточник: ' + L.landing_id + '/' + L.variant_id);
+        setStatus('Открываем почтовый клиент — отправьте письмо, и куратор ответит');
+        return;
+      }
+
+      btn.disabled = true; btn.textContent = 'Отправляем…';
+      fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)})
+        .then(function(r){ if (!r.ok) throw new Error('bad');
+          form.reset();
+          pixel('Lead', eventId);
+          setStatus('Заявка отправлена — куратор свяжется с вами');
+          btn.textContent = 'Заявка отправлена';
+        })
+        .catch(function(){
+          setStatus('Не удалось отправить. Напишите нам: hello@leadup.guru', true);
+          btn.disabled = false; btn.textContent = okText;
+        });
+    });
+  })();
+</script>
+</body>
+</html>
