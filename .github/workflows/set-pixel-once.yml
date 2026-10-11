@@ -1,0 +1,47 @@
+name: one-shot: Meta Pixel ID -> all landing pages
+
+# Одноразовый workflow: подключает Meta Pixel ко всем лендингам и удаляет себя.
+# Запускается самим фактом пуша этого файла в ветку, либо вручную (workflow_dispatch).
+
+on:
+  push:
+    paths:
+      - '.github/workflows/set-pixel-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  TARGET_BRANCH: pixel/meta-pixel-581042486157971
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guard — только целевая ветка
+        run: |
+          set -euo pipefail
+          echo "ref=$GITHUB_REF_NAME target=$TARGET_BRANCH"
+          test "$GITHUB_REF_NAME" = "$TARGET_BRANCH"
+
+      - name: Подключить Meta Pixel (581042486157971) к лендингам
+        run: python3 tools/pixel/set_pixel.py
+
+      - name: Commit, push и удаление временного workflow
+        run: |
+          set -euo pipefail
+          git config user.name "leadup-ai"
+          git config user.email "nagin@leadupmarketers.com"
+          git rm -f .github/workflows/set-pixel-once.yml 2>/dev/null || true
+          git add tools/pixel/set_pixel.py \
+                  ai-course/v1/index.html \
+                  ai-practicum/v1/index.html \
+                  lab/ai-longread/v1/index.html \
+                  lab/ai-longread/v2/index.html \
+                  lab/cosmo-ai/v1/index.html \
+                  lab/cosmo-ai/v2/index.html
+          git commit -m "Meta Pixel 581042486157971: подключение на все лендинги (ai-course/v1, ai-practicum/v1, ai-longread v1/v2, cosmo-ai v1/v2)"
+          git push origin "HEAD:${TARGET_BRANCH}"
