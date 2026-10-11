@@ -714,14 +714,14 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border-1);margin-top:80px}
 
   /* ===== Конфигурация лендинга: используется вебхуком и аналитикой =====
      landing_id = папка первого уровня, variant_id = папка варианта (A/B).
-     pixel_id оставьте пустым, пока не задан Meta Pixel ID в Events Manager. */
+     pixel_id — ID пикселя из Events Manager (задан). */
   window.__LANDING__ = {
     landing_id: 'ai-course',
     variant_id: 'v1',
     page_lang: 'ru',
     webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
     consent_text_version: '2026-10-privacy-v1',
-    pixel_id: ''
+    pixel_id: '28714651278203294'
   };
 
   /* --- Meta Pixel: подключается только если задан pixel_id --- */
