@@ -3,7 +3,8 @@
 """Подключение Meta Pixel к лендингам LeadUp AI.
 
 Ставит `pixel_id` в `window.__LANDING__` каждой страницы, при необходимости
-добавляет загрузчик пикселя и событие `PageView`.
+добавляет загрузчик пикселя и событие `PageView`, а также переносит страницы
+со старых ID пикселя на актуальный (`PREVIOUS_PIXEL_IDS`).
 
 Идемпотентен: повторный запуск ничего не ломает.
 Запуск из корня репозитория:  python3 tools/pixel/set_pixel.py
@@ -12,7 +13,13 @@ import pathlib
 import re
 import sys
 
-PIXEL_ID = "581042486157971"
+PIXEL_ID = "28714651278203294"  # "MBS Ads AI Agent" (Business: Management & Bookkeeping Services)
+
+# Пиксели, которые раньше стояли на страницах: при запуске заменяются на PIXEL_ID.
+# 581042486157971 — "Пиксель компании MBS" (не привязан к рекламному кабинету act_1421380076636776).
+PREVIOUS_PIXEL_IDS = [
+    "581042486157971",
+]
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
@@ -72,6 +79,15 @@ def patch(rel: str) -> tuple[int, int, list[str]]:
     lid = EXPECTED_LANDING_ID[rel]
     assert f"landing_id: '{lid}'" in text, f"{rel}: landing_id != {lid}"
 
+    # --- 0. миграция со старых ID пикселя ---
+    for old_id in PREVIOUS_PIXEL_IDS:
+        if old_id == PIXEL_ID:
+            continue
+        if old_id in text:
+            n = text.count(old_id)
+            text = text.replace(old_id, PIXEL_ID)
+            notes.append(f"миграция пикселя {old_id} -> {PIXEL_ID} ({n} шт.)")
+
     # --- 1. pixel_id ---
     if f"pixel_id: '{PIXEL_ID}'" in text:
         notes.append("pixel_id уже задан")
@@ -111,6 +127,8 @@ def patch(rel: str) -> tuple[int, int, list[str]]:
 
     # --- проверки результата ---
     assert text.count(PIXEL_ID) == 1, f"{rel}: ID пикселя встречается {text.count(PIXEL_ID)} раз"
+    for old_id in PREVIOUS_PIXEL_IDS:
+        assert old_id not in text, f"{rel}: остался старый ID пикселя {old_id}"
     assert text.count("fbq('track', 'PageView')") == 1, f"{rel}: PageView не ровно 1 раз"
     assert "fbevents.js" in text, f"{rel}: нет загрузчика пикселя"
     assert text.count("<title>") == 1, f"{rel}: <title> поехал"
