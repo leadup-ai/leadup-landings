@@ -15,9 +15,9 @@ DESC = ("Бесплатный 4-дневный ИИ-практикум LeadUp AI
 OGD = ("Четыре вечера, 0 €: 9 вопросов ментору — как проходит практикум, "
        "чему на нём учишься и что делать после.")
 TWD = "Четыре вечера, 0 € — 9 вопросов ментору о практикуме LeadUp AI."
-IMG = "https://leadup-ai.github.io/leadup-landings/assets/og/ai-longread-1200x630.png"
+IMG = "https://ad.leadup.guru/assets/og/ai-longread-1200x630.png"
 IMG_ALT = "Бесплатный ИИ-практикум LeadUp AI: четыре вечера, 0 €, старт 27 октября"
-BASE = "https://leadup-ai.github.io/leadup-landings/lab/ai-longread"
+BASE = "https://ad.leadup.guru/lab/ai-longread"
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 print("repo root:", ROOT, file=sys.stderr)
