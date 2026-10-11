@@ -554,9 +554,22 @@ h2.heading{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2re
     page_lang: 'ru',
     webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
     consent_text_version: '2026-10-privacy-v1',
-    pixel_id: '' /* TODO: вставить Meta Pixel ID */
+    pixel_id: '581042486157971' /* Meta Pixel ID (Events Manager) */
   };
   window.__LANDING__ = LANDING;
+
+  /* --- Meta Pixel: подключается, если задан pixel_id --- */
+  (function(){
+    var id = window.__LANDING__ && window.__LANDING__.pixel_id;
+    if (!id) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id); fbq('track', 'PageView');
+  })();
+
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -639,7 +652,7 @@ h2.heading{font-family:'Abril Fatface',serif;font-weight:400;font-size:clamp(2re
     } catch(e){}
 
     if (LANDING.pixel_id && window.fbq) {
-      try { window.fbq('track', eventName === 'lead' ? 'Lead' : eventName, {}, { eventID: payload.event_id }); } catch(e){}
+      try { if (eventName === 'lead') window.fbq('track', 'Lead', {}, { eventID: payload.event_id }); } catch(e){}
     }
     return payload.event_id;
   }
