@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>OG · ai-business · LeadUp AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    background:#fff;color:#000;
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    position:relative;
+  }
+  .blob{position:absolute;border-radius:50%;filter:blur(0px)}
+  .b1{right:-160px;top:-200px;width:620px;height:620px;background:#ece9ff}
+  .b2{right:-60px;bottom:-260px;width:520px;height:520px;background:#cac0ff;opacity:.45}
+  .b3{left:-220px;bottom:-300px;width:520px;height:520px;background:#f3f0ff}
+  .frame{position:absolute;inset:0;border:1px solid #e0e0e0}
+  .wrap{position:relative;height:100%;padding:54px 64px 50px;display:flex;flex-direction:column;justify-content:space-between}
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .logo{height:44px;width:auto;display:block;filter:invert(1)}
+  .tag{
+    font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#3d3bff;
+    border:1px solid rgba(61,59,255,.35);background:rgba(61,59,255,.07);
+    padding:9px 18px;border-radius:999px;white-space:nowrap;
+  }
+  .mid{max-width:1000px}
+  .kick{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3d3bff;
+    background:#ece9ff;padding:10px 18px;border-radius:999px;margin-bottom:24px;
+  }
+  .kick i{width:8px;height:8px;border-radius:50%;background:#3d3bff;display:block}
+  h1{font-size:74px;line-height:1.02;font-weight:900;letter-spacing:-.03em}
+  h1 em{font-style:normal;color:#3d3bff}
+  .sub{margin-top:22px;font-size:26px;line-height:1.32;font-weight:500;color:#565656;max-width:900px}
+  .bot{display:flex;align-items:flex-end;justify-content:space-between;gap:36px}
+  .facts{display:flex;gap:12px;flex-wrap:wrap}
+  .fact{font-size:19px;font-weight:700;color:#000;border:1px solid #e0e0e0;border-radius:14px;padding:12px 18px;background:#f6f6f7;white-space:nowrap}
+  .fact b{color:#3d3bff}
+  .who{display:flex;align-items:center;gap:16px}
+  .who img{width:88px;height:88px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 8px 26px rgba(20,20,20,.14)}
+  .who .txt{font-size:17px;line-height:1.35;color:#565656}
+  .who .txt b{display:block;font-size:20px;color:#000;font-weight:800;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="frame"></div>
+  <div class="wrap">
+    <div class="top">
+      <img class="logo" src="../../assets/leadup-logo.svg" alt="LeadUp AI">
+      <span class="tag">Курс LeadUp AI</span>
+    </div>
+
+    <div class="mid">
+      <span class="kick"><i></i>Старт 26 октября</span>
+      <h1>Нейросети<br>для <em>бизнеса</em></h1>
+      <p class="sub">За 8 недель вы соберёте команду ИИ-агентов под свои задачи — без кода и разработчиков</p>
+    </div>
+
+    <div class="bot">
+      <div class="facts">
+        <span class="fact"><b>8</b> недель</span>
+        <span class="fact"><b>12</b> проектов</span>
+        <span class="fact">ментор 1:1</span>
+        <span class="fact">доступ <b>12</b> мес</span>
+      </div>
+      <div class="who">
+        <img src="../../assets/mentor-nagin.svg" alt="Владимир Нагин">
+        <span class="txt"><b>Владимир Нагин</b>автор всех интенсимов и курсов LeadUp AI</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

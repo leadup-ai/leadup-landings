@@ -1,0 +1,41 @@
+name: Build OG image (ai-business)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/og/ai-business.html'
+      - '.github/workflows/og-business.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render OG card 1200x630
+        run: |
+          set -e
+          mkdir -p assets/og
+          google-chrome --headless=new --no-sandbox --disable-gpu --hide-scrollbars \
+            --force-device-scale-factor=1 --window-size=1200,630 \
+            --virtual-time-budget=5000 \
+            --screenshot=assets/og/ai-business-1200x630.png \
+            "file://$PWD/tools/og/ai-business.html"
+          ls -l assets/og
+
+      - name: Commit image
+        run: |
+          set -e
+          git config user.name "leadup-ai"
+          git config user.email "nagin@leadupmarketers.com"
+          git add assets/og/ai-business-1200x630.png
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "OG image: ai-business 1200x630"
+            git push
+          fi
