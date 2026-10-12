@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Нейросети для бизнеса — курс LeadUp AI за 8 недель</title>
+<meta name="description" content="Курс «Нейросети для бизнеса» от LeadUp AI: за 8 недель соберёте команду ИИ-агентов под свои задачи — без кода и разработчиков. 12 проектов, ментор 1:1, доступ 12 месяцев. Старт 26 октября, 12 мест.">
+<link rel="canonical" href="https://ad.leadup.guru/ai-business/v2/">
+<meta property="og:site_name" content="LeadUp AI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Нейросети для бизнеса — курс LeadUp AI за 8 недель">
+<meta property="og:description" content="8 недель практики: 12 проектов с ИИ-агентами, ментор 1:1 и доступ на 12 месяцев. Старт 26 октября, 12 мест.">
+<meta property="og:url" content="https://ad.leadup.guru/ai-business/v2/">
+<meta property="og:image" content="https://ad.leadup.guru/assets/og/ai-business-1200x630.png">
+<meta property="og:image:secure_url" content="https://ad.leadup.guru/assets/og/ai-business-1200x630.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Курс «Нейросети для бизнеса» от LeadUp AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросети для бизнеса — курс LeadUp AI">
+<meta name="twitter:description" content="8 недель, 12 проектов, ментор 1:1. Старт 26 октября.">
+<meta name="twitter:image" content="https://ad.leadup.guru/assets/og/ai-business-1200x630.png">
+<meta name="theme-color" content="#0A0F0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   LeadUp AI — Design Tokens (v3)
+   Direction: D2 Cold Technical · Color: C3 Electric Teal · Type: TS1 Geist
+   Reference DNA: Linear + Vercel + Raycast
+   Source: leadup-ai/LeadUp-AI-Design-System · colors_and_type.css
+   (Google Fonts @import replaced by <link> in <head>)
+   ============================================================ */
+
+:root {
+  color-scheme: dark;
+
+  /* ---------- COLORS: Signature ---------- */
+  --teal:            #00E5C7;   /* Electric Teal — CTA, accent, links */
+  --teal-hover:      #14F5D7;
+  --teal-pressed:    #00CBB0;
+  --teal-tint:       rgba(0, 229, 199, 0.12);
+  --teal-tint-2:     rgba(0, 229, 199, 0.20);
+  --teal-glow:       0 0 24px rgba(0, 229, 199, 0.45);
+
+  /* ---------- COLORS: Surfaces (dark-first) ---------- */
+  --bg-0:            #050807;   /* deepest — outside body */
+  --bg-1:            #0A0F0D;   /* default page */
+  --bg-2:            #0F1512;   /* elevated section */
+  --bg-3:            #141B18;   /* card surface */
+  --bg-4:            #1B2420;   /* raised card, input */
+  --bg-5:            #253029;   /* hover, divider-fill */
+
+  /* ---------- COLORS: Light surfaces ---------- */
+  --bg-light-1:      #FAFBFA;
+  --bg-light-2:      #F2F4F3;
+  --bg-light-3:      #E6EAE8;
+
+  /* ---------- COLORS: Foreground (on dark) ---------- */
+  --fg-1:            #EDEFEE;   /* primary text */
+  --fg-2:            rgba(237, 239, 238, 0.72);  /* body */
+  --fg-3:            rgba(237, 239, 238, 0.52);  /* muted */
+  --fg-4:            rgba(237, 239, 238, 0.36);  /* captions, disabled */
+
+  /* ---------- COLORS: Foreground (on light) ---------- */
+  --fg-light-1:      #0A0F0D;
+  --fg-light-2:      #3A4440;
+  --fg-light-3:      #6A7570;
+  --fg-light-4:      #9BA3A0;
+
+  /* ---------- COLORS: Borders ---------- */
+  --border-1:        rgba(255, 255, 255, 0.06);   /* subtle */
+  --border-2:        rgba(255, 255, 255, 0.10);   /* default */
+  --border-3:        rgba(255, 255, 255, 0.18);   /* hover, focus-ring */
+  --border-light-1:  rgba(10, 15, 13, 0.08);
+  --border-light-2:  rgba(10, 15, 13, 0.14);
+  --border-light-3:  rgba(10, 15, 13, 0.22);
+
+  /* ---------- COLORS: Light semantic ---------- */
+  --teal-on-light:       #009E8A;   /* darker teal for AA on white */
+  --teal-on-light-hover: #00B89E;
+  --teal-tint-light:     rgba(0, 158, 138, 0.10);
+  --success-on-light:    #15803D;
+  --success-tint-light:  rgba(21, 128, 61, 0.10);
+  --warning-on-light:    #A16207;
+  --warning-tint-light:  rgba(161, 98, 7, 0.10);
+  --danger-on-light:     #DC2626;
+  --danger-tint-light:   rgba(220, 38, 38, 0.10);
+  --info-on-light:       #2563EB;
+  --info-tint-light:     rgba(37, 99, 235, 0.10);
+
+  /* ---------- COLORS: Light shadows ---------- */
+  --shadow-light-1:  0 1px 2px rgba(10, 15, 13, 0.06);
+  --shadow-light-2:  0 2px 8px rgba(10, 15, 13, 0.08), 0 0 0 1px rgba(10, 15, 13, 0.04);
+  --shadow-light-3:  0 8px 24px rgba(10, 15, 13, 0.10), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-light-4:  0 20px 48px rgba(10, 15, 13, 0.14), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-light-teal: 0 0 0 1px var(--teal-on-light), 0 4px 16px rgba(0, 158, 138, 0.18);
+  --ring-focus-light: 0 0 0 2px #fff, 0 0 0 4px var(--teal-on-light);
+
+  /* ---------- COLORS: Semantic ---------- */
+  --success:         #3EE089;
+  --success-tint:    rgba(62, 224, 137, 0.14);
+  --warning:         #F5B544;
+  --warning-tint:    rgba(245, 181, 68, 0.14);
+  --danger:          #FF5D5D;
+  --danger-tint:     rgba(255, 93, 93, 0.14);
+  --info:            #6EB8FF;
+  --info-tint:       rgba(110, 184, 255, 0.14);
+
+  /* ---------- COLORS: Gradients (used sparingly) ---------- */
+  --grad-glow:       radial-gradient(60% 80% at 50% 0%, rgba(0, 229, 199, 0.18) 0%, transparent 60%);
+  --grad-mesh:       radial-gradient(at 18% 24%, rgba(0, 229, 199, 0.10) 0, transparent 45%),
+                     radial-gradient(at 82% 80%, rgba(0, 229, 199, 0.06) 0, transparent 50%);
+  --grad-teal-line:  linear-gradient(90deg, transparent, rgba(0, 229, 199, 0.4), transparent);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-sans:       'Geist', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  --font-mono:       'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs:         11px;    /* eyebrow, kbd, mono tags */
+  --text-sm:         13px;    /* small body, meta */
+  --text-base:       15px;    /* body */
+  --text-md:         17px;    /* lead paragraph */
+  --text-lg:         20px;    /* small subhead */
+  --text-xl:         24px;    /* H4 */
+  --text-2xl:        32px;    /* H3 */
+  --text-3xl:        44px;    /* H2 */
+  --text-4xl:        60px;    /* H1 */
+  --text-5xl:        84px;    /* display */
+  --text-6xl:        120px;   /* mega display */
+
+  --fw-regular:      400;
+  --fw-medium:       500;
+  --fw-semibold:     600;
+  --fw-bold:         700;
+  --fw-extrabold:    800;
+  --fw-black:        900;
+
+  --lh-display:      0.98;
+  --lh-tight:        1.04;
+  --lh-snug:         1.2;
+  --lh-normal:       1.5;
+  --lh-relaxed:      1.6;
+
+  --tracking-mega:   -0.045em;   /* 84px+ display */
+  --tracking-tight:  -0.035em;   /* H1, H2 */
+  --tracking-snug:   -0.02em;    /* H3, H4 */
+  --tracking-normal: -0.01em;    /* lead */
+  --tracking-wide:   0.08em;     /* eyebrow uppercase */
+  --tracking-mono:   0.02em;     /* mono */
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1:            4px;
+  --sp-2:            8px;
+  --sp-3:            12px;
+  --sp-4:            16px;
+  --sp-5:            20px;
+  --sp-6:            24px;
+  --sp-8:            32px;
+  --sp-10:           40px;
+  --sp-12:           48px;
+  --sp-16:           64px;
+  --sp-20:           80px;
+  --sp-24:           96px;
+  --sp-32:           128px;
+  --sp-40:           160px;
+
+  /* ---------- RADII (tight, Linear-esque) ---------- */
+  --r-sm:            4px;    /* kbd, inline */
+  --r-md:            6px;    /* small buttons, badges */
+  --r-lg:            8px;    /* buttons, inputs — DEFAULT */
+  --r-xl:            10px;   /* cards */
+  --r-2xl:           14px;   /* large cards, hero blocks */
+  --r-3xl:           20px;   /* feature panels */
+  --r-full:          9999px;
+
+  /* ---------- SHADOWS (subtle, mostly rings) ---------- */
+  --shadow-1:        0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2:        0 2px 8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-3:        0 12px 32px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-4:        0 24px 64px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-teal:     0 0 0 1px var(--teal), 0 8px 24px rgba(0, 229, 199, 0.28);
+  --ring-focus:      0 0 0 2px var(--bg-1), 0 0 0 4px var(--teal);
+
+  /* ---------- MOTION (Linear-like, fast + crisp) ---------- */
+  --ease:            cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1:           120ms;   /* hover, micro */
+  --dur-2:           200ms;   /* default */
+  --dur-3:           320ms;   /* reveal */
+  --dur-4:           500ms;   /* complex */
+
+  /* ---------- GRID / LAYOUT ---------- */
+  --container-wide:   1440px;  /* dashboards, wide app shells */
+  --container:        1240px;  /* DEFAULT marketing / content */
+  --container-narrow: 980px;   /* focused forms, auth, pricing */
+  --container-prose:  720px;   /* blog article body, long-form reading */
+  --grid-cols:        12;      /* base column count */
+  --grid-gap:         24px;    /* desktop gutter */
+  --grid-gap-md:      20px;    /* tablet gutter */
+  --grid-gap-sm:      16px;    /* mobile gutter */
+  --gutter:           24px;    /* container side padding (desktop) */
+  --gutter-mobile:    20px;    /* container side padding (mobile) */
+
+  /* ---------- BREAKPOINTS (mobile-first min-width) ----------
+     Use in @media (min-width: var-equivalent). CSS custom props
+     can't be used directly in media queries — these document the
+     canonical values; copy the px into your @media rules.        */
+  --bp-sm:           480px;   /* large phone           */
+  --bp-md:           768px;   /* tablet / split layouts */
+  --bp-lg:           1024px;  /* laptop / sidebar appears */
+  --bp-xl:           1280px;  /* desktop / full container */
+  --bp-2xl:          1536px;  /* wide / max content     */
+
+  /* ---------- Z-INDEX / ELEVATION ORDER ----------
+     Single source of stacking truth. Never hard-code z-index;
+     reference these so overlays never fight each other.          */
+  --z-base:          0;      /* default flow                 */
+  --z-raised:        10;     /* hovered card, focused input  */
+  --z-sticky:        100;    /* sticky section, sticky bottom-bar */
+  --z-header:        200;    /* site header / app top nav    */
+  --z-dropdown:      300;    /* dropdown, select menu, autocomplete */
+  --z-backdrop:      400;    /* modal / drawer scrim         */
+  --z-modal:         500;    /* dialog, bottom-sheet, drawer */
+  --z-popover:       600;    /* popover, command palette     */
+  --z-toast:         700;    /* toast / snackbar stack       */
+  --z-tooltip:       800;    /* tooltip — always on top of UI */
+  --z-max:           9999;   /* escape hatch — onboarding spotlight */
+
+  /* ---------- BACKGROUND GRID (signature pattern) ---------- */
+  --grid-line:       rgba(255, 255, 255, 0.035);
+  --grid-size:       48px;
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+html {
+  background: var(--bg-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'ss01', 'cv11';  /* Geist stylistic sets */
+}
+
+body {
+  background: var(--bg-1);
+  color: var(--fg-1);
+  min-height: 100vh;
+}
+
+/* ---------- Typography elements ---------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  margin: 0;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+}
+
+h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+}
+h4 {
+  font-size: var(--text-xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+}
+h5 {
+  font-size: var(--text-lg);
+  font-weight: var(--fw-semibold);
+  line-height: 1.3;
+  letter-spacing: var(--tracking-snug);
+}
+h6 {
+  font-size: var(--text-md);
+  font-weight: var(--fw-semibold);
+  line-height: 1.35;
+  letter-spacing: var(--tracking-normal);
+}
+
+.display-1 {
+  font-size: var(--text-5xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-mega);
+}
+.display-2 {
+  font-size: var(--text-6xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-mega);
+}
+
+p {
+  margin: 0;
+  color: var(--fg-2);
+  line-height: var(--lh-normal);
+}
+
+.lead {
+  font-size: var(--text-md);
+  color: var(--fg-2);
+  line-height: 1.55;
+  letter-spacing: var(--tracking-normal);
+}
+
+code, pre, kbd, samp, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  letter-spacing: var(--tracking-mono);
+}
+
+code {
+  padding: 1px 6px;
+  background: var(--bg-3);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-sm);
+  color: var(--teal);
+}
+
+kbd {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: var(--fw-medium);
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  border-bottom-width: 2px;
+  border-radius: var(--r-sm);
+  color: var(--fg-1);
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color var(--dur-1) var(--ease);
+}
+a:hover { color: var(--teal-hover); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.eyebrow-accent {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.caption {
+  font-size: var(--text-xs);
+  color: var(--fg-3);
+  line-height: var(--lh-snug);
+}
+
+/* Selection */
+::selection { background: var(--teal-tint-2); color: var(--fg-1); }
+
+/* Focus */
+:where(button, a, input, textarea, select, [tabindex]):focus-visible {
+  outline: none;
+  box-shadow: var(--ring-focus);
+  border-radius: inherit;
+}
+
+/* Scrollbar (dark) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-1); }
+::-webkit-scrollbar-thumb { background: var(--bg-4); border-radius: 10px; border: 2px solid var(--bg-1); }
+::-webkit-scrollbar-thumb:hover { background: var(--bg-5); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ============================================================
+   UTILITY PRIMITIVES
+   ============================================================ */
+
+.container       { max-width: var(--container);        margin: 0 auto; padding: 0 var(--gutter); }
+.container-wide  { max-width: var(--container-wide);   margin: 0 auto; padding: 0 var(--gutter); }
+.container-narrow{ max-width: var(--container-narrow); margin: 0 auto; padding: 0 var(--gutter); }
+.container-prose { max-width: var(--container-prose);  margin: 0 auto; padding: 0 var(--gutter); }
+
+/* 12-col responsive grid: 1 col (mobile) → 6 (tablet) → 12 (desktop) */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap-sm);
+}
+@media (min-width: 768px) {
+  .grid-12 { grid-template-columns: repeat(8, 1fr); gap: var(--grid-gap-md); }
+}
+@media (min-width: 1024px) {
+  .grid-12 { grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
+}
+@media (max-width: 767px) {
+  .container, .container-wide, .container-narrow, .container-prose {
+    padding: 0 var(--gutter-mobile);
+  }
+}
+
+/* Signature background grid */
+.bg-grid {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+.bg-glow-top {
+  background: var(--grad-glow), var(--bg-1);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-1);
+  border: 0;
+}
+
+.divider-teal {
+  height: 1px;
+  background: var(--grad-teal-line);
+  border: 0;
+}
+
+/* Gradient text — SPARINGLY, max 1 per screen */
+.text-teal-grad {
+  background: linear-gradient(90deg, #14F5D7 0%, #00E5C7 50%, #00CBB0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ============================================================
+   LIGHT THEME — apply via [data-theme="light"] or .theme-light
+   ============================================================ */
+
+[data-theme="light"],
+.theme-light {
+  --bg-0:        #F0F2F1;
+  --bg-1:        #FAFBFA;
+  --bg-2:        #F2F4F3;
+  --bg-3:        #E6EAE8;
+  --bg-4:        #DCE0DE;
+  --bg-5:        #CFD4D2;
+
+  --fg-1:        #0A0F0D;
+  --fg-2:        #3A4440;
+  --fg-3:        #6A7570;
+  --fg-4:        #9BA3A0;
+
+  --border-1:    rgba(10, 15, 13, 0.06);
+  --border-2:    rgba(10, 15, 13, 0.12);
+  --border-3:    rgba(10, 15, 13, 0.22);
+
+  --teal:        #009E8A;
+  --teal-hover:  #00B89E;
+  --teal-pressed:#008575;
+  --teal-tint:   rgba(0, 158, 138, 0.10);
+  --teal-tint-2: rgba(0, 158, 138, 0.18);
+  --teal-glow:   0 4px 16px rgba(0, 158, 138, 0.22);
+
+  --success:     #15803D;
+  --success-tint:rgba(21, 128, 61, 0.10);
+  --warning:     #A16207;
+  --warning-tint:rgba(161, 98, 7, 0.10);
+  --danger:      #DC2626;
+  --danger-tint: rgba(220, 38, 38, 0.10);
+  --info:        #2563EB;
+  --info-tint:   rgba(37, 99, 235, 0.10);
+
+  --shadow-1:    0 1px 2px rgba(10, 15, 13, 0.06);
+  --shadow-2:    0 2px 8px rgba(10, 15, 13, 0.08), 0 0 0 1px rgba(10, 15, 13, 0.04);
+  --shadow-3:    0 8px 24px rgba(10, 15, 13, 0.10), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-4:    0 20px 48px rgba(10, 15, 13, 0.14), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-teal: 0 0 0 1px var(--teal), 0 4px 16px rgba(0, 158, 138, 0.18);
+  --ring-focus:  0 0 0 2px #fff, 0 0 0 4px var(--teal);
+
+  --grid-line:   rgba(10, 15, 13, 0.04);
+
+  --grad-glow:   radial-gradient(60% 80% at 50% 0%, rgba(0, 158, 138, 0.10) 0%, transparent 60%);
+  --grad-teal-line: linear-gradient(90deg, transparent, rgba(0, 158, 138, 0.25), transparent);
+
+  color-scheme: light;
+}
+
+[data-theme="light"] body,
+.theme-light body,
+[data-theme="light"],
+.theme-light {
+  background: var(--bg-1);
+  color: var(--fg-1);
+}
+
+/* Auto light via OS preference */
+/* Light mode is opt-in only via [data-theme="light"] above.
+   We intentionally do NOT auto-switch on prefers-color-scheme:
+   the design system is dark-first by brand. */
+
+/* ============================================================
+   ai-business · v2 — PAGE LAYER
+   LeadUp AI Design System v3 · D2 Cold Technical · C3 Electric Teal · TS1 Geist
+   Structure, ids, classes and copy: 1:1 with ai-business v1.
+   Only the visual layer is new. Teal = text / 1px border / glow only.
+   Budget on this page: 1 grid-pattern (hero), 1 teal glow (.price--top), 0 gradient text.
+   ============================================================ */
+
+/* ---------- 0. Brand font lock ---------- */
+/* DS v3 --font-sans keeps 'Inter' as a 4th-level fallback (token file copied verbatim).
+   Brand rules forbid Inter, so the page layer re-declares the same Geist stack without it.
+   No Inter webfont is loaded anywhere on this page. */
+:root{--font-sans:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+
+/* ---------- 0b. Base parity & safety ---------- */
+[hidden]{display:none!important}
+img{max-width:100%}
+svg{display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+ul,ol{list-style:none;margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}
+::selection{background:var(--teal-tint-2);color:var(--fg-1)}
+
+/* ---------- 1. Type scale (overrides DS element defaults) ---------- */
+.h1{
+  font-family:var(--font-sans);
+  font-size:clamp(34px,9vw,60px);line-height:var(--lh-tight);
+  letter-spacing:var(--tracking-tight);font-weight:var(--fw-bold);color:var(--fg-1);
+  text-wrap:balance;
+}
+.h2{
+  font-family:var(--font-sans);
+  font-size:clamp(26px,6.2vw,44px);line-height:var(--lh-tight);
+  letter-spacing:var(--tracking-tight);font-weight:var(--fw-bold);color:var(--fg-1);
+  text-wrap:balance;
+}
+.h3{
+  font-family:var(--font-sans);
+  font-size:clamp(20px,4.4vw,32px);line-height:var(--lh-snug);
+  letter-spacing:var(--tracking-snug);font-weight:var(--fw-semibold);color:var(--fg-1);
+}
+.lead{font-size:var(--text-md);line-height:1.55;letter-spacing:var(--tracking-normal);color:var(--fg-2);max-width:68ch}
+.sub{font-size:var(--text-base);line-height:var(--lh-relaxed);letter-spacing:var(--tracking-normal);color:var(--fg-2);max-width:66ch}
+.tiny{font-size:var(--text-sm);line-height:1.55;color:var(--fg-3);max-width:66ch}
+.prose{max-width:68ch}
+.prose p{font-size:var(--text-base);line-height:var(--lh-relaxed);color:var(--fg-2)}
+.prose p+p{margin-top:12px}
+.section__head>.lead,.section__head>.sub,.section__head>.tiny{margin-top:14px}
+.section__head>.h2+.lead{margin-top:16px}
+
+/* ---------- 2. Sections ---------- */
+.section{position:relative;padding:clamp(56px,8vw,110px) 0;background:var(--bg-1)}
+.section--soft{background:var(--bg-2)}
+.section--lav{background:var(--bg-3)}
+.section--dark{background:var(--bg-0);border-top:1px solid var(--border-1);border-bottom:1px solid var(--border-1)}
+.section__head{max-width:860px;margin-bottom:clamp(26px,4vw,44px)}
+.section__head--center{margin-left:auto;margin-right:auto;text-align:center}
+.section__head--center .lead,.section__head--center .sub,.section__head--center .tiny{margin-left:auto;margin-right:auto}
+.section__head>*{min-width:0}
+
+/* ---------- 3. Skip link + notice bar ---------- */
+.skip{
+  position:absolute;left:12px;top:-70px;z-index:var(--z-header);
+  display:inline-flex;align-items:center;min-height:44px;
+  padding:10px 16px;background:var(--bg-3);border:1px solid var(--teal);
+  border-radius:var(--r-lg);font-size:var(--text-sm);color:var(--teal);
+  transition:top var(--dur-2) var(--ease);
+}
+.skip:focus{top:12px}
+.notice{position:relative;z-index:var(--z-dropdown);background:var(--bg-0);color:var(--fg-1);font-size:var(--text-sm);line-height:18px;border-bottom:1px solid var(--border-1)}
+.notice__in{
+  display:flex;align-items:center;justify-content:center;gap:8px 14px;flex-wrap:wrap;
+  padding:9px var(--gutter-mobile);max-width:var(--container);margin:0 auto;text-align:center;
+}
+.notice__dot{position:relative;flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.notice__dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--teal-tint-2)}
+.notice__link{
+  display:inline-flex;align-items:center;min-height:44px;padding:0 6px;margin:0 -6px;
+  font-size:var(--text-sm);color:var(--teal);text-decoration:underline;
+  text-decoration-color:var(--teal-tint-2);text-underline-offset:3px;white-space:nowrap;
+  transition:color var(--dur-1) var(--ease),text-decoration-color var(--dur-1) var(--ease);
+}
+.notice__link:hover{color:var(--teal-hover);text-decoration-color:var(--teal-hover)}
+@media(min-width:768px){.notice__in{padding-left:var(--gutter);padding-right:var(--gutter)}}
+
+/* ---------- 4. Header ---------- */
+.header{
+  position:sticky;top:0;left:0;z-index:var(--z-header);width:100%;
+  background:rgba(10,15,13,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border-1);
+  transition:box-shadow var(--dur-2) var(--ease),background-color var(--dur-2) var(--ease);
+}
+.header.is-compact{background:rgba(5,8,7,.94);box-shadow:var(--shadow-3)}
+.header__in{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  max-width:var(--container);margin:0 auto;min-height:62px;padding:9px var(--gutter-mobile);
+  transition:min-height var(--dur-2) var(--ease),padding var(--dur-2) var(--ease);
+}
+.header.is-compact .header__in{min-height:52px;padding-top:4px;padding-bottom:4px}
+.logo{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;min-width:0;min-height:44px}
+.logo__img{display:block;height:22px;width:auto;max-width:100%;filter:brightness(10)} /* DS logo rule, dark bg */
+.header__nav{display:none}
+.header__right{display:flex;align-items:center;gap:10px;flex:0 0 auto;min-width:0}
+@media(min-width:400px){.logo__img{height:24px}}
+@media(min-width:768px){.header__in{padding-left:var(--gutter);padding-right:var(--gutter)}}
+@media(min-width:1024px){
+  .logo__img{height:28px}
+  .header__nav{display:block;flex:1 1 auto;min-width:0;margin:0 16px}
+  .header__nav ul{display:flex;flex-wrap:wrap;gap:2px}
+  .header__nav a{
+    display:block;padding:10px 12px;border-radius:var(--r-lg);font-size:var(--text-sm);
+    line-height:20px;color:var(--fg-2);
+    transition:background-color var(--dur-1) var(--ease),color var(--dur-1) var(--ease);
+  }
+  .header__nav a:hover{background:var(--bg-3);color:var(--fg-1)}
+  .header__in{min-height:76px;padding:14px var(--gutter)}
+  .header.is-compact .header__in{min-height:62px;padding-top:8px;padding-bottom:8px}
+}
+
+/* ---------- 5. Buttons + link ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:52px;padding:12px 20px;border:1px solid transparent;border-radius:var(--r-lg);
+  font-family:var(--font-sans);font-size:var(--text-base);font-weight:var(--fw-semibold);
+  letter-spacing:var(--tracking-normal);line-height:1.2;color:var(--fg-1);text-align:center;
+  text-decoration:none;white-space:nowrap;
+  transition:background-color var(--dur-2) var(--ease),border-color var(--dur-2) var(--ease),
+             color var(--dur-2) var(--ease),box-shadow var(--dur-2) var(--ease),transform var(--dur-1) var(--ease);
+}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.6;cursor:default}
+.btn--primary{border-color:var(--teal);background:var(--bg-4);color:var(--teal)}
+.btn--primary:hover{border-color:var(--teal-hover);background:var(--teal-tint);color:var(--teal-hover)}
+.btn--primary:active{border-color:var(--teal-pressed);color:var(--teal-pressed)}
+.btn--white{background:var(--bg-light-1);border-color:var(--bg-light-1);color:var(--fg-light-1)}
+.btn--white:hover{background:#FFFFFF;border-color:#FFFFFF;color:var(--fg-light-1)}
+.btn--ghost{border-color:var(--border-2);background:transparent;color:var(--fg-2)}
+.btn--ghost:hover{border-color:var(--border-3);background:var(--bg-3);color:var(--fg-1)}
+.btn--block{display:flex;width:100%;padding-left:12px;padding-right:12px}
+.btn--sm{min-height:44px;padding:9px 14px;border-radius:var(--r-md);font-size:var(--text-sm)}
+.link{
+  display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0;
+  font-size:var(--text-base);font-weight:var(--fw-medium);color:var(--teal);
+  text-decoration:underline;text-decoration-color:var(--teal-tint-2);text-underline-offset:4px;
+  transition:color var(--dur-1) var(--ease),text-decoration-color var(--dur-1) var(--ease);
+}
+.link:hover{color:var(--teal-hover);text-decoration-color:var(--teal-hover)}
+@media(max-width:400px){.btn{padding:12px 16px}}
+
+/* ---------- 6. Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:clamp(36px,6vw,80px) 0 clamp(40px,6vw,84px);background:var(--grad-glow),var(--bg-1)}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+  background-size:var(--grid-size) var(--grid-size);
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 76%);
+  mask-image:linear-gradient(180deg,#000 0%,transparent 76%);
+}
+.hero .container{position:relative;z-index:var(--z-raised)}
+.hero__grid{display:grid;gap:30px}
+.hero__grid>*{min-width:0}
+.hero__text>.kicker{display:inline-flex;align-items:center;gap:8px}
+.kicker{
+  font-family:var(--font-mono);font-size:var(--text-xs);font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--teal);
+}
+.kicker::before{content:"";flex:0 0 auto;width:6px;height:6px;border-radius:50%;border:1px solid var(--teal)}
+.hero h1{margin-top:18px}
+.hero__sub{margin-top:18px;font-size:clamp(17px,4.6vw,20px);line-height:1.5;letter-spacing:var(--tracking-normal);color:var(--fg-2);max-width:560px}
+.hero__badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.badge{
+  display:inline-flex;align-items:center;min-height:30px;padding:5px 12px;
+  border:1px solid var(--border-2);border-radius:var(--r-full);background:var(--bg-3);
+  font-family:var(--font-mono);font-size:var(--text-xs);line-height:18px;font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-mono);text-transform:uppercase;color:var(--fg-3);
+}
+.hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:26px}
+.hero__note{
+  margin-top:18px;padding-left:14px;border-left:1px solid var(--teal);
+  font-size:var(--text-sm);line-height:1.6;color:var(--fg-3);max-width:560px;
+}
+.hero__facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.fact{background:var(--bg-3);border:1px solid var(--border-1);border-radius:var(--r-xl);padding:13px 14px;min-width:0}
+.fact__v{display:block;font-size:var(--text-lg);line-height:1.25;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.fact__l{display:block;margin-top:4px;font-size:var(--text-sm);line-height:17px;color:var(--fg-3)}
+@media(min-width:768px){
+  .hero__facts{grid-template-columns:repeat(4,1fr)}
+}
+@media(min-width:1024px){
+  .hero__grid{grid-template-columns:1.04fr .96fr;gap:48px;align-items:center}
+  .hero__sub{font-size:22px;line-height:30px}
+}
+
+/* ---------- 7. Mock device (hero visual) ---------- */
+.mock{
+  border:1px solid var(--border-2);border-radius:var(--r-2xl);padding:14px;
+  background:linear-gradient(180deg,var(--bg-3),var(--bg-2) 60%,var(--bg-1));
+  box-shadow:var(--shadow-3);
+}
+.mock__top{display:flex;align-items:center;gap:6px;padding:2px 4px 12px;border-bottom:1px solid var(--border-1)}
+.mock__dot{width:8px;height:8px;border-radius:50%;background:var(--bg-5)}
+.mock__dot--on{background:var(--teal)}
+.mock__title{margin-left:auto;font-family:var(--font-mono);font-size:11px;line-height:16px;font-weight:var(--fw-medium);letter-spacing:var(--tracking-mono);text-transform:uppercase;color:var(--fg-3)}
+.mock__row{display:flex;align-items:center;gap:10px;min-width:0;padding:9px 10px;border-radius:var(--r-lg);background:var(--bg-3);border:1px solid var(--border-1)}
+.mock__row+.mock__row{margin-top:8px}
+.mock__row:first-of-type{margin-top:12px}
+.mock__ico{
+  flex:0 0 auto;width:28px;height:28px;border-radius:var(--r-md);border:1px solid var(--teal);
+  background:var(--teal-tint);color:var(--teal);font-family:var(--font-mono);
+  font-size:11px;line-height:26px;font-weight:var(--fw-semibold);text-align:center;
+}
+.mock__ico--lav{border-color:var(--border-2);background:var(--bg-4);color:var(--fg-3)}
+.mock__txt{min-width:0;flex:1 1 auto}
+.mock__b{display:block;font-size:14px;line-height:18px;font-weight:var(--fw-medium);color:var(--fg-1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock__m{display:block;font-size:12px;line-height:16px;color:var(--fg-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock__state{
+  flex:0 0 auto;padding:2px 8px;border-radius:var(--r-full);border:1px solid var(--border-2);
+  background:var(--bg-4);color:var(--fg-2);font-family:var(--font-mono);font-size:11px;
+  line-height:16px;font-weight:var(--fw-medium);letter-spacing:var(--tracking-mono);text-transform:uppercase;
+}
+.mock__foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0 4px 2px}
+.mock__pill{
+  padding:6px 11px;border-radius:var(--r-full);border:1px solid rgba(0,229,199,.30);
+  background:var(--teal-tint);color:var(--teal);font-family:var(--font-mono);font-size:11px;
+  line-height:16px;font-weight:var(--fw-medium);letter-spacing:var(--tracking-mono);text-transform:uppercase;
+}
+
+/* ---------- 8. Fact cards + generic cards ---------- */
+.grid-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid-facts>*{min-width:0}
+.card{background:var(--bg-3);border:1px solid var(--border-1);border-radius:var(--r-xl);padding:18px;height:100%;min-width:0}
+.card__k{display:block;font-family:var(--font-mono);font-size:var(--text-xs);line-height:16px;font-weight:var(--fw-medium);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-3)}
+.card__v{display:block;margin-top:8px;font-size:var(--text-base);line-height:1.45;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.card__n{display:block;font-family:var(--font-mono);font-size:var(--text-xs);line-height:16px;font-weight:var(--fw-medium);letter-spacing:var(--tracking-mono);text-transform:uppercase;color:var(--teal)}
+.card__t{display:block;margin-top:10px;font-size:var(--text-md);line-height:1.3;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.card__d{display:block;margin-top:8px;font-size:var(--text-sm);line-height:1.55;color:var(--fg-3)}
+@media(min-width:768px){
+  .grid-facts{grid-template-columns:repeat(3,1fr);gap:14px}
+}
+@media(min-width:1024px){
+  .grid-facts{grid-template-columns:repeat(6,1fr)}
+  .card{padding:22px}
+}
+
+/* ---------- 9. Two-column blocks + panels ---------- */
+.cols-2{display:grid;gap:16px}
+.cols-2>*{min-width:0}
+.panel{background:var(--bg-3);border:1px solid var(--border-1);border-radius:var(--r-2xl);padding:20px}
+.panel>.h3{margin-bottom:10px}
+@media(min-width:768px){
+  .cols-2{grid-template-columns:1fr 1fr;gap:20px}
+  .panel{padding:26px}
+}
+
+/* ---------- 10. Advantages (tabs) ---------- */
+.adv__tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.adv__tab{
+  min-height:44px;padding:10px 16px;border:1px solid var(--border-2);border-radius:var(--r-full);
+  background:var(--bg-3);font-size:var(--text-sm);line-height:20px;font-weight:var(--fw-medium);
+  color:var(--fg-2);
+  transition:background-color var(--dur-1) var(--ease),border-color var(--dur-1) var(--ease),color var(--dur-1) var(--ease);
+}
+.adv__tab:hover{border-color:var(--border-3);color:var(--fg-1)}
+.adv__tab.is-active{border-color:var(--teal);background:var(--teal-tint);color:var(--teal)}
+.adv__panel{
+  display:grid;gap:22px;background:var(--bg-3);border:1px solid var(--border-1);
+  border-radius:var(--r-2xl);padding:20px;
+}
+.adv__panel[hidden]{display:none}
+.adv__panel>*{min-width:0}
+.adv__num{display:block;font-family:var(--font-mono);font-size:var(--text-xs);font-weight:var(--fw-medium);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--teal)}
+.adv__panel .h3{margin-top:10px}
+.adv__panel .sub{margin-top:10px}
+.adv__list{display:grid;gap:10px;align-content:start}
+.adv__list li{position:relative;padding-left:24px;font-size:var(--text-base);line-height:22px;color:var(--fg-2)}
+.adv__list li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:12px;border-radius:var(--r-sm);border:1px solid var(--teal)}
+.adv__res{
+  margin-top:16px;padding:12px 14px;border:1px solid rgba(0,229,199,.28);border-radius:var(--r-lg);
+  background:var(--teal-tint);font-size:var(--text-sm);line-height:1.5;color:var(--fg-1);
+}
+@media(min-width:768px){
+  .adv__panel{grid-template-columns:1fr 1fr;gap:28px;align-items:start;padding:26px}
+}
+
+/* ---------- 11. Check lists ---------- */
+.checks{display:grid;gap:12px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-size:var(--text-base);line-height:1.55;color:var(--fg-2)}
+.checks li svg{flex:0 0 auto;width:18px;height:18px;margin-top:3px;color:var(--teal)}
+@media(min-width:768px){
+  .checks--2{grid-template-columns:1fr 1fr;gap:12px 28px}
+}
+
+/* ---------- 12. Slider (projects) ---------- */
+.slider{margin:0 calc(var(--gutter-mobile) * -1)}
+.slider__head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 var(--gutter-mobile);margin-bottom:16px}
+.slider__title{font-size:var(--text-lg);line-height:1.3;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.slider__nav{display:flex;gap:8px;flex:0 0 auto}
+.arrow{
+  display:flex;align-items:center;justify-content:center;width:44px;height:44px;
+  border:1px solid var(--border-2);border-radius:var(--r-lg);background:var(--bg-3);color:var(--fg-2);
+  transition:background-color var(--dur-1) var(--ease),border-color var(--dur-1) var(--ease),color var(--dur-1) var(--ease);
+}
+.arrow:hover{border-color:var(--teal);background:var(--teal-tint);color:var(--teal)}
+.arrow svg{width:18px;height:18px}
+.slider__track{
+  display:flex;gap:12px;overflow-x:auto;padding:2px var(--gutter-mobile) 16px;
+  scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.slider__track::-webkit-scrollbar{display:none}
+.slider__item{flex:0 0 auto;width:78%;max-width:280px;height:auto;scroll-snap-align:start}
+.slider__item .card{display:flex;flex-direction:column}
+.slider__item .card__d{flex:1 1 auto}
+@media(min-width:768px){
+  .slider{margin:0}
+  .slider__head{padding:0}
+  .slider__track{padding:2px 0 16px}
+  .slider__item{width:31%;max-width:340px}
+}
+@media(min-width:1024px){
+  .slider__item{width:23.2%}
+}
+
+/* ---------- 13. Accordion (program + faq) ---------- */
+.acc{display:grid;gap:0;border-top:1px solid var(--border-1)}
+.acc__item{border-bottom:1px solid var(--border-1);min-width:0}
+.acc__btn{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;padding:16px 0;text-align:left}
+.acc__num{flex:0 0 auto;min-width:26px;font-family:var(--font-mono);font-size:var(--text-sm);line-height:20px;color:var(--fg-3);transition:color var(--dur-2) var(--ease)}
+.acc__label{
+  flex:1 1 auto;min-width:0;font-size:var(--text-md);line-height:24px;font-weight:var(--fw-semibold);
+  letter-spacing:var(--tracking-snug);color:var(--fg-1);
+  transition:color var(--dur-2) var(--ease);
+}
+.acc__ico{
+  position:relative;flex:0 0 auto;width:26px;height:26px;border:1px solid var(--border-2);
+  border-radius:50%;color:var(--fg-2);
+  transition:background-color var(--dur-2) var(--ease),color var(--dur-2) var(--ease),border-color var(--dur-2) var(--ease);
+}
+.acc__ico::before,.acc__ico::after{content:"";position:absolute;left:50%;top:50%;background:currentColor;transform:translate(-50%,-50%)}
+.acc__ico::before{width:10px;height:1.5px}
+.acc__ico::after{width:1.5px;height:10px;transition:opacity var(--dur-2) var(--ease)}
+.acc__btn:hover .acc__ico{border-color:var(--border-3);color:var(--fg-1)}
+.acc__item.is-open .acc__ico{border-color:var(--teal);background:var(--teal-tint);color:var(--teal)}
+.acc__item.is-open .acc__ico::after{opacity:0}
+.acc__item.is-open .acc__num,.acc__item.is-open .acc__label{color:var(--teal)}
+.acc__panel{max-width:860px;padding:0 0 20px}
+.acc__panel[hidden]{display:none}
+.acc__panel p{font-size:var(--text-base);line-height:23px;color:var(--fg-2)}
+.acc__panel p+p{margin-top:10px}
+.acc__res{margin-top:10px;padding-left:12px;border-left:1px solid var(--teal);font-size:var(--text-sm);line-height:1.55;color:var(--fg-3)}
+@media(min-width:768px){
+  .acc__panel{padding-left:42px;padding-right:24px}
+}
+@media(min-width:1024px){
+  .acc__label{font-size:20px;line-height:28px}
+}
+
+/* ---------- 14. Certificate ---------- */
+.cert{display:grid;gap:24px;align-items:center}
+.cert>*{min-width:0}
+.cert__card{
+  position:relative;overflow:hidden;padding:24px;
+  background:linear-gradient(160deg,var(--bg-4) 0%,var(--bg-3) 58%,var(--bg-2) 100%);
+  border:1px solid var(--border-2);border-radius:var(--r-2xl);box-shadow:var(--shadow-3);
+}
+.cert__card::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--grad-teal-line)}
+.cert__brand{display:flex;align-items:center;gap:10px;font-size:var(--text-sm);font-weight:var(--fw-medium);letter-spacing:var(--tracking-normal);color:var(--fg-2)}
+.cert__mark{
+  display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:26px;height:26px;
+  border:1px solid var(--teal);border-radius:var(--r-md);background:var(--teal-tint);
+  font-family:var(--font-mono);font-size:11px;font-weight:var(--fw-bold);color:var(--teal);
+}
+.cert__title{margin-top:22px;font-size:var(--text-xl);line-height:1.25;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.cert__line{margin-top:10px;font-family:var(--font-mono);font-size:var(--text-sm);line-height:20px;color:var(--fg-3)}
+.cert__meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding-right:70px}
+.cert__tag{
+  padding:5px 10px;border:1px solid var(--border-2);border-radius:var(--r-md);background:var(--bg-2);
+  font-family:var(--font-mono);font-size:var(--text-xs);line-height:16px;font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-mono);text-transform:uppercase;color:var(--fg-3);
+}
+.cert__seal{
+  position:absolute;right:20px;bottom:20px;display:flex;align-items:center;justify-content:center;
+  width:54px;height:54px;padding:6px;border:1px solid var(--teal);border-radius:50%;
+  background:var(--teal-tint);color:var(--teal);font-family:var(--font-mono);font-size:10px;
+  line-height:12px;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-mono);
+  text-transform:uppercase;text-align:center;
+}
+@media(min-width:768px){
+  .cert{grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+}
+
+/* ---------- 15. Speaker ---------- */
+.speaker{
+  display:grid;gap:20px;background:var(--bg-3);border:1px solid var(--border-1);
+  border-radius:var(--r-2xl);padding:18px;
+}
+.speaker>*{min-width:0}
+.speaker__ava{
+  position:relative;display:flex;align-items:flex-end;justify-content:center;width:100%;height:264px;
+  border:1px solid var(--border-2);border-radius:var(--r-xl);padding-bottom:0;overflow:hidden;
+  background:linear-gradient(180deg,var(--bg-4) 0%,var(--bg-2) 100%);
+}
+.speaker__ava img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.speaker__name{font-size:22px;line-height:28px;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.speaker__role{margin-top:8px;font-family:var(--font-mono);font-size:var(--text-sm);line-height:21px;font-weight:var(--fw-medium);letter-spacing:var(--tracking-mono);color:var(--teal)}
+.speaker__bio{margin-top:14px;font-size:var(--text-base);line-height:23px;color:var(--fg-2)}
+.speaker__bio+.speaker__bio{margin-top:12px}
+.speaker__tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.speaker__tag{
+  padding:6px 11px;border-radius:var(--r-full);border:1px solid var(--border-2);background:var(--bg-2);
+  font-family:var(--font-mono);font-size:var(--text-xs);line-height:16px;font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-mono);text-transform:uppercase;color:var(--fg-3);
+}
+@media(min-width:768px){
+  .speaker{grid-template-columns:220px 1fr;gap:32px;align-items:start;padding:26px}
+  .speaker__ava{height:260px}
+}
+@media(min-width:1024px){
+  .speaker{grid-template-columns:260px 1fr;align-items:center}
+  .speaker__ava{height:300px}
+}
+
+/* ---------- 16. Reviews ---------- */
+.reviews{display:grid;gap:14px}
+.review{
+  display:flex;flex-direction:column;min-width:0;padding:20px;
+  background:var(--bg-3);border:1px solid var(--border-1);border-radius:var(--r-xl);
+}
+.stars{display:flex;gap:3px;color:var(--teal)}
+.stars svg{width:15px;height:15px}
+.review__text{margin-top:14px;flex:1 1 auto;font-size:var(--text-base);line-height:23px;color:var(--fg-2)}
+.review__who{margin-top:16px;font-size:var(--text-base);line-height:1.3;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.review__role{margin-top:4px;font-family:var(--font-mono);font-size:var(--text-sm);line-height:20px;color:var(--fg-3)}
+@media(min-width:768px){.reviews{grid-template-columns:1fr 1fr;gap:20px}}
+@media(min-width:1024px){.reviews{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- 17. Prices ---------- */
+.prices{display:grid;gap:16px;margin-top:26px}
+.prices>*{min-width:0}
+.price{
+  position:relative;display:flex;flex-direction:column;min-width:0;padding:22px;
+  background:var(--bg-3);border:1px solid var(--border-1);border-radius:var(--r-2xl);
+}
+.price--top{border-color:var(--teal);box-shadow:var(--shadow-teal)}
+.price__tag{
+  position:absolute;top:-13px;left:20px;padding:5px 12px;border:1px solid var(--teal);
+  border-radius:var(--r-full);background:var(--bg-1);color:var(--teal);
+  font-family:var(--font-mono);font-size:var(--text-xs);line-height:16px;font-weight:var(--fw-medium);
+  letter-spacing:var(--tracking-mono);text-transform:uppercase;
+}
+.price__name{font-size:19px;line-height:25px;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.price__sum{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-top:12px}
+.price__now{font-size:32px;line-height:36px;font-weight:var(--fw-bold);letter-spacing:var(--tracking-tight);color:var(--fg-1)}
+.price__old{font-size:16px;line-height:20px;color:var(--fg-4);text-decoration:line-through}
+.price__mo{margin-top:6px;font-size:var(--text-sm);line-height:20px;color:var(--fg-3)}
+.price__list{margin-top:16px;flex:1 1 auto}
+.price__list li{position:relative;padding-left:24px;font-size:var(--text-base);line-height:22px;color:var(--fg-2)}
+.price__list li+li{margin-top:10px}
+.price__list li::before{
+  content:"";position:absolute;left:1px;top:7px;width:13px;height:7px;
+  border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg);
+}
+.price .btn{margin-top:20px}
+@media(min-width:768px){.prices{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.prices{grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}}
+
+/* ---------- 18. Form ---------- */
+.form-grid{display:grid;gap:28px}
+.form-grid>*{min-width:0}
+.form-head>.lead{margin-top:14px}
+.form-head>.checks{margin-top:22px}
+.form{background:var(--bg-2);border:1px solid var(--border-2);border-radius:var(--r-2xl);padding:20px}
+.form__title{font-size:var(--text-xl);line-height:1.3;font-weight:var(--fw-semibold);letter-spacing:var(--tracking-snug);color:var(--fg-1)}
+.form__sub{margin-top:8px;font-size:var(--text-sm);line-height:1.5;color:var(--fg-3)}
+.form__body{margin-top:20px}
+.form__tiny{margin-top:12px;font-size:var(--text-sm);line-height:18px;color:var(--fg-3)}
+.form__tiny a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.field{margin-bottom:14px;min-width:0}
+.field label{display:block;margin-bottom:6px;font-size:var(--text-sm);line-height:20px;font-weight:var(--fw-medium);color:var(--fg-2)}
+.field input,.field select{
+  width:100%;height:52px;padding:0 14px;border:1px solid var(--border-2);border-radius:var(--r-lg);
+  background:var(--bg-4);color:var(--fg-1);font-family:var(--font-sans);font-size:16px;line-height:20px;
+  transition:border-color var(--dur-1) var(--ease),box-shadow var(--dur-1) var(--ease),background-color var(--dur-1) var(--ease);
+}
+.field input::placeholder{color:var(--fg-4)}
+.field input:hover,.field select:hover{border-color:var(--border-3)}
+.field input:focus,.field select:focus{outline:0;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-tint)}
+.field select{
+  appearance:none;-webkit-appearance:none;padding-right:38px;
+  background-image:linear-gradient(45deg,transparent 50%,var(--fg-3) 50%),linear-gradient(135deg,var(--fg-3) 50%,transparent 50%);
+  background-position:calc(100% - 19px) calc(50% + 2px),calc(100% - 14px) calc(50% + 2px);
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat;
+}
+.field.is-invalid input,.field.is-invalid select{border-color:var(--danger);background:var(--danger-tint)}
+.field__err{display:none;margin-top:6px;font-size:var(--text-sm);line-height:18px;color:var(--danger)}
+.field.is-invalid .field__err{display:block}
+.field--check{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px}
+.field--check input{flex:0 0 auto;width:22px;height:22px;height:22px;margin:1px 0 0;padding:0;accent-color:var(--teal)}
+.field--check label{margin:0;font-size:var(--text-sm);line-height:20px;font-weight:var(--fw-regular);color:var(--fg-2)}
+.field--check a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none}
+.form-msg{display:none;margin-top:14px;padding:12px 14px;border-radius:var(--r-lg);font-size:var(--text-sm);line-height:20px}
+.form-msg.is-ok{display:block;background:var(--success-tint);border:1px solid rgba(62,224,137,.35);color:var(--success)}
+.form-msg.is-err{display:block;background:var(--danger-tint);border:1px solid rgba(255,93,93,.35);color:var(--danger)}
+@media(min-width:768px){.form{padding:26px}}
+@media(min-width:1024px){.form-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start}}
+
+/* ---------- 19. Footer ---------- */
+.footer{background:var(--bg-0);border-top:1px solid var(--border-1);padding:clamp(40px,6vw,64px) 0 28px}
+.footer__grid{display:grid;gap:28px}
+.footer__grid>*{min-width:0}
+.footer__logo-img{display:block;height:26px;width:auto;max-width:100%;filter:brightness(10)} /* DS logo rule, dark bg */
+.footer__desc{margin-top:16px;font-size:var(--text-sm);line-height:19px;color:var(--fg-2);max-width:340px}
+.footer__credit{margin-top:12px;font-size:var(--text-sm);line-height:19px;color:var(--fg-3);max-width:340px}
+.footer__title{font-family:var(--font-mono);font-size:var(--text-xs);line-height:16px;font-weight:var(--fw-medium);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-3)}
+.footer__list{margin-top:16px;display:grid;gap:2px}
+.footer__list a{display:inline-flex;align-items:center;min-height:44px;font-size:var(--text-sm);line-height:20px;color:var(--fg-2);text-decoration:none}
+.footer__list a:hover{color:var(--teal)}
+.footer__mail{font-family:var(--font-mono);color:var(--teal)}
+.footer__bottom{
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;
+  margin-top:36px;padding-top:18px;border-top:1px solid var(--border-1);
+  font-size:var(--text-xs);line-height:18px;color:var(--fg-4);
+}
+.footer__legal{color:var(--fg-4)}
+@media(min-width:768px){.footer__grid{grid-template-columns:1.2fr 1fr 1fr}}
+@media(min-width:1024px){.footer__grid{gap:48px}}
+
+/* ---------- 20. Mobile sticky CTA ---------- */
+.mob-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:var(--z-sticky);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(5,8,7,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--border-2);transform:translateY(0);
+  transition:transform var(--dur-3) var(--ease);
+}
+.mob-cta.is-hidden{transform:translateY(130%)}
+.mob-cta__note{margin-top:6px;text-align:center;font-family:var(--font-mono);font-size:var(--text-xs);line-height:16px;letter-spacing:var(--tracking-mono);text-transform:uppercase;color:var(--fg-3)}
+@media(min-width:768px){.mob-cta{display:none}}
+@media(max-width:767.9px){body{padding-bottom:84px}}
+
+/* ---------- 21. Narrow-screen fixes (parity with v1) ---------- */
+.hero__grid>*,.cols-2>*,.grid-facts>*,.stats>*,.section__head>*,.adv__panel>*,.speaker__*,.speaker>*,.reviews>*,.card>*{min-width:0}
+.badge,.fact__l,.hero__note,.card__d,.review__text,.acc__label,.card__v,.footer__desc{overflow-wrap:anywhere}
+@media(max-width:400px){
+  .hero__facts{grid-template-columns:1fr}
+  .hero__facts .fact{display:flex;align-items:baseline;gap:8px}
+  .hero__facts .fact__l{margin-top:0}
+  .hero__cta .btn{width:100%;justify-content:center}
+  .mock{padding:12px}
+  .mock__row{padding:8px}
+  .acc__btn{gap:10px}
+  .acc__num{min-width:22px}
+  .price__now{font-size:28px;line-height:32px}
+  .cert__meta{padding-right:0}
+  .cert__seal{position:static;margin-top:20px}
+}
+</style>
+</head>
+<body>
+<noscript><style>.acc__panel[hidden]{display:block!important}.acc__panel{padding-left:0!important}.mob-cta{display:none!important}</style></noscript>
+<a class="skip" href="#form" data-scroll="#form">Перейти к форме заявки</a>
+
+<div class="notice">
+  <div class="notice__in">
+    <span class="notice__dot" aria-hidden="true"></span>
+    <span>Старт потока — 26 октября, мест в потоке: 12</span>
+    <button class="notice__link" type="button" data-scroll="#form" data-cta="notice">Забронировать со скидкой</button>
+  </div>
+</div>
+
+<header class="header" id="siteHeader">
+  <div class="header__in">
+    <a class="logo" href="#top" data-scroll="#top" aria-label="LeadUp AI — к началу страницы">
+      <img class="logo__img" src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60" decoding="async">
+    </a>
+    <nav class="header__nav" aria-label="Разделы страницы">
+      <ul>
+        <li><a href="#program" data-scroll="#program">Программа</a></li>
+        <li><a href="#how" data-scroll="#how">Как учимся</a></li>
+        <li><a href="#speaker" data-scroll="#speaker">Спикер</a></li>
+        <li><a href="#reviews" data-scroll="#reviews">Отзывы</a></li>
+        <li><a href="#faq" data-scroll="#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+    <div class="header__right">
+      <button class="btn btn--primary btn--sm" type="button" data-scroll="#form" data-cta="header">Записаться</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ГЕРОЙ -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <span class="kicker">Курс LeadUp AI · старт 26 октября</span>
+        <h1 class="h1" id="hero-title">Нейросети для бизнеса</h1>
+        <p class="hero__sub">За 8 недель соберёте команду ИИ-агентов под свои задачи — без кода и разработчиков</p>
+        <div class="hero__badges">
+          <span class="badge">Онлайн</span>
+          <span class="badge">Без кода</span>
+          <span class="badge">12 мест в потоке</span>
+        </div>
+        <div class="hero__cta">
+          <button class="btn btn--primary" type="button" data-scroll="#form" data-cta="hero">Забронировать место</button>
+          <button class="link" type="button" data-scroll="#program">Смотреть программу</button>
+        </div>
+        <p class="hero__note">2400+ выпускников, средняя оценка 4.9 из 5. Рассрочка от 17 € в месяц, без процентов.</p>
+        <ul class="hero__facts">
+          <li class="fact"><span class="fact__v">8 недель</span><span class="fact__l">обучения и практики</span></li>
+          <li class="fact"><span class="fact__v">12 проектов</span><span class="fact__l">в портфолио</span></li>
+          <li class="fact"><span class="fact__v">1:1 с ментором</span><span class="fact__l">раз в неделю</span></li>
+          <li class="fact"><span class="fact__v">12 месяцев</span><span class="fact__l">доступа к материалам</span></li>
+        </ul>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="mock">
+          <div class="mock__top">
+            <span class="mock__dot mock__dot--on"></span>
+            <span class="mock__dot"></span>
+            <span class="mock__dot"></span>
+            <span class="mock__title">Агенты в работе</span>
+          </div>
+          <div class="mock__row">
+            <span class="mock__ico">01</span>
+            <span class="mock__txt"><span class="mock__b">Ассистент продаж</span><span class="mock__m">отвечает на заявки по прайсу</span></span>
+            <span class="mock__state">работает</span>
+          </div>
+          <div class="mock__row">
+            <span class="mock__ico mock__ico--lav">02</span>
+            <span class="mock__txt"><span class="mock__b">Обработка заявок</span><span class="mock__m">ставит задачу менеджеру</span></span>
+            <span class="mock__state">работает</span>
+          </div>
+          <div class="mock__row">
+            <span class="mock__ico">03</span>
+            <span class="mock__txt"><span class="mock__b">Отчёты руководителю</span><span class="mock__m">сводит цифры из таблиц</span></span>
+            <span class="mock__state">ночью</span>
+          </div>
+          <div class="mock__row">
+            <span class="mock__ico mock__ico--lav">04</span>
+            <span class="mock__txt"><span class="mock__b">Поддержка клиентов</span><span class="mock__m">отвечает по базе знаний</span></span>
+            <span class="mock__state">работает</span>
+          </div>
+          <div class="mock__foot">
+            <span class="mock__pill">12 проектов</span>
+            <span class="mock__pill">8 недель</span>
+            <span class="mock__pill">без кода</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- О КУРСЕ -->
+<section class="section" id="facts" aria-labelledby="facts-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="facts-title">Что это за курс</h2>
+      <p class="lead">Практика на твоих процессах: разбираешь задачи своего бизнеса, собираешь ИИ-агентов и считаешь, что они приносят.</p>
+    </div>
+    <div class="prose">
+      <p>Мы не изучаем нейросети ради инструментов. Каждую неделю ты берёшь задачу из своего бизнеса — заявки, продажи, поддержку, отчёты, найм — и доводишь её до рабочего агента. К концу курса в портфолио остаётся 12 проектов с описанием результата.</p>
+      <p>Программировать не нужно: сборка идёт на визуальных платформах, а ментор раз в неделю смотрит именно твой процесс и подсказывает, что поправить.</p>
+    </div>
+    <ul class="grid-facts" style="margin-top:26px">
+      <li class="card"><span class="card__k">Формат</span><span class="card__v">Онлайн, 8 недель</span></li>
+      <li class="card"><span class="card__k">Старт</span><span class="card__v">26 октября</span></li>
+      <li class="card"><span class="card__k">Практика</span><span class="card__v">12 проектов</span></li>
+      <li class="card"><span class="card__k">Ментор</span><span class="card__v">1:1 каждую неделю</span></li>
+      <li class="card"><span class="card__k">Доступ</span><span class="card__v">12 месяцев</span></li>
+      <li class="card"><span class="card__k">Уровень</span><span class="card__v">Без кода</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="section section--soft" id="advantages" aria-labelledby="adv-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="adv-title">Что даёт курс</h2>
+      <p class="lead">Пять вещей, которые остаются у тебя после восьми недель. Выбери, что важно именно сейчас.</p>
+    </div>
+    <div class="adv" data-adv>
+      <div class="adv__tabs" role="tablist" aria-label="Что даёт курс">
+        <button class="adv__tab is-active" type="button" id="adv-tab-1" role="tab" aria-selected="true" aria-controls="adv-panel-1" tabindex="0" data-adv-tab="1">Команда агентов</button>
+        <button class="adv__tab" type="button" id="adv-tab-2" role="tab" aria-selected="false" aria-controls="adv-panel-2" tabindex="-1" data-adv-tab="2">Без кода</button>
+        <button class="adv__tab" type="button" id="adv-tab-3" role="tab" aria-selected="false" aria-controls="adv-panel-3" tabindex="-1" data-adv-tab="3">Экономика</button>
+        <button class="adv__tab" type="button" id="adv-tab-4" role="tab" aria-selected="false" aria-controls="adv-panel-4" tabindex="-1" data-adv-tab="4">Ментор 1:1</button>
+        <button class="adv__tab" type="button" id="adv-tab-5" role="tab" aria-selected="false" aria-controls="adv-panel-5" tabindex="-1" data-adv-tab="5">Доступ на год</button>
+      </div>
+      <div class="adv__panel is-active" id="adv-panel-1" role="tabpanel" aria-labelledby="adv-tab-1" data-adv-panel="1">
+        <div>
+          <div class="adv__num">01</div>
+          <h3 class="h3">Команда агентов вместо ручной работы</h3>
+          <p class="sub">Собираешь агентов под свои процессы: заявки, продажи, поддержку, отчёты, найм. Каждый проект остаётся с описанием того, что он делает и сколько времени освобождает.</p>
+          <p class="adv__res">Результат: 12 проектов, которые можно показать команде и партнёрам.</p>
+        </div>
+        <ul class="adv__list">
+          <li>Ассистент для входящих заявок</li>
+          <li>Агент поддержки по базе знаний</li>
+          <li>Отчёты для руководителя из таблиц</li>
+          <li>Онбординг новых сотрудников</li>
+        </ul>
+      </div>
+      <div class="adv__panel" id="adv-panel-2" role="tabpanel" aria-labelledby="adv-tab-2" data-adv-panel="2" hidden>
+        <div>
+          <div class="adv__num">02</div>
+          <h3 class="h3">Автоматизация без разработчиков</h3>
+          <p class="sub">Все сборки — на визуальных платформах. Программирование не нужно: описываешь процесс словами и собираешь его из готовых блоков, а интеграции подключаешь по инструкции.</p>
+          <p class="adv__res">Результат: агент, которого ты сам можешь доработать через месяц.</p>
+        </div>
+        <ul class="adv__list">
+          <li>Визуальные сценарии: Make, n8n</li>
+          <li>Связка с таблицами и CRM</li>
+          <li>Тексты и промпты под твои задачи</li>
+          <li>Проверка результата без программиста</li>
+        </ul>
+      </div>
+      <div class="adv__panel" id="adv-panel-3" role="tabpanel" aria-labelledby="adv-tab-3" data-adv-panel="3" hidden>
+        <div>
+          <div class="adv__num">03</div>
+          <h3 class="h3">Экономика внедрения в цифрах</h3>
+          <p class="sub">Считаешь эффект в деньгах и часах: сколько работы забирает агент, сколько стоит подписка и когда вложение окупается. Решение о внедрении принимаешь по цифрам, а не по настроению.</p>
+          <p class="adv__res">Результат: расчёт по каждому проекту + план внедрения на 3 месяца.</p>
+        </div>
+        <ul class="adv__list">
+          <li>Оценка освобождённых часов</li>
+          <li>Стоимость инструментов в месяц</li>
+          <li>Приоритет задач по эффекту</li>
+          <li>Что автоматизировать первым</li>
+        </ul>
+      </div>
+      <div class="adv__panel" id="adv-panel-4" role="tabpanel" aria-labelledby="adv-tab-4" data-adv-panel="4" hidden>
+        <div>
+          <div class="adv__num">04</div>
+          <h3 class="h3">Ментор 1:1 каждую неделю</h3>
+          <p class="sub">Раз в неделю сорок пять минут лично с ментором: разбираете твой процесс, смотрите сборку и правите то, что не работает. Никаких абстрактных примеров — только твоя задача.</p>
+          <p class="adv__res">Результат: восемь живых сессий и правки по каждому проекту.</p>
+        </div>
+        <ul class="adv__list">
+          <li>Разбор твоего процесса</li>
+          <li>Правки по сборке агента</li>
+          <li>Ответы на вопросы по инструментам</li>
+          <li>План на следующую неделю</li>
+        </ul>
+      </div>
+      <div class="adv__panel" id="adv-panel-5" role="tabpanel" aria-labelledby="adv-tab-5" data-adv-panel="5" hidden>
+        <div>
+          <div class="adv__num">05</div>
+          <h3 class="h3">Доступ к материалам на год</h3>
+          <p class="sub">Записи, шаблоны промптов и разборы остаются с тобой на 12 месяцев. Возвращаешься к ним, когда берёшься за следующий процесс — без спешки и без доплат.</p>
+          <p class="adv__res">Результат: библиотека, которая растёт вместе с твоими задачами.</p>
+        </div>
+        <ul class="adv__list">
+          <li>Записи всех занятий</li>
+          <li>Шаблоны промптов и сценариев</li>
+          <li>Разборы проектов потока</li>
+          <li>Обновления материалов</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- НАВЫКИ -->
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="skills-title">Что ты освоишь за 8 недель</h2>
+      <p class="lead">Восемь навыков, которые остаются после курса и работают на следующем проекте.</p>
+    </div>
+    <ul class="checks checks--2">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Собирать ИИ-агентов под задачи своего бизнеса</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Связывать нейросети с таблицами, CRM и мессенджерами</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Писать промпты, которые дают рабочий результат</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Считать стоимость внедрения и эффект на выручку</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Выбирать инструменты: ChatGPT, Claude, DeepSeek, Make, n8n</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Описывать процесс так, чтобы его собрал подрядчик</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Проверять ответы агентов и убирать ошибки</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Строить план внедрения на три месяца вперёд</span></li>
+    </ul>
+  </div>
+</section>
+<!-- ПРОЕКТЫ / ГАЛЕРЕЯ -->
+<section class="section section--soft" id="cases" aria-labelledby="cases-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="cases-title">12 проектов в портфолио</h2>
+      <p class="lead">Каждую неделю — новый агент под твой процесс. Вот что уносят с курса выпускники прошлых потоков.</p>
+    </div>
+    <div class="slider" data-slider>
+      <div class="slider__head">
+        <p class="slider__title">Проекты потока</p>
+        <div class="slider__nav">
+          <button class="arrow" type="button" data-slide="-1" aria-label="Предыдущие проекты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+          <button class="arrow" type="button" data-slide="1" aria-label="Следующие проекты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </div>
+      </div>
+      <ul class="slider__track" data-track tabindex="0" aria-label="Проекты, которые собирают на курсе">
+        <li class="slider__item"><div class="card"><span class="card__n">01</span><span class="card__t">Ассистент продаж</span><span class="card__d">Отвечает на входящие по прайсу и передаёт менеджеру.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">02</span><span class="card__t">Обработка заявок</span><span class="card__d">Создаёт карточку в CRM и ставит задачу команде.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">03</span><span class="card__t">Поддержка по базе знаний</span><span class="card__d">Отвечает клиентам, сложное передаёт людям.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">04</span><span class="card__t">Отчёты руководителю</span><span class="card__d">Сводит цифры из таблиц в утреннюю сводку.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">05</span><span class="card__t">Онбординг сотрудников</span><span class="card__d">Выдаёт доступы, план и первые задачи новичку.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">06</span><span class="card__t">Разбор отзывов</span><span class="card__d">Собирает отзывы и выделяет повторяющиеся причины.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">07</span><span class="card__t">Описания товаров</span><span class="card__d">Готовит тексты по характеристикам и фото.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">08</span><span class="card__t">План публикаций</span><span class="card__d">Собирает контент-план на месяц по темам.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">09</span><span class="card__t">Ответы на запросы</span><span class="card__d">Подбирает прошлые ответы и собирает черновик.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">10</span><span class="card__t">Сводка по метрикам</span><span class="card__d">Раз в день пишет, что выросло и что просело.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">11</span><span class="card__t">Поиск поставщиков</span><span class="card__d">Собирает варианты и сравнивает условия.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">12</span><span class="card__t">Контроль качества</span><span class="card__d">Проверяет заявки по чек-листу и отмечает ошибки.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- КАК УЧИМСЯ -->
+<section class="section" id="how" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="how-title">Как проходит обучение</h2>
+      <p class="lead">Два занятия в неделю, живой разбор и личная сессия с ментором. Всё остальное — работа над твоим проектом.</p>
+    </div>
+    <div class="cols-2">
+      <div class="panel">
+        <h3 class="h3">Занятия</h3>
+        <p class="sub">Понедельник — короткая теория в записи, среда — живой разбор и сборка агента вместе с потоком. Записи остаются на 12 месяцев.</p>
+      </div>
+      <div class="panel">
+        <h3 class="h3">Практика каждую неделю</h3>
+        <p class="sub">В конце недели сдаёшь проект по чек-листу. Проверяем не красоту интерфейса, а то, что агент действительно снимает работу с твоей команды.</p>
+      </div>
+      <div class="panel">
+        <h3 class="h3">Ментор 1:1</h3>
+        <p class="sub">45 минут лично раз в неделю: смотрим твой процесс, правим сборку и промпты, договариваемся о задаче на следующую неделю.</p>
+      </div>
+      <div class="panel">
+        <h3 class="h3">Поддержка в чате</h3>
+        <p class="sub">Вопросы по инструментам и авторизациям решаем в чате потока и в рабочие дни — обычно в тот же день.</p>
+      </div>
+    </div>
+    <div class="slider" data-slider style="margin-top:40px">
+      <div class="slider__head">
+        <p class="slider__title">Неделя на курсе</p>
+        <div class="slider__nav">
+          <button class="arrow" type="button" data-slide="-1" aria-label="Предыдущие шаги недели"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+          <button class="arrow" type="button" data-slide="1" aria-label="Следующие шаги недели"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </div>
+      </div>
+      <ul class="slider__track" data-track tabindex="0" aria-label="Как устроена учебная неделя">
+        <li class="slider__item"><div class="card"><span class="card__n">Понедельник</span><span class="card__t">Короткая теория</span><span class="card__d">20–30 минут видео по теме недели и разбор примера.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">Среда</span><span class="card__t">Живой разбор</span><span class="card__d">Собираем агента вместе, отвечаю на вопросы потока.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">Четверг</span><span class="card__t">Работа над проектом</span><span class="card__d">Переносишь разбор на свой процесс и тестируешь.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">Пятница</span><span class="card__t">Сессия с ментором</span><span class="card__d">45 минут 1:1 по твоему проекту и промптам.</span></div></li>
+        <li class="slider__item"><div class="card"><span class="card__n">Воскресенье</span><span class="card__t">Сдача проекта</span><span class="card__d">Чек-лист, обратная связь и фиксация результата.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- СЕРТИФИКАТ -->
+<section class="section section--lav" id="cert" aria-labelledby="cert-title">
+  <div class="container">
+    <div class="cert">
+      <div>
+        <h2 class="h2" id="cert-title">Сертификат и портфолио</h2>
+        <p class="lead" style="margin-top:14px">После защиты проектов высылаем сертификат LeadUp AI. Вместе с ним у тебя остаётся описание 12 агентов — его можно показать команде, инвестору или подрядчику.</p>
+        <ul class="checks" style="margin-top:22px">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Сертификат о прохождении курса</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Портфолио: 12 проектов с описанием результата</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Шаблоны промптов и сценариев сборки</span></li>
+        </ul>
+      </div>
+      <div class="cert__card" aria-hidden="true">
+        <div class="cert__brand"><span class="cert__mark">AI</span><span>LeadUp AI</span></div>
+        <div class="cert__title">Сертификат о прохождении</div>
+        <div class="cert__line">Курс «Нейросети для бизнеса» · 8 недель · 2026</div>
+        <div class="cert__meta">
+          <span class="cert__tag">8 недель</span>
+          <span class="cert__tag">12 проектов</span>
+          <span class="cert__tag">Ментор 1:1</span>
+        </div>
+        <div class="cert__seal">LeadUp<br>AI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРОГРАММА -->
+<section class="section section--soft" id="program" aria-labelledby="program-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="program-title">Программа по неделям</h2>
+      <p class="lead">Восемь шагов от карты процессов до защищённых проектов. Каждая неделя заканчивается готовым агентом.</p>
+    </div>
+    <div class="acc" data-acc>
+      <div class="acc__item is-open">
+        <button class="acc__btn" type="button" aria-expanded="true" aria-controls="wk-1">
+          <span class="acc__num">01</span><span class="acc__label">Карта процессов и цели автоматизации</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-1">
+          <p>Разбираем твой бизнес на процессы и находим 12 задач, которые агенты могут забрать у команды. Считаем, сколько часов каждая задача съедает сейчас.</p>
+          <p class="acc__res">Результат: список процессов с приоритетом по эффекту.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="wk-2">
+          <span class="acc__num">02</span><span class="acc__label">Первый агент: заявки и продажи</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-2" hidden>
+          <p>Собираем ассистента, который отвечает на входящие по прайсу, уточняет детали и передаёт диалог менеджеру, когда нужен человек.</p>
+          <p class="acc__res">Результат: рабочий агент на первой линии.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="wk-3">
+          <span class="acc__num">03</span><span class="acc__label">Промпты и база знаний</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-3" hidden>
+          <p>Учимся описывать контекст так, чтобы ответ был точным. Собираем базу знаний по продукту, ценам и частым вопросам.</p>
+          <p class="acc__res">Результат: библиотека промптов и рабочая база знаний.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="wk-4">
+          <span class="acc__num">04</span><span class="acc__label">Связки с таблицами, CRM и мессенджерами</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-4" hidden>
+          <p>Подключаем визуальные сценарии: агент сам создаёт записи, ставит задачи, отправляет письма и уведомления в мессенджеры.</p>
+          <p class="acc__res">Результат: агент, встроенный в твои рабочие инструменты.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="wk-5">
+          <span class="acc__num">05</span><span class="acc__label">Поддержка клиентов и сценарии эскалации</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-5" hidden>
+          <p>Строим диалоги поддержки: агент отвечает по базе, а сложные случаи переводит на сотрудника с готовым контекстом.</p>
+          <p class="acc__res">Результат: агент поддержки и два сценария продаж.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="wk-6">
+          <span class="acc__num">06</span><span class="acc__label">Отчёты и аналитика без ручной сборки</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-6" hidden>
+          <p>Агент собирает цифры из таблиц и систем, сравнивает с прошлой неделей и присылает сводку утром — без напоминаний и выгрузок.</p>
+          <p class="acc__res">Результат: ежедневный отчёт для руководителя.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="wk-7">
+          <span class="acc__num">07</span><span class="acc__label">Экономика внедрения и окупаемость</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-7" hidden>
+          <p>Считаем освобождённые часы, стоимость инструментов в месяц и срок окупаемости по каждому проекту. Готовим план внедрения на три месяца.</p>
+          <p class="acc__res">Результат: расчёт по 12 проектам и приоритеты внедрения.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="wk-8">
+          <span class="acc__num">08</span><span class="acc__label">Защита проектов и план развития</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="wk-8" hidden>
+          <p>Собираем портфолио, защищаем проекты перед потоком и намечаем, какие процессы автоматизировать следующими.</p>
+          <p class="acc__res">Результат: портфолио из 12 проектов и план на квартал.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КОНСУЛЬТАЦИЯ -->
+<section class="section section--dark" id="consult" aria-labelledby="consult-title">
+  <div class="container">
+    <div class="cols-2" style="gap:26px">
+      <div>
+        <h2 class="h2" id="consult-title">Обсудим твой процесс до старта</h2>
+        <p class="lead" style="margin-top:14px">Оставь заявку — свяжемся в рабочие дни, разберём 2–3 задачи из твоего бизнеса и скажем честно, что стоит автоматизировать первым, а что лучше пока оставить команде.</p>
+        <div class="hero__cta">
+          <button class="btn btn--white" type="button" data-scroll="#form" data-cta="consult">Получить консультацию</button>
+          <button class="link" type="button" data-scroll="#price" style="color:#fff">Посмотреть тарифы</button>
+        </div>
+        <p class="tiny" style="margin-top:14px;color:rgba(255,255,255,.6)">Консультация — 20 минут, без давления и продаж. Если курс не подходит, скажем прямо.</p>
+      </div>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Разберём, где теряется время в твоих процессах</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Скажем, какие агенты дадут результат в первый месяц</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Посчитаем нагрузку: 6–8 часов в неделю, включая сессию 1:1</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Подберём тариф и рассрочку под твой бюджет</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- СПИКЕР -->
+<section class="section" id="speaker" aria-labelledby="speaker-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="speaker-title">Спикер курса</h2>
+      <p class="lead">Все занятия и сессии ведёт один человек — чтобы ты не пересказывал задачу каждому новому преподавателю.</p>
+    </div>
+    <div class="speaker">
+      <div class="speaker__ava">
+        <img src="../../assets/mentor-nagin.svg" alt="Владимир Нагин — автор всех интенсимов и курсов LeadUp AI" width="480" height="472" loading="lazy" decoding="async">
+      </div>
+      <div>
+        <h3 class="speaker__name">Владимир Нагин</h3>
+        <p class="speaker__role">Автор всех интенсимов и курсов LeadUp AI</p>
+        <p class="speaker__bio">Собирает ИИ-агентов для бизнеса и учит этому предпринимателей: от первого сценария до внедрения в компанию. На курсе разбирает процессы каждого участника лично и показывает, как считать эффект от автоматизации в часах и деньгах.</p>
+        <p class="speaker__bio">Ведёт поток так: сначала разбор твоей задачи, потом сборка агента, потом проверка на реальных данных. За восемь недель ты успеваешь пройти этот путь двенадцать раз.</p>
+        <div class="speaker__tags">
+          <span class="speaker__tag">Автор программы</span>
+          <span class="speaker__tag">Сессии 1:1</span>
+          <span class="speaker__tag">2400+ выпускников</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="section section--soft" id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="reviews-title">Отзывы выпускников</h2>
+      <p class="lead">Средняя оценка курса — 4.9 из 5 по 2400+ выпускникам. Вот несколько историй с прошлых потоков.</p>
+    </div>
+    <div class="reviews">
+      <article class="review">
+        <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg></div>
+        <p class="review__text">Пришёл с мыслью «нейросети — это не про мой бизнес». На второй неделе у нас уже работал агент на входящих заявках: он уточняет детали и передаёт менеджеру готовый диалог. Разгрузили две точки на два часа в день.</p>
+        <p class="review__who">Ирина</p>
+        <p class="review__role">Сеть салонов, Валенсия</p>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg></div>
+        <p class="review__text">Самым полезным оказалась экономика: мы посчитали, сколько часов забирает ручная отчётность и когда внедрение окупится. Сессия 1:1 каждую неделю держала темп — на десятой задаче я бы сам не дошёл.</p>
+        <p class="review__who">Дмитрий</p>
+        <p class="review__role">Логистика, Аликанте</p>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg></div>
+        <p class="review__text">Программировать не умею и не планировала. Собрала агента поддержки по базе знаний, теперь он отвечает на типовые вопросы о записи и ценах. Сложные случаи переводит на администратора с контекстом.</p>
+        <p class="review__who">Ольга</p>
+        <p class="review__role">Школа, Мадрид</p>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg></div>
+        <p class="review__text">Взял тариф на команду: два сотрудника прошли курс вместе со мной. Сам не писал ни строки кода — собрали процессы в визуальных сценариях. Через месяц вышли на ежедневную сводку без участия человека.</p>
+        <p class="review__who">Артём</p>
+        <p class="review__role">Интернет-магазин, Барселона</p>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg></div>
+        <p class="review__text">Ценю конкретику: каждую неделю — новый проект и разбор с ментором. Записался в рассрочку, чтобы не выдёргивать деньги из оборотки, и не пожалел. Сейчас у меня готовый план внедрения на квартал.</p>
+        <p class="review__who">Марина</p>
+        <p class="review__role">Студия мебели, Торревьеха</p>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 6.9L12 18l-6.2 3.2L7 14.3 2 9.4l7-.9z"></path></svg></div>
+        <p class="review__text">Совмещала с работой: 6–7 часов в неделю, всё по записям. На седьмой неделе сделала расчёт по своему проекту и поняла, что окупается за полтора месяца. Доступ на год оставила — возвращаюсь к шаблонам.</p>
+        <p class="review__who">Наталья</p>
+        <p class="review__role">Маркетплейсы, Валенсия</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ТАРИФЫ -->
+<section class="section" id="price" aria-labelledby="price-title">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <h2 class="h2" id="price-title">Тарифы и рассрочка</h2>
+      <p class="lead">Цены в евро, рассрочка на 12 месяцев без процентов. Скидка действует до старта потока — 26 октября.</p>
+    </div>
+    <div class="prices">
+      <div class="price">
+        <p class="price__name">Самостоятельно</p>
+        <p class="price__sum"><span class="price__now">199 €</span><span class="price__old">299 €</span></p>
+        <p class="price__mo">Рассрочка — 17 € в месяц</p>
+        <ul class="price__list">
+          <li>8 недель обучения и записи занятий</li>
+          <li>Шаблоны промптов и сценариев</li>
+          <li>Чат потока и проверка проектов по чек-листу</li>
+          <li>Доступ к материалам 12 месяцев</li>
+        </ul>
+        <button class="btn btn--ghost btn--block" type="button" data-scroll="#form" data-cta="price_1">Выбрать тариф</button>
+      </div>
+      <div class="price price--top">
+        <span class="price__tag">Выбирают чаще</span>
+        <p class="price__name">С ментором</p>
+        <p class="price__sum"><span class="price__now">399 €</span><span class="price__old">599 €</span></p>
+        <p class="price__mo">Рассрочка — 33 € в месяц</p>
+        <ul class="price__list">
+          <li>Всё из тарифа «Самостоятельно»</li>
+          <li>8 личных сессий с ментором по 45 минут</li>
+          <li>Разбор твоих процессов и правки по сборке</li>
+          <li>Разбор экономики внедрения по твоим цифрам</li>
+        </ul>
+        <button class="btn btn--primary btn--block" type="button" data-scroll="#form" data-cta="price_2">Выбрать тариф</button>
+      </div>
+      <div class="price">
+        <p class="price__name">Команда</p>
+        <p class="price__sum"><span class="price__now">899 €</span><span class="price__old">1 299 €</span></p>
+        <p class="price__mo">Рассрочка — 75 € в месяц</p>
+        <ul class="price__list">
+          <li>Всё из тарифа «С ментором»</li>
+          <li>Доступ до трёх участников от одной компании</li>
+          <li>Две групповые сессии по процессам команды</li>
+          <li>Сводный план внедрения на квартал</li>
+        </ul>
+        <button class="btn btn--ghost btn--block" type="button" data-scroll="#form" data-cta="price_3">Выбрать тариф</button>
+      </div>
+    </div>
+    <p class="tiny" style="margin-top:18px;text-align:center">Оплата картой или переводом. Скидку фиксируем на заявке — до подтверждения места она не пропадает.</p>
+  </div>
+</section>
+
+<!-- ЗАЯВКА -->
+<section class="section section--dark" id="form" aria-labelledby="form-title">
+  <div class="container">
+    <div class="form-grid">
+      <div class="form-head">
+        <h2 class="h2" id="form-title">Забронировать место в потоке</h2>
+        <p class="lead">Старт 26 октября, в потоке 12 мест. Оставь заявку — пришлём программу, расскажем про рассрочку и зафиксируем за тобой место.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Ответим в рабочие дни, обычно в тот же день</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Консультация 20 минут до оплаты</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Загрузка 6–8 часов в неделю, всё по записям</span></li>
+        </ul>
+      </div>
+      <div class="form">
+        <p class="form__title">Заявка на курс «Нейросети для бизнеса»</p>
+        <p class="form__sub">Данные нужны только для связи по заявке.</p>
+        <form id="reg-form" class="form__body" novalidate>
+          <div class="field" data-field="name">
+            <label for="f-name">Имя</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Как к тебе обращаться" required>
+            <span class="field__err">Напиши, как к тебе обращаться</span>
+          </div>
+          <div class="field" data-field="email">
+            <label for="f-email">E-mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+            <span class="field__err">Проверь адрес: нужен формат you@example.com</span>
+          </div>
+          <div class="field">
+            <label for="f-contact">Telegram или WhatsApp — не обязательно</label>
+            <input id="f-contact" name="contact" type="text" autocomplete="off" placeholder="@nickname или +34…">
+          </div>
+          <div class="field">
+            <label for="f-plan">Тариф</label>
+            <select id="f-plan" name="plan">
+              <option value="ещё выбираю">Ещё выбираю</option>
+              <option value="самостоятельно — 199 €">Самостоятельно — 199 €</option>
+              <option value="с ментором — 399 €">С ментором — 399 €</option>
+              <option value="команда — 899 €">Команда — 899 €</option>
+            </select>
+          </div>
+          <div class="field hp" aria-hidden="true">
+            <label for="f-hp">Не заполняй это поле</label>
+            <input id="f-hp" name="company_website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field" data-field="consent">
+            <div class="field--check">
+              <input id="f-consent" name="consent" type="checkbox" required>
+              <label for="f-consent">Согласен на обработку данных и связь по заявке. Политику конфиденциальности пришлём вместе с ответом.</label>
+            </div>
+            <span class="field__err">Отметь согласие — без него не сможем связаться</span>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit" data-cta="form_submit">Забронировать место</button>
+          <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+          <p class="form__tiny">Если форма не отправилась, напиши на <a href="mailto:hello@leadup.guru">hello@leadup.guru</a> — забронируем место вручную.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ВОПРОСЫ -->
+<section class="section section--soft" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2" id="faq-title">Частые вопросы</h2>
+      <p class="lead">Если не нашёл свой вопрос — напиши на hello@leadup.guru, ответим до оплаты.</p>
+    </div>
+    <div class="acc" data-acc>
+      <div class="acc__item is-open">
+        <button class="acc__btn" type="button" aria-expanded="true" aria-controls="faq-1">
+          <span class="acc__num">01</span><span class="acc__label">Нужно ли уметь программировать?</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="faq-1">
+          <p>Нет. Все сборки идут на визуальных платформах: ты описываешь процесс и соединяешь блоки. Если умеешь работать с таблицами, этого достаточно для старта.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-2">
+          <span class="acc__num">02</span><span class="acc__label">Сколько времени нужно в неделю?</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="faq-2" hidden>
+          <p>6–8 часов: занятие с разбором, работа над проектом и сессия с ментором на тарифах «С ментором» и «Команда». Теорию можно смотреть в записи.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-3">
+          <span class="acc__num">03</span><span class="acc__label">Подойдёт ли курс небольшому бизнесу?</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="faq-3" hidden>
+          <p>Да, на прошлых потоках большинство участников — компании до 30 человек. Мы начинаем с процессов, которые забирают больше всего времени, чтобы эффект был виден уже в первый месяц.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-4">
+          <span class="acc__num">04</span><span class="acc__label">Что будет, если пропущу занятие?</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="faq-4" hidden>
+          <p>Записи и материалы остаются с тобой на 12 месяцев. Сессию с ментором можно перенести в рамках недели — предупреди в чате потока.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-5">
+          <span class="acc__num">05</span><span class="acc__label">Как работает рассрочка?</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="faq-5" hidden>
+          <p>Оплата делится на 12 месяцев: 17 €, 33 € или 75 € — по выбранному тарифу, без процентов. Первый платёж — после подтверждения места, до старта потока.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-6">
+          <span class="acc__num">06</span><span class="acc__label">На каком языке занятия и в каком часовом поясе?</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="faq-6" hidden>
+          <p>Всё на русском языке. Время занятий указываем по Мадриду и Москве, разборы записываем — можно посмотреть в удобные часы.</p>
+        </div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-7">
+          <span class="acc__num">07</span><span class="acc__label">Сколько мест в потоке и когда старт?</span><span class="acc__ico" aria-hidden="true"></span>
+        </button>
+        <div class="acc__panel" id="faq-7" hidden>
+          <p>Старт — 26 октября, в потоке 12 мест: так у ментора хватает времени на сессии 1:1 с каждым участником. Место закрепляется после заявки и подтверждения от команды.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ПОДВАЛ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <img class="footer__logo-img" src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60" loading="lazy" decoding="async">
+        <p class="footer__desc">Школа практического ИИ для предпринимателей. Учим собирать агентов под свои процессы — без кода и разработчиков.</p>
+        <p class="footer__credit">Автор всех интенсимов и курсов LeadUp AI — Владимир Нагин.</p>
+      </div>
+      <div>
+        <p class="footer__title">Разделы</p>
+        <ul class="footer__list">
+          <li><a href="#program" data-scroll="#program">Программа по неделям</a></li>
+          <li><a href="#how" data-scroll="#how">Как проходит обучение</a></li>
+          <li><a href="#price" data-scroll="#price">Тарифы и рассрочка</a></li>
+          <li><a href="#reviews" data-scroll="#reviews">Отзывы выпускников</a></li>
+          <li><a href="#faq" data-scroll="#faq">Частые вопросы</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__title">Контакты</p>
+        <ul class="footer__list">
+          <li><a class="footer__mail" href="mailto:hello@leadup.guru">hello@leadup.guru</a></li>
+          <li><a href="mailto:hello@leadup.guru?subject=Вопрос%20по%20курсу%20«Нейросети%20для%20бизнеса»">Задать вопрос по курсу</a></li>
+          <li><a href="#form" data-scroll="#form">Забронировать место в потоке</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 LeadUp AI. Курс «Нейросети для бизнеса»</span>
+      <span class="footer__legal"><span>Политика конфиденциальности и оферта — по запросу на hello@leadup.guru</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- МОБИЛЬНАЯ CTA-ПОЛОСА -->
+<div class="mob-cta" id="mobCta" hidden>
+  <button class="btn btn--primary btn--block" type="button" data-scroll="#form" data-cta="mob_bar">Забронировать место</button>
+  <p class="mob-cta__note">Старт 26 октября · осталось 12 мест</p>
+</div>
+<script>
+window.__LANDING__ = {
+  landing_id: 'ai-business',
+  variant_id: 'v2',
+  page_lang: 'ru',
+  webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
+  consent_text_version: '2026-10-privacy-v1',
+  pixel_id: '28714651278203294'
+};
+(function () {
+  'use strict';
+  var CFG = (typeof window.__LANDING__ !== 'undefined' && window.__LANDING__) ? window.__LANDING__ : {
+    landing_id: 'ai-business',
+    variant_id: 'v2',
+    page_lang: 'ru',
+    webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
+    consent_text_version: '2026-10-privacy-v1',
+    pixel_id: '28714651278203294'
+  };
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var BEH = reduce ? 'auto' : 'smooth';
+  var FT_KEY = 'lu_ft_' + CFG.landing_id;
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
+
+  function eid() {
+    return 'lu-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+  }
+
+  function getCookie(name) {
+    var m = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[2]) : '';
+  }
+
+  function firstTouch() {
+    var out = {};
+    var stored = null;
+    try { stored = JSON.parse(window.localStorage.getItem(FT_KEY) || 'null'); } catch (e) { stored = null; }
+    var fromUrl = {};
+    var qs = window.location.search || '';
+    if (qs) {
+      try {
+        var p = new URLSearchParams(qs);
+        UTM_KEYS.forEach(function (k) { if (p.get(k)) { fromUrl[k] = p.get(k); } });
+      } catch (e) {}
+    }
+    if (!stored && Object.keys(fromUrl).length) {
+      stored = fromUrl;
+      stored.landing_page = window.location.pathname;
+      stored.first_seen = new Date().toISOString();
+      try { window.localStorage.setItem(FT_KEY, JSON.stringify(stored)); } catch (e) {}
+    }
+    UTM_KEYS.forEach(function (k) { out[k] = (stored && stored[k]) || fromUrl[k] || ''; });
+    out.first_landing_page = (stored && stored.landing_page) || window.location.pathname;
+    return out;
+  }
+
+  function buildPayload(event, extra) {
+    var id = eid();
+    var payload = Object.assign({
+      event_name: event,
+      event_id: id,
+      landing_id: CFG.landing_id,
+      variant_id: CFG.variant_id,
+      page_lang: CFG.page_lang,
+      page_url: window.location.href,
+      referrer: document.referrer || '',
+      client_ts: new Date().toISOString(),
+      consent_text_version: CFG.consent_text_version,
+      fbp: getCookie('_fbp'),
+      fbc: getCookie('_fbc')
+    }, firstTouch(), extra || {});
+    window.__LAST_EVENT__ = payload;
+    return payload;
+  }
+
+  function push(body) {
+    try {
+      return fetch(CFG.webhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        keepalive: true,
+        mode: 'cors'
+      });
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  }
+
+  /* --- Meta Pixel --- */
+  if (CFG.pixel_id) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', CFG.pixel_id);
+    fbq('track', 'PageView');
+  }
+  function px(eventName, params, eventId, kind) {
+    if (!window.fbq) { return; }
+    try {
+      var args = [kind || 'trackCustom', eventName, params || {}];
+      if (eventId) { args.push({ eventID: eventId }); }
+      window.fbq.apply(null, args);
+    } catch (e) {}
+  }
+
+  function send(event, extra) {
+    var body = buildPayload(event, extra);
+    px(event, { content_name: CFG.landing_id + '/' + CFG.variant_id }, body.event_id);
+    push(body).catch(function () {});
+    return body;
+  }
+
+  /* --- аккордеоны --- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-acc]'), function (acc) {
+    Array.prototype.forEach.call(acc.querySelectorAll('.acc__item'), function (item) {
+      var btn = item.querySelector('.acc__btn');
+      var panel = item.querySelector('.acc__panel');
+      if (!btn || !panel) { return; }
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      item.classList.toggle('is-open', open);
+      panel.hidden = !open;
+      btn.addEventListener('click', function () {
+        var next = !(btn.getAttribute('aria-expanded') === 'true');
+        btn.setAttribute('aria-expanded', next ? 'true' : 'false');
+        item.classList.toggle('is-open', next);
+        panel.hidden = !next;
+      });
+    });
+  });
+
+  /* --- преимущества: активная карточка --- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-adv]'), function (root) {
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[data-adv-tab]'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('[data-adv-panel]'));
+    if (!tabs.length || !panels.length) { return; }
+    function select(i) {
+      tabs.forEach(function (t, idx) {
+        var on = idx === i;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (p, idx) {
+        p.classList.toggle('is-active', idx === i);
+        p.hidden = idx !== i;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (ev) {
+        var n = null;
+        if (ev.key === 'ArrowRight' || ev.key === 'ArrowDown') { n = (i + 1) % tabs.length; }
+        else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp') { n = (i - 1 + tabs.length) % tabs.length; }
+        else if (ev.key === 'Home') { n = 0; }
+        else if (ev.key === 'End') { n = tabs.length - 1; }
+        if (n !== null) { ev.preventDefault(); select(n); tabs[n].focus(); }
+      });
+    });
+    select(tabs.findIndex(function (t) { return t.classList.contains('is-active'); }) || 0);
+  });
+
+  /* --- слайдеры --- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-slider]'), function (sl) {
+    var track = sl.querySelector('[data-track]');
+    var prev = sl.querySelector('[data-slide="-1"]');
+    var next = sl.querySelector('[data-slide="1"]');
+    if (!track) { return; }
+    function step() {
+      var item = track.querySelector('.slider__item');
+      return item ? item.getBoundingClientRect().width + 12 : Math.round(track.clientWidth * 0.8);
+    }
+    function update() {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      if (prev) { prev.disabled = track.scrollLeft <= 2; }
+      if (next) { next.disabled = track.scrollLeft >= max; }
+    }
+    if (prev) { prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: BEH }); }); }
+    if (next) { next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: BEH }); }); }
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
+  /* --- плавный скролл по CTA --- */
+  document.addEventListener('click', function (ev) {
+    var t = ev.target.closest ? ev.target.closest('[data-scroll]') : null;
+    if (!t) { return; }
+    var sel = t.getAttribute('data-scroll');
+    var el = sel ? document.querySelector(sel) : null;
+    if (!el) { return; }
+    ev.preventDefault();
+    if (sel === '#top') { window.scrollTo({ top: 0, behavior: BEH }); return; }
+    el.scrollIntoView({ behavior: BEH, block: 'start' });
+    if (sel === '#form') {
+      var title = document.getElementById('form-title');
+      if (title) {
+        title.setAttribute('tabindex', '-1');
+        window.setTimeout(function () { try { title.focus({ preventScroll: true }); } catch (e) {} }, reduce ? 0 : 650);
+      }
+    }
+  });
+
+  /* --- фиксация кликов по CTA --- */
+  document.addEventListener('click', function (ev) {
+    var t = ev.target.closest ? ev.target.closest('[data-cta]') : null;
+    if (!t) { return; }
+    send('cta_click', { cta: t.getAttribute('data-cta'), block: t.closest('section') ? t.closest('section').id : '' });
+  }, true);
+
+  /* --- компактный хедер --- */
+  var header = document.getElementById('siteHeader');
+  function onScroll() {
+    if (header) { header.classList.toggle('is-compact', window.scrollY > 24); }
+    updateBar();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* --- мобильная CTA-полоса --- */
+  var bar = document.getElementById('mobCta');
+  var formSection = document.getElementById('form');
+  var mq = window.matchMedia('(min-width: 768px)');
+  var hideTimer = null;
+  function updateBar() {
+    if (!bar) { return; }
+    if (mq.matches) { bar.hidden = true; return; }
+    var past = window.scrollY > 380;
+    var formNear = false;
+    if (formSection) {
+      var r = formSection.getBoundingClientRect();
+      formNear = r.top < window.innerHeight * 0.85;
+    }
+    var show = past && !formNear;
+    if (show) {
+      if (hideTimer) { window.clearTimeout(hideTimer); hideTimer = null; }
+      bar.hidden = false;
+      window.requestAnimationFrame(function () { bar.classList.remove('is-hidden'); });
+    } else {
+      bar.classList.add('is-hidden');
+      if (hideTimer) { window.clearTimeout(hideTimer); }
+      hideTimer = window.setTimeout(function () { bar.hidden = true; }, reduce ? 0 : 260);
+    }
+  }
+  if (mq.addEventListener) { mq.addEventListener('change', updateBar); }
+
+  /* --- форма --- */
+  var regForm = document.getElementById('reg-form');
+  var formMsg = document.getElementById('form-msg');
+  var started = false;
+
+  if (regForm) {
+    regForm.addEventListener('focusin', function () {
+      if (started) { return; }
+      started = true;
+      send('form_start', {});
+    });
+
+    regForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      if (regForm.dataset.sending === '1') { return; }
+      if (regForm.company_website && regForm.company_website.value) { return; }
+
+      var invalid = [];
+      function mark(field, input, msg) {
+        if (field) { field.classList.add('is-invalid'); }
+        if (input) { input.setAttribute('aria-invalid', 'true'); }
+        invalid.push(msg);
+      }
+      Array.prototype.forEach.call(regForm.querySelectorAll('.field'), function (f) {
+        f.classList.remove('is-invalid');
+      });
+      Array.prototype.forEach.call(regForm.querySelectorAll('[aria-invalid]'), function (i) {
+        i.removeAttribute('aria-invalid');
+      });
+      if (formMsg) { formMsg.className = 'form-msg'; formMsg.textContent = ''; }
+
+      var nameInput = regForm.elements.name;
+      var emailInput = regForm.elements.email;
+      var consentInput = regForm.elements.consent;
+      var nameField = nameInput ? nameInput.closest('.field') : null;
+      var emailField = emailInput ? emailInput.closest('.field') : null;
+      var consentField = consentInput ? consentInput.closest('.field') : null;
+
+      if (!nameInput || nameInput.value.trim().length < 2) { mark(nameField, nameInput, 'name'); }
+      var mail = emailInput ? emailInput.value.trim() : '';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail)) { mark(emailField, emailInput, 'email'); }
+      if (!consentInput || !consentInput.checked) { mark(consentField, consentInput, 'consent'); }
+
+      if (invalid.length) {
+        send('form_error', { reason: 'validation', fields: invalid });
+        if (formMsg) {
+          formMsg.className = 'form-msg is-err';
+          formMsg.textContent = 'Проверь отмеченные поля: имя, почту и согласие на обработку данных.';
+        }
+        var firstField = regForm.querySelector('.field.is-invalid input');
+        if (firstField) { firstField.focus(); }
+        return;
+      }
+
+      var btn = regForm.querySelector('[type="submit"]');
+      var body = buildPayload('lead', {
+        form_name: 'reg-form',
+        name: nameInput.value.trim(),
+        email: mail,
+        contact: regForm.elements.contact ? regForm.elements.contact.value.trim() : '',
+        plan: regForm.elements.plan ? regForm.elements.plan.value : '',
+        consent: true,
+        honeypot: regForm.company_website ? regForm.company_website.value : '',
+        value: 0,
+        currency: 'EUR',
+        content_name: CFG.landing_id + '/' + CFG.variant_id
+      });
+
+      regForm.dataset.sending = '1';
+      if (btn) { btn.disabled = true; btn.textContent = 'Отправляем…'; }
+
+      push(body).then(function (res) {
+        if (!res || !res.ok) { throw new Error('bad status'); }
+        px('Lead', { value: 0, currency: 'EUR', content_name: CFG.landing_id + '/' + CFG.variant_id, content_type: 'product' }, body.event_id, 'track');
+        if (formMsg) {
+          formMsg.className = 'form-msg is-ok';
+          formMsg.textContent = 'Готово: заявка у нас. Ответим на почту в рабочие дни.';
+        }
+        regForm.reset();
+      }).catch(function () {
+        send('form_error', { reason: 'network' });
+        if (formMsg) {
+          formMsg.className = 'form-msg is-err';
+          formMsg.textContent = 'Не получилось отправить заявку. Попробуй ещё раз или напиши на hello@leadup.guru.';
+        }
+      }).then(function () {
+        regForm.dataset.sending = '';
+        if (btn) { btn.disabled = false; btn.textContent = 'Забронировать место'; }
+      });
+    });
+  }
+
+  /* --- первый экран --- */
+  send('page_view', { screen: 'hero' });
+  onScroll();
+})();
+</script>
+</body>
+</html>
