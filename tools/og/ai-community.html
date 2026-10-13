@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>OG · ai-community · LeadUp AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    background:#0A0F0D;color:#F2F5F4;
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    position:relative;
+  }
+  .glow{position:absolute;border-radius:50%}
+  .g1{right:-240px;top:-260px;width:700px;height:700px;background:radial-gradient(circle at 40% 40%, rgba(0,229,199,.20), rgba(0,229,199,0) 68%)}
+  .g2{left:-200px;bottom:-320px;width:640px;height:640px;background:radial-gradient(circle at 60% 40%, rgba(0,229,199,.10), rgba(0,229,199,0) 70%)}
+  .grid{position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:60px 60px}
+  .frame{position:absolute;inset:0;border:1px solid rgba(255,255,255,.08)}
+  .wrap{position:relative;height:100%;padding:54px 64px 50px;display:flex;flex-direction:column;justify-content:space-between}
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .logo{height:44px;width:auto;display:block}
+  .tag{
+    font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#00E5C7;
+    border:1px solid rgba(0,229,199,.35);background:rgba(0,229,199,.07);
+    padding:9px 18px;border-radius:999px;white-space:nowrap;
+  }
+  .mid{max-width:1010px}
+  .kick{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#00E5C7;
+    background:rgba(0,229,199,.08);border:1px solid rgba(0,229,199,.22);
+    padding:10px 18px;border-radius:999px;margin-bottom:24px;
+  }
+  .kick i{width:8px;height:8px;border-radius:50%;background:#00E5C7;display:block}
+  h1{font-size:72px;line-height:1.03;font-weight:900;letter-spacing:-.03em;color:#F2F5F4}
+  h1 em{font-style:normal;color:#00E5C7}
+  .sub{margin-top:22px;font-size:25px;line-height:1.34;font-weight:500;color:#A9B2BD;max-width:920px}
+  .bot{display:flex;align-items:flex-end;justify-content:space-between;gap:36px}
+  .facts{display:flex;gap:12px;flex-wrap:wrap}
+  .fact{font-size:19px;font-weight:700;color:#F2F5F4;border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:12px 18px;background:#111815;white-space:nowrap}
+  .fact b{color:#00E5C7}
+  .who{display:flex;align-items:center;gap:16px;text-align:left}
+  .who img{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:1px solid rgba(0,229,199,.35)}
+  .who .txt{font-size:16px;line-height:1.35;color:#A9B2BD;max-width:300px}
+  .who .txt b{display:block;font-size:19px;color:#F2F5F4;font-weight:800;margin-bottom:2px}
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="frame"></div>
+  <div class="wrap">
+    <div class="top">
+      <img class="logo" src="../../assets/leadup-logo.svg" alt="LeadUp AI">
+      <span class="tag">Сообщество · Практикум 0 €</span>
+    </div>
+
+    <div class="mid">
+      <span class="kick"><i></i>Старт 27 октября · 19:00</span>
+      <h1>Сообщество и курсы<br>по <em>ИИ</em></h1>
+      <p class="sub">4 вечера практики бесплатно: собираешь агентов, автоматизируешь рутину, забираешь готовые сценарии</p>
+    </div>
+
+    <div class="bot">
+      <div class="facts">
+        <span class="fact"><b>4</b> вечера</span>
+        <span class="fact">участие <b>0 €</b></span>
+        <span class="fact"><b>2 400</b> выпускников</span>
+        <span class="fact">ментор 1:1</span>
+      </div>
+      <div class="who">
+        <img src="../../assets/mentor-nagin.svg" alt="Владимир Нагин">
+        <span class="txt"><b>Владимир Нагин</b>автор всех интенсимов и курсов LeadUp AI</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
