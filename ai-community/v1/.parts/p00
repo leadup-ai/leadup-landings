@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сообщество и курсы по ИИ — LeadUp AI</title>
+<meta name="description" content="Бесплатный 4-дневный практикум по ИИ с 27 октября и 8-недельный курс с ментором. 2 400 выпускников, разборы каждую неделю, участие — 0 €. Присоединяйся.">
+<meta name="theme-color" content="#0A0F0D">
+<link rel="canonical" href="https://ad.leadup.guru/ai-community/v1/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LeadUp AI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Сообщество и курсы по ИИ — LeadUp AI">
+<meta property="og:description" content="Бесплатный 4-дневный практикум по ИИ с 27 октября и 8-недельный курс с ментором. 2 400 выпускников, разборы каждую неделю, участие — 0 €. Присоединяйся.">
+<meta property="og:url" content="https://ad.leadup.guru/ai-community/v1/">
+<meta property="og:image" content="https://ad.leadup.guru/assets/og/ai-community-1200x630.png">
+<meta property="og:image:secure_url" content="https://ad.leadup.guru/assets/og/ai-community-1200x630.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LeadUp AI: сообщество практиков ИИ, бесплатный практикум 27 октября">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сообщество и курсы по ИИ — LeadUp AI">
+<meta name="twitter:description" content="Бесплатный 4-дневный практикум по ИИ с 27 октября и 8-недельный курс с ментором. 2 400 выпускников, разборы каждую неделю, участие — 0 €. Присоединяйся.">
+<meta name="twitter:image" content="https://ad.leadup.guru/assets/og/ai-community-1200x630.png">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBBMEYwRCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjE3IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMEU1QzciIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjYiIGZpbGw9IiMwMEU1QzciLz48L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ---- LeadUp AI Design System v3 tokens (source of truth) ---- */
+:root {
+  color-scheme: dark;
+
+  /* ---------- COLORS: Signature ---------- */
+  --teal:            #00E5C7;   /* Electric Teal — CTA, accent, links */
+  --teal-hover:      #14F5D7;
+  --teal-pressed:    #00CBB0;
+  --teal-tint:       rgba(0, 229, 199, 0.12);
+  --teal-tint-2:     rgba(0, 229, 199, 0.20);
+  --teal-glow:       0 0 24px rgba(0, 229, 199, 0.45);
+
+  /* ---------- COLORS: Surfaces (dark-first) ---------- */
+  --bg-0:            #050807;   /* deepest — outside body */
+  --bg-1:            #0A0F0D;   /* default page */
+  --bg-2:            #0F1512;   /* elevated section */
+  --bg-3:            #141B18;   /* card surface */
+  --bg-4:            #1B2420;   /* raised card, input */
+  --bg-5:            #253029;   /* hover, divider-fill */
+
+  /* ---------- COLORS: Light surfaces ---------- */
+  --bg-light-1:      #FAFBFA;
+  --bg-light-2:      #F2F4F3;
+  --bg-light-3:      #E6EAE8;
+
+  /* ---------- COLORS: Foreground (on dark) ---------- */
+  --fg-1:            #EDEFEE;   /* primary text */
+  --fg-2:            rgba(237, 239, 238, 0.72);  /* body */
+  --fg-3:            rgba(237, 239, 238, 0.52);  /* muted */
+  --fg-4:            rgba(237, 239, 238, 0.36);  /* captions, disabled */
+
+  /* ---------- COLORS: Foreground (on light) ---------- */
+  --fg-light-1:      #0A0F0D;
+  --fg-light-2:      #3A4440;
+  --fg-light-3:      #6A7570;
+  --fg-light-4:      #9BA3A0;
+
+  /* ---------- COLORS: Borders ---------- */
+  --border-1:        rgba(255, 255, 255, 0.06);   /* subtle */
+  --border-2:        rgba(255, 255, 255, 0.10);   /* default */
+  --border-3:        rgba(255, 255, 255, 0.18);   /* hover, focus-ring */
+  --border-light-1:  rgba(10, 15, 13, 0.08);
+  --border-light-2:  rgba(10, 15, 13, 0.14);
+  --border-light-3:  rgba(10, 15, 13, 0.22);
+
+  /* ---------- COLORS: Light semantic ---------- */
+  --teal-on-light:       #009E8A;   /* darker teal for AA on white */
+  --teal-on-light-hover: #00B89E;
+  --teal-tint-light:     rgba(0, 158, 138, 0.10);
+  --success-on-light:    #15803D;
+  --success-tint-light:  rgba(21, 128, 61, 0.10);
+  --warning-on-light:    #A16207;
+  --warning-tint-light:  rgba(161, 98, 7, 0.10);
+  --danger-on-light:     #DC2626;
+  --danger-tint-light:   rgba(220, 38, 38, 0.10);
+  --info-on-light:       #2563EB;
+  --info-tint-light:     rgba(37, 99, 235, 0.10);
+
+  /* ---------- COLORS: Light shadows ---------- */
+  --shadow-light-1:  0 1px 2px rgba(10, 15, 13, 0.06);
+  --shadow-light-2:  0 2px 8px rgba(10, 15, 13, 0.08), 0 0 0 1px rgba(10, 15, 13, 0.04);
+  --shadow-light-3:  0 8px 24px rgba(10, 15, 13, 0.10), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-light-4:  0 20px 48px rgba(10, 15, 13, 0.14), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-light-teal: 0 0 0 1px var(--teal-on-light), 0 4px 16px rgba(0, 158, 138, 0.18);
+  --ring-focus-light: 0 0 0 2px #fff, 0 0 0 4px var(--teal-on-light);
+
+  /* ---------- COLORS: Semantic ---------- */
+  --success:         #3EE089;
+  --success-tint:    rgba(62, 224, 137, 0.14);
+  --warning:         #F5B544;
+  --warning-tint:    rgba(245, 181, 68, 0.14);
+  --danger:          #FF5D5D;
+  --danger-tint:     rgba(255, 93, 93, 0.14);
+  --info:            #6EB8FF;
+  --info-tint:       rgba(110, 184, 255, 0.14);
+
+  /* ---------- COLORS: Gradients (used sparingly) ---------- */
+  --grad-glow:       radial-gradient(60% 80% at 50% 0%, rgba(0, 229, 199, 0.18) 0%, transparent 60%);
+  --grad-mesh:       radial-gradient(at 18% 24%, rgba(0, 229, 199, 0.10) 0, transparent 45%),
+                     radial-gradient(at 82% 80%, rgba(0, 229, 199, 0.06) 0, transparent 50%);
+  --grad-teal-line:  linear-gradient(90deg, transparent, rgba(0, 229, 199, 0.4), transparent);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-sans:       'Geist', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  --font-mono:       'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs:         11px;    /* eyebrow, kbd, mono tags */
+  --text-sm:         13px;    /* small body, meta */
+  --text-base:       15px;    /* body */
+  --text-md:         17px;    /* lead paragraph */
+  --text-lg:         20px;    /* small subhead */
+  --text-xl:         24px;    /* H4 */
+  --text-2xl:        32px;    /* H3 */
+  --text-3xl:        44px;    /* H2 */
+  --text-4xl:        60px;    /* H1 */
+  --text-5xl:        84px;    /* display */
+  --text-6xl:        120px;   /* mega display */
+
+  --fw-regular:      400;
+  --fw-medium:       500;
+  --fw-semibold:     600;
+  --fw-bold:         700;
+  --fw-extrabold:    800;
+  --fw-black:        900;
+
+  --lh-display:      0.98;
+  --lh-tight:        1.04;
+  --lh-snug:         1.2;
+  --lh-normal:       1.5;
+  --lh-relaxed:      1.6;
+
+  --tracking-mega:   -0.045em;   /* 84px+ display */
+  --tracking-tight:  -0.035em;   /* H1, H2 */
+  --tracking-snug:   -0.02em;    /* H3, H4 */
+  --tracking-normal: -0.01em;    /* lead */
+  --tracking-wide:   0.08em;     /* eyebrow uppercase */
+  --tracking-mono:   0.02em;     /* mono */
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1:            4px;
+  --sp-2:            8px;
+  --sp-3:            12px;
+  --sp-4:            16px;
+  --sp-5:            20px;
+  --sp-6:            24px;
+  --sp-8:            32px;
+  --sp-10:           40px;
+  --sp-12:           48px;
+  --sp-16:           64px;
+  --sp-20:           80px;
+  --sp-24:           96px;
+  --sp-32:           128px;
+  --sp-40:           160px;
+
+  /* ---------- RADII (tight, Linear-esque) ---------- */
+  --r-sm:            4px;    /* kbd, inline */
+  --r-md:            6px;    /* small buttons, badges */
+  --r-lg:            8px;    /* buttons, inputs — DEFAULT */
+  --r-xl:            10px;   /* cards */
+  --r-2xl:           14px;   /* large cards, hero blocks */
+  --r-3xl:           20px;   /* feature panels */
+  --r-full:          9999px;
+
+  /* ---------- SHADOWS (subtle, mostly rings) ---------- */
+  --shadow-1:        0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2:        0 2px 8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-3:        0 12px 32px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-4:        0 24px 64px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-teal:     0 0 0 1px var(--teal), 0 8px 24px rgba(0, 229, 199, 0.28);
+  --ring-focus:      0 0 0 2px var(--bg-1), 0 0 0 4px var(--teal);
+
+  /* ---------- MOTION (Linear-like, fast + crisp) ---------- */
+  --ease:            cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1:           120ms;   /* hover, micro */
+  --dur-2:           200ms;   /* default */
+  --dur-3:           320ms;   /* reveal */
+  --dur-4:           500ms;   /* complex */
+
+  /* ---------- GRID / LAYOUT ---------- */
+  --container-wide:   1440px;  /* dashboards, wide app shells */
+  --container:        1240px;  /* DEFAULT marketing / content */
+  --container-narrow: 980px;   /* focused forms, auth, pricing */
+  --container-prose:  720px;   /* blog article body, long-form reading */
+  --grid-cols:        12;      /* base column count */
+  --grid-gap:         24px;    /* desktop gutter */
+  --grid-gap-md:      20px;    /* tablet gutter */
+  --grid-gap-sm:      16px;    /* mobile gutter */
+  --gutter:           24px;    /* container side padding (desktop) */
+  --gutter-mobile:    20px;    /* container side padding (mobile) */
+
+  /* ---------- BREAKPOINTS (mobile-first min-width) ----------
+     Use in @media (min-width: var-equivalent). CSS custom props
+     can't be used directly in media queries — these document the
+     canonical values; copy the px into your @media rules.        */
+  --bp-sm:           480px;   /* large phone           */
+  --bp-md:           768px;   /* tablet / split layouts */
+  --bp-lg:           1024px;  /* laptop / sidebar appears */
+  --bp-xl:           1280px;  /* desktop / full container */
+  --bp-2xl:          1536px;  /* wide / max content     */
+
+  /* ---------- Z-INDEX / ELEVATION ORDER ----------
+     Single source of stacking truth. Never hard-code z-index;
+     reference these so overlays never fight each other.          */
+  --z-base:          0;      /* default flow                 */
+  --z-raised:        10;     /* hovered card, focused input  */
+  --z-sticky:        100;    /* sticky section, sticky bottom-bar */
+  --z-header:        200;    /* site header / app top nav    */
+  --z-dropdown:      300;    /* dropdown, select menu, autocomplete */
+  --z-backdrop:      400;    /* modal / drawer scrim         */
+  --z-modal:         500;    /* dialog, bottom-sheet, drawer */
+  --z-popover:       600;    /* popover, command palette     */
+  --z-toast:         700;    /* toast / snackbar stack       */
+  --z-tooltip:       800;    /* tooltip — always on top of UI */
+  --z-max:           9999;   /* escape hatch — onboarding spotlight */
+
+  /* ---------- BACKGROUND GRID (signature pattern) ---------- */
+  --grid-line:       rgba(255, 255, 255, 0.035);
+  --grid-size:       48px;
+}
+
+/* LeadUp AI · community landing — 1:1 port of the reference stylesheet.
+   Base: LeadUp AI Design System v3, dark-first. Teal (#00E5C7) is an accent only:
+   text, 1px borders, glows, small accents. Never a large fill. */
+
+:root {
+  --bg: #0A0F0D;
+  --bg-2: #0F1512;
+  --bg-3: #141B18;
+  --line: rgba(255,255,255,.10);
+  --line-2: rgba(255,255,255,.14);
+  --fg: #EDEFEE;
+  --fg-2: rgba(237,239,238,.64);
+  --fg-3: rgba(237,239,238,.40);
+  --fg-4: rgba(237,239,238,.24);
+  --accent: #00E5C7;
+  --accent-deep: #00CBB0;
+  --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  --mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+  --container: 1080px;
+  --wide: 1265px;
+  --nav-h: 60px;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: auto; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--sans); font-size: 14px; line-height: 1.5; font-weight: 400;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+h1, h2, h3, h4, h5, p { margin: 0; }
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- reveal (Framer-style appear) ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+/* the parallax writes an inline transform on the laptop every frame; a transform transition here would lag it a full second behind the scroll */
+.hero__device.reveal { transform: none; transition: opacity 1s var(--ease); }
+.hero__title .line { display: block; overflow: hidden; }
+.hero__title .line > span { display: block; transform: translateY(110%); transition: transform 1.1s var(--ease); }
+.hero__title.is-in .line > span { transform: none; }
+.hero__title.is-in .line:nth-child(2) > span { transition-delay: .08s; }
+
+/* ---------- type ---------- */
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 14px 0 12px; border-radius: 999px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.06);
+  font-size: 12px; color: var(--fg-2); letter-spacing: .01em;
+}
+.chip--solid { background: rgba(255,255,255,.1); color: var(--fg); border-color: transparent; }
+.chip__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px rgba(0,229,199,.7); flex: none; }
+.h2 { font-size: 40px; line-height: 54px; letter-spacing: -.04em; font-weight: 500; color: var(--fg);
