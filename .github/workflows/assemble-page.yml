@@ -1,0 +1,23 @@
+name: Assemble ai-community page
+on:
+  workflow_dispatch:
+  push:
+    paths: ['ai-community/v1/.parts/**']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          set -e
+          cat ai-community/v1/.parts/p* > ai-community/v1/index.html
+          test "$(wc -c < ai-community/v1/index.html)" = "189785"
+          test "$(md5sum ai-community/v1/index.html | cut -d' ' -f1)" = "c0d7ae2fc7d259492a095cc524acc9ba"
+          rm -rf ai-community/v1/.parts
+          git config user.name "leadup-ai"
+          git config user.email "nagin@leadupmarketers.com"
+          git add -A
+          git commit -m "Publish ai-community/v1 page (assembled from parts)"
+          git push
