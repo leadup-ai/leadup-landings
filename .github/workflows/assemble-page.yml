@@ -1,23 +1,41 @@
-name: Assemble ai-community page
+name: Assemble ai-community v1 (xz+base64 chunks)
+
 on:
-  workflow_dispatch:
   push:
-    paths: ['ai-community/v1/.parts/**']
+    paths:
+      - 'ai-community/v1/.pack/**'
+  workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
-  build:
+  assemble:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
+
+      - name: Stage check
+        id: stage
+        run: |
+          if [ -f ai-community/v1/.pack/part0.b64 ] && [ -f ai-community/v1/.pack/part1.b64 ] && [ -f ai-community/v1/.pack/part2.b64 ] && [ -f ai-community/v1/.pack/part3.b64 ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Not all chunks present yet - nothing to do."
+          fi
+
+      - name: Assemble and verify
+        if: steps.stage.outputs.ready == 'true'
+        run: python3 ai-community/v1/pack-assemble.py
+
+      - name: Commit and push
+        if: steps.stage.outputs.ready == 'true'
+        run: |
           set -e
-          cat ai-community/v1/.parts/p* > ai-community/v1/index.html
-          test "$(wc -c < ai-community/v1/index.html)" = "189785"
-          test "$(md5sum ai-community/v1/index.html | cut -d' ' -f1)" = "c0d7ae2fc7d259492a095cc524acc9ba"
-          rm -rf ai-community/v1/.parts
-          git config user.name "leadup-ai"
-          git config user.email "nagin@leadupmarketers.com"
+          rm -rf ai-community/v1/.pack ai-community/v1/.parts probe ai-community/v1/pack-assemble.py
+          git config user.name "leadup-bot"
+          git config user.email "leadup-bot@users.noreply.github.com"
           git add -A
-          git commit -m "Publish ai-community/v1 page (assembled from parts)"
-          git push
+          git commit -m "Publish ai-community/v1 landing page (verbatim, verified)"
+          git push origin HEAD:main
