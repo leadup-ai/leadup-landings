@@ -1,0 +1,1830 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сообщество и курсы по ИИ — LeadUp AI</title>
+<meta name="description" content="Бесплатный 4-дневный практикум по ИИ с 27 октября и 8-недельный курс с ментором. 2 400 выпускников, разборы каждую неделю, участие — 0 €. Присоединяйся.">
+<meta name="theme-color" content="#0A0F0D">
+<link rel="canonical" href="https://ad.leadup.guru/ai-community/v1/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LeadUp AI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Сообщество и курсы по ИИ — LeadUp AI">
+<meta property="og:description" content="Бесплатный 4-дневный практикум по ИИ с 27 октября и 8-недельный курс с ментором. 2 400 выпускников, разборы каждую неделю, участие — 0 €. Присоединяйся.">
+<meta property="og:url" content="https://ad.leadup.guru/ai-community/v1/">
+<meta property="og:image" content="https://ad.leadup.guru/assets/og/ai-community-1200x630.png">
+<meta property="og:image:secure_url" content="https://ad.leadup.guru/assets/og/ai-community-1200x630.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LeadUp AI: сообщество практиков ИИ, бесплатный практикум 27 октября">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сообщество и курсы по ИИ — LeadUp AI">
+<meta name="twitter:description" content="Бесплатный 4-дневный практикум по ИИ с 27 октября и 8-недельный курс с ментором. 2 400 выпускников, разборы каждую неделю, участие — 0 €. Присоединяйся.">
+<meta name="twitter:image" content="https://ad.leadup.guru/assets/og/ai-community-1200x630.png">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iIzBBMEYwRCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjE3IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMEU1QzciIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjYiIGZpbGw9IiMwMEU1QzciLz48L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ---- LeadUp AI Design System v3 tokens (source of truth) ---- */
+:root {
+  color-scheme: dark;
+
+  /* ---------- COLORS: Signature ---------- */
+  --teal:            #00E5C7;   /* Electric Teal — CTA, accent, links */
+  --teal-hover:      #14F5D7;
+  --teal-pressed:    #00CBB0;
+  --teal-tint:       rgba(0, 229, 199, 0.12);
+  --teal-tint-2:     rgba(0, 229, 199, 0.20);
+  --teal-glow:       0 0 24px rgba(0, 229, 199, 0.45);
+
+  /* ---------- COLORS: Surfaces (dark-first) ---------- */
+  --bg-0:            #050807;   /* deepest — outside body */
+  --bg-1:            #0A0F0D;   /* default page */
+  --bg-2:            #0F1512;   /* elevated section */
+  --bg-3:            #141B18;   /* card surface */
+  --bg-4:            #1B2420;   /* raised card, input */
+  --bg-5:            #253029;   /* hover, divider-fill */
+
+  /* ---------- COLORS: Light surfaces ---------- */
+  --bg-light-1:      #FAFBFA;
+  --bg-light-2:      #F2F4F3;
+  --bg-light-3:      #E6EAE8;
+
+  /* ---------- COLORS: Foreground (on dark) ---------- */
+  --fg-1:            #EDEFEE;   /* primary text */
+  --fg-2:            rgba(237, 239, 238, 0.72);  /* body */
+  --fg-3:            rgba(237, 239, 238, 0.52);  /* muted */
+  --fg-4:            rgba(237, 239, 238, 0.36);  /* captions, disabled */
+
+  /* ---------- COLORS: Foreground (on light) ---------- */
+  --fg-light-1:      #0A0F0D;
+  --fg-light-2:      #3A4440;
+  --fg-light-3:      #6A7570;
+  --fg-light-4:      #9BA3A0;
+
+  /* ---------- COLORS: Borders ---------- */
+  --border-1:        rgba(255, 255, 255, 0.06);   /* subtle */
+  --border-2:        rgba(255, 255, 255, 0.10);   /* default */
+  --border-3:        rgba(255, 255, 255, 0.18);   /* hover, focus-ring */
+  --border-light-1:  rgba(10, 15, 13, 0.08);
+  --border-light-2:  rgba(10, 15, 13, 0.14);
+  --border-light-3:  rgba(10, 15, 13, 0.22);
+
+  /* ---------- COLORS: Light semantic ---------- */
+  --teal-on-light:       #009E8A;   /* darker teal for AA on white */
+  --teal-on-light-hover: #00B89E;
+  --teal-tint-light:     rgba(0, 158, 138, 0.10);
+  --success-on-light:    #15803D;
+  --success-tint-light:  rgba(21, 128, 61, 0.10);
+  --warning-on-light:    #A16207;
+  --warning-tint-light:  rgba(161, 98, 7, 0.10);
+  --danger-on-light:     #DC2626;
+  --danger-tint-light:   rgba(220, 38, 38, 0.10);
+  --info-on-light:       #2563EB;
+  --info-tint-light:     rgba(37, 99, 235, 0.10);
+
+  /* ---------- COLORS: Light shadows ---------- */
+  --shadow-light-1:  0 1px 2px rgba(10, 15, 13, 0.06);
+  --shadow-light-2:  0 2px 8px rgba(10, 15, 13, 0.08), 0 0 0 1px rgba(10, 15, 13, 0.04);
+  --shadow-light-3:  0 8px 24px rgba(10, 15, 13, 0.10), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-light-4:  0 20px 48px rgba(10, 15, 13, 0.14), 0 0 0 1px rgba(10, 15, 13, 0.06);
+  --shadow-light-teal: 0 0 0 1px var(--teal-on-light), 0 4px 16px rgba(0, 158, 138, 0.18);
+  --ring-focus-light: 0 0 0 2px #fff, 0 0 0 4px var(--teal-on-light);
+
+  /* ---------- COLORS: Semantic ---------- */
+  --success:         #3EE089;
+  --success-tint:    rgba(62, 224, 137, 0.14);
+  --warning:         #F5B544;
+  --warning-tint:    rgba(245, 181, 68, 0.14);
+  --danger:          #FF5D5D;
+  --danger-tint:     rgba(255, 93, 93, 0.14);
+  --info:            #6EB8FF;
+  --info-tint:       rgba(110, 184, 255, 0.14);
+
+  /* ---------- COLORS: Gradients (used sparingly) ---------- */
+  --grad-glow:       radial-gradient(60% 80% at 50% 0%, rgba(0, 229, 199, 0.18) 0%, transparent 60%);
+  --grad-mesh:       radial-gradient(at 18% 24%, rgba(0, 229, 199, 0.10) 0, transparent 45%),
+                     radial-gradient(at 82% 80%, rgba(0, 229, 199, 0.06) 0, transparent 50%);
+  --grad-teal-line:  linear-gradient(90deg, transparent, rgba(0, 229, 199, 0.4), transparent);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-sans:       'Geist', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  --font-mono:       'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs:         11px;    /* eyebrow, kbd, mono tags */
+  --text-sm:         13px;    /* small body, meta */
+  --text-base:       15px;    /* body */
+  --text-md:         17px;    /* lead paragraph */
+  --text-lg:         20px;    /* small subhead */
+  --text-xl:         24px;    /* H4 */
+  --text-2xl:        32px;    /* H3 */
+  --text-3xl:        44px;    /* H2 */
+  --text-4xl:        60px;    /* H1 */
+  --text-5xl:        84px;    /* display */
+  --text-6xl:        120px;   /* mega display */
+
+  --fw-regular:      400;
+  --fw-medium:       500;
+  --fw-semibold:     600;
+  --fw-bold:         700;
+  --fw-extrabold:    800;
+  --fw-black:        900;
+
+  --lh-display:      0.98;
+  --lh-tight:        1.04;
+  --lh-snug:         1.2;
+  --lh-normal:       1.5;
+  --lh-relaxed:      1.6;
+
+  --tracking-mega:   -0.045em;   /* 84px+ display */
+  --tracking-tight:  -0.035em;   /* H1, H2 */
+  --tracking-snug:   -0.02em;    /* H3, H4 */
+  --tracking-normal: -0.01em;    /* lead */
+  --tracking-wide:   0.08em;     /* eyebrow uppercase */
+  --tracking-mono:   0.02em;     /* mono */
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1:            4px;
+  --sp-2:            8px;
+  --sp-3:            12px;
+  --sp-4:            16px;
+  --sp-5:            20px;
+  --sp-6:            24px;
+  --sp-8:            32px;
+  --sp-10:           40px;
+  --sp-12:           48px;
+  --sp-16:           64px;
+  --sp-20:           80px;
+  --sp-24:           96px;
+  --sp-32:           128px;
+  --sp-40:           160px;
+
+  /* ---------- RADII (tight, Linear-esque) ---------- */
+  --r-sm:            4px;    /* kbd, inline */
+  --r-md:            6px;    /* small buttons, badges */
+  --r-lg:            8px;    /* buttons, inputs — DEFAULT */
+  --r-xl:            10px;   /* cards */
+  --r-2xl:           14px;   /* large cards, hero blocks */
+  --r-3xl:           20px;   /* feature panels */
+  --r-full:          9999px;
+
+  /* ---------- SHADOWS (subtle, mostly rings) ---------- */
+  --shadow-1:        0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2:        0 2px 8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-3:        0 12px 32px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-4:        0 24px 64px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-teal:     0 0 0 1px var(--teal), 0 8px 24px rgba(0, 229, 199, 0.28);
+  --ring-focus:      0 0 0 2px var(--bg-1), 0 0 0 4px var(--teal);
+
+  /* ---------- MOTION (Linear-like, fast + crisp) ---------- */
+  --ease:            cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1:           120ms;   /* hover, micro */
+  --dur-2:           200ms;   /* default */
+  --dur-3:           320ms;   /* reveal */
+  --dur-4:           500ms;   /* complex */
+
+  /* ---------- GRID / LAYOUT ---------- */
+  --container-wide:   1440px;  /* dashboards, wide app shells */
+  --container:        1240px;  /* DEFAULT marketing / content */
+  --container-narrow: 980px;   /* focused forms, auth, pricing */
+  --container-prose:  720px;   /* blog article body, long-form reading */
+  --grid-cols:        12;      /* base column count */
+  --grid-gap:         24px;    /* desktop gutter */
+  --grid-gap-md:      20px;    /* tablet gutter */
+  --grid-gap-sm:      16px;    /* mobile gutter */
+  --gutter:           24px;    /* container side padding (desktop) */
+  --gutter-mobile:    20px;    /* container side padding (mobile) */
+
+  /* ---------- BREAKPOINTS (mobile-first min-width) ----------
+     Use in @media (min-width: var-equivalent). CSS custom props
+     can't be used directly in media queries — these document the
+     canonical values; copy the px into your @media rules.        */
+  --bp-sm:           480px;   /* large phone           */
+  --bp-md:           768px;   /* tablet / split layouts */
+  --bp-lg:           1024px;  /* laptop / sidebar appears */
+  --bp-xl:           1280px;  /* desktop / full container */
+  --bp-2xl:          1536px;  /* wide / max content     */
+
+  /* ---------- Z-INDEX / ELEVATION ORDER ----------
+     Single source of stacking truth. Never hard-code z-index;
+     reference these so overlays never fight each other.          */
+  --z-base:          0;      /* default flow                 */
+  --z-raised:        10;     /* hovered card, focused input  */
+  --z-sticky:        100;    /* sticky section, sticky bottom-bar */
+  --z-header:        200;    /* site header / app top nav    */
+  --z-dropdown:      300;    /* dropdown, select menu, autocomplete */
+  --z-backdrop:      400;    /* modal / drawer scrim         */
+  --z-modal:         500;    /* dialog, bottom-sheet, drawer */
+  --z-popover:       600;    /* popover, command palette     */
+  --z-toast:         700;    /* toast / snackbar stack       */
+  --z-tooltip:       800;    /* tooltip — always on top of UI */
+  --z-max:           9999;   /* escape hatch — onboarding spotlight */
+
+  /* ---------- BACKGROUND GRID (signature pattern) ---------- */
+  --grid-line:       rgba(255, 255, 255, 0.035);
+  --grid-size:       48px;
+}
+
+/* LeadUp AI · community landing — 1:1 port of the reference stylesheet.
+   Base: LeadUp AI Design System v3, dark-first. Teal (#00E5C7) is an accent only:
+   text, 1px borders, glows, small accents. Never a large fill. */
+
+:root {
+  --bg: #0A0F0D;
+  --bg-2: #0F1512;
+  --bg-3: #141B18;
+  --line: rgba(255,255,255,.10);
+  --line-2: rgba(255,255,255,.14);
+  --fg: #EDEFEE;
+  --fg-2: rgba(237,239,238,.64);
+  --fg-3: rgba(237,239,238,.40);
+  --fg-4: rgba(237,239,238,.24);
+  --accent: #00E5C7;
+  --accent-deep: #00CBB0;
+  --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  --mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+  --container: 1080px;
+  --wide: 1265px;
+  --nav-h: 60px;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: auto; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--sans); font-size: 14px; line-height: 1.5; font-weight: 400;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+h1, h2, h3, h4, h5, p { margin: 0; }
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- reveal (Framer-style appear) ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+/* the parallax writes an inline transform on the laptop every frame; a transform transition here would lag it a full second behind the scroll */
+.hero__device.reveal { transform: none; transition: opacity 1s var(--ease); }
+.hero__title .line { display: block; overflow: hidden; }
+.hero__title .line > span { display: block; transform: translateY(110%); transition: transform 1.1s var(--ease); }
+.hero__title.is-in .line > span { transform: none; }
+.hero__title.is-in .line:nth-child(2) > span { transition-delay: .08s; }
+
+/* ---------- type ---------- */
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 14px 0 12px; border-radius: 999px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.06);
+  font-size: 12px; color: var(--fg-2); letter-spacing: .01em;
+}
+.chip--solid { background: rgba(255,255,255,.1); color: var(--fg); border-color: transparent; }
+.chip__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px rgba(0,229,199,.7); flex: none; }
+.h2 { font-size: 40px; line-height: 54px; letter-spacing: -.04em; font-weight: 500; color: var(--fg); margin-top: 18px; }
+.h2__a, .h2__b { display: block; }
+.h2__b { color: var(--fg-3); }
+.h2--single { color: var(--fg); }
+.section-head { display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: end; margin-bottom: 40px; }
+.section-head__p { font-size: 16px; line-height: 24px; color: var(--fg-2); padding-bottom: 4px; }
+.section-head__link { justify-self: end; font-size: 15px; color: var(--fg-2); padding-bottom: 8px; }
+.section-head__link:hover { color: var(--fg); }
+
+/* ---------- buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 30px; border-radius: 999px; font-size: 14px; font-weight: 500; letter-spacing: -.01em; transition: transform .3s var(--ease), background .3s, box-shadow .3s; white-space: nowrap; }
+.btn--light { background: rgba(237,239,238,.88); color: #0F1512; }
+.btn--light:hover { background: #EDEFEE; transform: translateY(-1px); box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 10px 30px -10px rgba(0,229,199,.55); }
+.btn--ghost { background: rgba(255,255,255,.06); color: var(--fg); border: 1px solid var(--line-2); }
+.btn--ghost:hover { background: rgba(255,255,255,.1); }
+
+/* ---------- nav ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: var(--nav-h);
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  padding: 0 clamp(20px, 6vw, 180px);
+  background: linear-gradient(180deg, rgba(10,15,13,.75), rgba(10,15,13,0));
+  transition: background .4s;
+}
+.nav.is-scrolled { background: rgba(10,15,13,.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+.nav__brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 16px; letter-spacing: .06em; }
+.nav__brand img { width: 28px; height: 28px; }
+.nav__links { display: flex; gap: 8px; justify-self: center; }
+.nav__links a { font-size: 14px; color: var(--fg-2); padding: 8px 14px; border-radius: 999px; transition: color .2s, background .2s; }
+.nav__links a:hover { color: var(--fg); background: rgba(255,255,255,.06); }
+.nav__right { display: flex; align-items: center; gap: 16px; justify-self: end; }
+.nav__login { font-size: 14px; color: var(--fg-2); }
+.nav__login:hover { color: var(--fg); }
+.nav__cta { display: inline-flex; align-items: center; height: 38px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,.12); font-size: 14px; font-weight: 500; transition: background .25s; }
+.nav__cta:hover { background: rgba(255,255,255,.2); }
+.nav__burger { display: none; width: 40px; height: 40px; border-radius: 999px; background: rgba(255,255,255,.08); align-items: center; justify-content: center; justify-self: end; }
+.nav__sheet { display: none; position: fixed; top: var(--nav-h); left: 12px; right: 12px; z-index: 49; padding: 12px; border-radius: 20px; background: rgba(15,21,18,.96); border: 1px solid var(--line-2); flex-direction: column; }
+.nav__sheet.is-open { display: flex; }
+.nav__sheet a { padding: 12px 14px; font-size: 16px; color: var(--fg-2); border-radius: 12px; }
+.nav__sheet a:hover { color: var(--fg); background: rgba(255,255,255,.06); }
+.nav__sheet-cta { margin-top: 6px; text-align: center; background: rgba(237,239,238,.9); color: #0F1512 !important; font-weight: 500; }
+
+/* ---------- hero ---------- */
+.hero { position: relative; height: 1270px; overflow: clip; background: var(--bg); }
+.hero__sky {
+  position: absolute; inset: 0;
+  background: radial-gradient(200% 83% at 50% 0px, #0F1512 0%, #1B2420 42%, #00CBB0 100%);
+}
+.hero__sky::after { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 40% at 50% 100%, rgba(0,229,199,.22), rgba(0,229,199,0) 70%); }
+.layer { position: absolute; left: 50%; bottom: 0; width: max(1440px, 100%); transform: translateX(-50%); will-change: transform; pointer-events: none; max-width: none; }
+.layer--far { z-index: 1; opacity: 1; bottom: 150px; width: max(1680px, 117%); }
+.layer--mid { z-index: 2; bottom: 40px; }
+.layer--front { z-index: 4; bottom: -110px; }
+/* the layers drift past the section edge as they parallax; fade them into the page ground so the clip line never shows */
+.hero::after { content: ''; position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; height: 280px; background: linear-gradient(180deg, rgba(10,15,13,0) 0%, rgba(10,15,13,.6) 45%, var(--bg) 88%); pointer-events: none; }
+.hero__content { position: relative; z-index: 3; padding-top: 160px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.hero__title { font-size: 56px; line-height: 1.3; letter-spacing: -.04em; font-weight: 400; color: #EDEFEE; color: #EDEFEE; margin-top: 22px; max-width: 900px; }
+.hero__sub { margin-top: 16px; font-size: 14px; line-height: 21px; color: rgba(237,239,238,.8); max-width: 460px; }
+.hero__cta { margin-top: 46px; }
+.hero__device { position: absolute; z-index: 3; left: 50%; top: 594px; width: 960px; margin-left: -480px; will-change: transform; }
+.device { padding: 6px 6px 0; border-radius: 24px 24px 0 0; background: rgba(20,27,24,.85); box-shadow: 0 -1px 0 rgba(255,255,255,.08) inset, 0 40px 120px -20px rgba(0,0,0,.8); }
+.hero__floor { position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; height: 90px; background: linear-gradient(180deg, rgba(10,15,13,0), var(--bg) 70%); }
+
+/* ---------- product screen (shared) ---------- */
+.screen { display: grid; grid-template-columns: 230px 1fr; height: 670px; border-radius: 18px 18px 0 0; overflow: clip; background: #141B18; color: #DDE3E0; font-size: 14px; }
+.screen__side { background: #1B2420; border-right: 1px solid rgba(255,255,255,.06); padding: 22px 18px; }
+.screen__search { display: flex; align-items: center; justify-content: space-between; color: rgba(255,255,255,.35); }
+.screen__search span { display: block; width: 60px; height: 14px; border-radius: 999px; background: rgba(255,255,255,.12); }
+.screen__nav { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.screen__nav li { display: flex; align-items: center; gap: 10px; height: 33px; padding: 0 10px; border-radius: 8px; color: rgba(237,239,238,.72); }
+.screen__nav li.is-active { background: rgba(255,255,255,.07); color: #EDEFEE; }
+.screen__nav svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; opacity: .8; }
+.screen__main { position: relative; overflow: clip; }
+.screen__cover { position: absolute; inset: 0; width: 100%; height: 100%; filter: blur(26px) saturate(1.05); transform: scale(1.12); }
+.screen__hero { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; padding: 200px 60px 40px; background: linear-gradient(180deg, rgba(15,21,18,0) 40%, rgba(15,21,18,.35) 100%); }
+.screen--cta .screen__hero { padding-top: 150px; }
+.screen__avatar { width: 48px; height: 48px; border-radius: 50%; background: #050807; display: grid; place-items: center; box-shadow: 0 0 0 2px rgba(255,255,255,.18), 0 0 26px rgba(0,229,199,.55), 0 8px 24px rgba(0,0,0,.45); }
+.screen__avatar img { width: 32px; height: 32px; }
+.screen__name { margin-top: 12px; font-size: 16px; font-weight: 600; color: #EDEFEE; text-shadow: 0 1px 12px rgba(0,0,0,.4); }
+.screen__members { margin-top: 10px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #EDEFEE; }
+.faces { display: inline-flex; }
+.faces img { width: 22px; height: 22px; border-radius: 50%; border: 2px solid rgba(237,239,238,.9); margin-left: -8px; object-fit: cover; }
+.faces img:first-child { margin-left: 0; }
+.screen__join { margin-top: 16px; width: min(420px, 100%); height: 52px; border-radius: 12px; background: #EDEFEE; color: #0F1512; font-weight: 600; font-size: 15px; display: grid; place-items: center; box-shadow: 0 10px 30px -10px rgba(0,0,0,.6); }
+.screen__desc { margin-top: 18px; font-size: 12.5px; line-height: 18px; color: rgba(237,239,238,.88); text-align: left; max-width: 420px; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+
+/* ---------- intro ---------- */
+.intro { padding: 230px 0 210px; background: var(--bg); }
+.intro__inner { max-width: 640px; margin: 0 auto; transform: translateX(-120px); }
+.intro__p { font-size: 32px; line-height: 38px; letter-spacing: -.03em; font-weight: 400; color: var(--fg); opacity: .22; margin-top: 36px; transition: opacity .4s; }
+.intro__p:first-of-type { margin-top: 40px; }
+
+/* ---------- sections ---------- */
+.features, .get, .live, .plans, .faq, .videos { padding: 110px 0; background: var(--bg); }
+
+/* tabs */
+.tabs { display: grid; grid-template-columns: repeat(4, 1fr); padding: 6px; border-radius: 999px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); }
+.tab { height: 46px; border-radius: 999px; font-size: 17px; color: var(--fg-2); transition: background .3s, color .3s; }
+.tab.is-active { background: #1B2420; color: var(--fg); box-shadow: 0 1px 0 rgba(255,255,255,.06) inset; }
+.tab:hover { color: var(--fg); }
+
+/* stage */
+.stage { position: relative; margin-top: 12px; height: 600px; border-radius: 28px; overflow: clip; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02), 0 60px 120px -60px rgba(0,0,0,.9); }
+.stage__bg { position: absolute; inset: -8% 0; width: 100%; height: 116%; object-fit: cover; opacity: 1; filter: brightness(1.25); will-change: transform; }
+.stage::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,13,.15), rgba(10,15,13,0) 30%, rgba(10,15,13,.45) 100%); pointer-events: none; }
+.stage__slide { padding: 64px 120px; }
+.stage__slides { position: absolute; inset: 0; }
+.stage__slide { position: absolute; inset: 0; margin: 0; display: grid; place-items: center; padding: 56px 100px; opacity: 0; transform: translateY(14px) scale(.98); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.stage__slide.is-active { opacity: 1; transform: none; }
+.stage__slide img { max-height: 100%; max-width: 100%; border-radius: 14px; box-shadow: 0 40px 90px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.08); }
+.stage__slide--grid { padding: 40px 100px; }
+.qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%; max-width: 660px; }
+.qgrid img { width: 100%; height: auto; }
+.stage-bar { margin-top: 14px; height: 60px; display: grid; grid-template-columns: 48px 1fr 48px; align-items: center; padding: 0 6px; border-radius: 999px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); }
+.stage-bar__btn { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.05); border: 1px solid var(--line); display: grid; place-items: center; color: var(--fg-2); transition: background .2s, color .2s; }
+.stage-bar__btn:hover { background: rgba(255,255,255,.1); color: var(--fg); }
+.stage-bar__caption { text-align: center; font-size: 17px; color: var(--fg); }
+
+/* stacked decks */
+.stack { position: relative; margin-top: 8px; }
+.deck { position: sticky; top: 120px; display: grid; grid-template-columns: 1fr 1fr; height: 628px; margin-bottom: 48px; border-radius: 28px; overflow: clip; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02), 0 50px 100px -50px rgba(0,0,0,.9); transform-origin: 50% 0; }
+.stack.is-near .deck { will-change: transform, filter; }
+.deck--flip .deck__copy { order: 2; }
+.deck__copy { padding: 56px 48px; display: flex; flex-direction: column; }
+.deck__label { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--fg-3); }
+.deck__title { margin-top: 64px; font-size: 32px; line-height: 40px; letter-spacing: -.03em; font-weight: 500; max-width: 12ch; }
+.deck__p { margin-top: 30px; font-size: 15px; line-height: 22px; color: var(--fg-2); max-width: 40ch; }
+.deck__foot { margin-top: auto; display: inline-flex; align-items: center; gap: 12px; font-size: 15px; color: var(--fg-2); }
+.cross { position: relative; width: 14px; height: 14px; flex: none; opacity: .7; }
+.cross::before, .cross::after { content: ''; position: absolute; background: var(--fg-2); }
+.cross::before { left: 0; right: 0; top: 6.5px; height: 1px; }
+.cross::after { top: 0; bottom: 0; left: 6.5px; width: 1px; }
+.deck__media { position: relative; margin: 8px; border-radius: 22px; overflow: clip; background: #141B18; }
+.deck__bg { position: absolute; inset: -6% 0; width: 100%; height: 112%; object-fit: cover; opacity: .95; }
+.deck__media::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,13,.1), rgba(10,15,13,.45)); }
+.deck__shot { position: absolute; left: 50%; top: 50%; width: 82%; transform: translate(-50%, -50%); border-radius: 12px; box-shadow: 0 40px 80px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.1); object-fit: cover; }
+.deck__shot--tall { width: 58%; aspect-ratio: 4 / 5; object-position: 50% 15%; }
+
+/* plans */
+.plans__grid { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 28px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); padding: 0; }
+.plan { padding: 44px 36px 20px; display: flex; flex-direction: column; }
+.plan--raised { margin: -16px -1px; padding-top: 60px; background: #141B18; border: 1px solid var(--line-2); border-radius: 22px; box-shadow: 0 30px 80px -30px rgba(0,0,0,.9), 0 0 60px -30px rgba(0,229,199,.35); position: relative; z-index: 1; }
+.plan__label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-2); padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.plan__price { display: flex; align-items: baseline; gap: 8px; margin-top: 32px; }
+.plan__price b { font-size: 40px; font-weight: 400; letter-spacing: -.04em; color: var(--fg); line-height: 1; }
+.plan__price span { font-size: 18px; color: var(--fg-2); }
+.plan__blurb { margin-top: 22px; font-size: 15px; line-height: 21px; color: var(--fg-2); max-width: 22ch; min-height: 42px; }
+.plan .btn { align-self: flex-start; margin-top: 26px; height: 40px; padding: 0 22px; font-size: 14px; }
+.plan__rows { list-style: none; margin: 46px 0 0; padding: 0; }
+.plan__rows li { display: flex; align-items: center; gap: 12px; height: 61px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--fg); }
+.plan__rows li:last-child { border-bottom: 0; }
+.plan__rows i { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.1); flex: none; position: relative; }
+.plan__rows i::after { content: ''; position: absolute; left: 7px; top: 5px; width: 5px; height: 9px; border: solid var(--fg); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); opacity: .85; }
+.plan--raised .plan__rows i { background: rgba(0,229,199,.18); }
+.plan--raised .plan__rows i::after { border-color: var(--accent); }
+
+/* faq */
+.faq__grid { display: grid; grid-template-columns: 345px 1fr; gap: 48px; align-items: start; }
+.faq__side { position: sticky; top: 100px; }
+.faq__tabs { display: flex; flex-direction: column; gap: 4px; padding: 6px; border-radius: 28px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); }
+.faq__tabs button { height: 44px; border-radius: 999px; font-size: 16px; color: var(--fg-2); transition: background .25s, color .25s; }
+.faq__tabs button.is-active { background: #1B2420; color: var(--fg); }
+.faq__card { margin-top: 24px; padding: 36px; border-radius: 22px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); }
+.faq__card h4 { font-size: 22px; font-weight: 500; letter-spacing: -.02em; }
+.faq__card p { margin-top: 12px; font-size: 14px; line-height: 21px; color: var(--fg-2); }
+.faq__card a { display: inline-block; margin-top: 30px; font-size: 14px; color: var(--fg-2); }
+.faq__card a:hover { color: var(--fg); }
+.faq__set { display: none; flex-direction: column; gap: 10px; }
+.faq__set.is-active { display: flex; }
+.qa { border-radius: 22px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); }
+.qa summary { list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 34px 36px; font-size: 17px; cursor: pointer; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa__chev { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.06); border: 1px solid var(--line); position: relative; flex: none; transition: transform .3s var(--ease); }
+.qa__chev::after { content: ''; position: absolute; left: 12px; top: 10px; width: 8px; height: 8px; border: solid var(--fg-2); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); }
+.qa[open] .qa__chev { transform: rotate(180deg); }
+.qa__a { padding: 0 36px 34px; font-size: 15px; line-height: 23px; color: var(--fg-2); max-width: 60ch; }
+
+/* videos */
+.videos__intro { margin-top: 16px; max-width: 50ch; font-size: 16px; line-height: 24px; color: var(--fg-2); }
+.videos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px; border-radius: 28px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); }
+.vcard { border-radius: 20px; background: #141B18; overflow: clip; transition: transform .35s var(--ease), background .3s; }
+.vcard:hover { transform: translateY(-3px); background: #141B18; }
+.vcard img { width: 100%; aspect-ratio: 16 / 12; object-fit: cover; }
+.vcard h3 { padding: 26px 30px 0; font-size: 22px; line-height: 30px; letter-spacing: -.02em; font-weight: 500; }
+.vcard__meta { padding: 20px 30px 34px; font-size: 14px; color: var(--fg-2); }
+
+/* ais live */
+.live__panel { display: grid; grid-template-columns: 1.45fr 1fr; gap: 10px; padding: 10px; border-radius: 28px; background: #0F1512; border: 1px solid var(--line); box-shadow: 0 0 0 6px rgba(255,255,255,.02); }
+.live__media { position: relative; display: block; aspect-ratio: 16 / 9; border-radius: 20px; overflow: clip; background: #141B18; }
+.live__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.live__media:hover img { transform: scale(1.02); }
+.live__side { display: flex; flex-direction: column; padding: 26px 26px 26px 22px; }
+.live__label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-2); padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.live__rows { list-style: none; margin: 0; padding: 0; }
+.live__rows li { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.live__when { grid-column: 1 / -1; font-size: 13px; color: var(--fg-2); }
+.live__what { font-size: 18px; letter-spacing: -.02em; color: var(--fg); }
+.live__where { font-size: 14px; color: var(--fg-3); }
+.live__side .btn { align-self: flex-start; margin-top: auto; }
+
+/* typed headlines */
+[data-type] .w { display: inline-block; white-space: nowrap; }
+[data-type] .ch { display: inline-block; opacity: 0; filter: blur(6px); transform: translateY(4px); transition: opacity .32s var(--ease), filter .5s var(--ease), transform .5s var(--ease); }
+[data-type].is-typed .ch { opacity: 1; filter: blur(0); transform: none; }
+
+/* cta */
+.cta { position: relative; padding: 200px 0 260px; background: linear-gradient(180deg, var(--bg) 0%, #141B18 100%); overflow: clip; }
+.cta__inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; align-items: start; }
+.cta__copy .h2 { margin-top: 0; }
+.cta__copy p { margin-top: 26px; font-size: 16px; line-height: 24px; color: var(--fg-2); max-width: 36ch; }
+.cta__copy .btn { margin-top: 42px; }
+.cta__device { position: relative; }
+.screen--cta { height: 560px; border-radius: 18px; grid-template-columns: 230px 1fr; width: 1180px; box-shadow: 0 40px 100px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.06); }
+.cta__dunes { position: absolute; z-index: 1; left: 0; right: 0; bottom: -20px; width: 100%; height: 560px; object-fit: cover; object-position: 50% 30%; opacity: .95; -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 55%); mask-image: linear-gradient(180deg, transparent 0%, #000 55%); will-change: transform; }
+.cta__layer { position: absolute; left: 50%; width: max(1440px, 100%); transform: translateX(-50%); pointer-events: none; will-change: transform; max-width: none; }
+.cta__layer--mid { z-index: 1; bottom: -30px; opacity: .9; }
+.cta__layer--front { z-index: 3; bottom: -140px; }
+.cta::after { content: ''; position: absolute; z-index: 4; left: 0; right: 0; bottom: 0; height: 240px; background: linear-gradient(180deg, rgba(10,15,13,0) 0%, rgba(10,15,13,.6) 45%, var(--bg) 88%); pointer-events: none; }
+
+/* scroll progress: a 2px lit line along the top edge with a small bright head */
+.progress { position: fixed; top: 0; left: 0; right: 0; z-index: 60; height: 2px; pointer-events: none; }
+.progress__bar { position: absolute; inset: 0; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, rgba(0,229,199,.8), #00E5C7 60%, #CDFAF0); box-shadow: 0 0 12px rgba(0,229,199,.7); will-change: transform; }
+.progress__head { position: absolute; top: -3px; left: -4px; width: 8px; height: 8px; border-radius: 50%; background: #EDEFEE; box-shadow: 0 0 10px 3px rgba(0,229,199,.85); transform: translateX(0); opacity: 0; transition: opacity .3s var(--ease); will-change: transform; }
+.progress.is-on .progress__head { opacity: 1; }
+
+/* footer */
+.footer { position: relative; z-index: 2; background: var(--bg); padding: 70px 0 40px; }
+.footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
+.footer__brand p { margin-top: 20px; font-size: 14px; color: var(--fg-2); max-width: 30ch; }
+.footer__fine { margin-top: 14px; font-size: 12px; color: var(--fg-4); max-width: 34ch; line-height: 1.5; }
+.footer__col { display: flex; flex-direction: column; gap: 14px; }
+.footer__col h5 { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+.footer__col a { font-size: 15px; color: var(--fg-2); }
+.footer__col a:hover { color: var(--fg); }
+.footer__terms { margin-top: 30px; font-size: 11px; line-height: 1.65; color: rgba(237,239,238,.42); }
+.footer__terms p { max-width: 980px; }
+.footer__terms p + p { margin-top: 8px; }
+.footer__bottom { margin-top: 56px; padding-top: 30px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13px; color: var(--fg-2); }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .hero__title .line > span { transition: none; opacity: 1; transform: none; }
+  .layer, .hero__device, .stage__bg, .cta__dunes { transform: none !important; }
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1100px) {
+  .nav { padding: 0 20px; }
+  .nav__links { gap: 2px; }
+  .nav__links a { padding: 8px 10px; }
+  .section-head { grid-template-columns: 1fr; gap: 20px; }
+  .section-head__p { padding-bottom: 0; max-width: 46ch; }
+  .section-head__link { justify-self: start; }
+}
+/* seven nav links plus the wordmark stop fitting below 1000px, so the menu button takes over there */
+@media (max-width: 1000px) {
+  .nav { grid-template-columns: auto 1fr auto; }
+  .nav__links, .nav__login, .nav__cta { display: none; }
+  .nav__burger { display: inline-flex; }
+}
+@media (max-width: 900px) {
+  /* hero keeps its layered stage on phones: fixed height, laptop parked behind the treeline, narrower ridge art */
+  .hero { height: 960px; padding-bottom: 0; }
+  .hero__content { padding: 108px 20px 0; }
+  .hero__title { font-size: 38px; line-height: 1.12; }
+  .hero__sub { font-size: 14px; line-height: 20px; padding: 0 8px; }
+  .hero__cta { margin-top: 32px; }
+  .hero__title .line { display: inline; }
+  .hero__title .line > span { display: inline; transform: none; }
+  .hero__title .line:nth-child(2) > span::before { content: ' '; }
+  .hero__device { position: absolute; top: 520px; left: 16px; right: 16px; width: auto; margin: 0; }
+  .screen { grid-template-columns: 1fr; height: 460px; }
+  .screen__side { display: none; }
+  .screen__hero { padding: 64px 24px 24px; }
+  .screen__cover { filter: none; transform: scale(1.06); }
+  /* phone GPU budget: no backdrop blur behind the nav, no filter on the drifting stage image, no blur on typed characters */
+  .nav.is-scrolled { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(10,15,13,.94); }
+  .stage__bg { filter: none; }
+  [data-type] .ch { filter: none; transition: opacity .32s var(--ease), transform .5s var(--ease); }
+  [data-type].is-typed .ch { filter: none; }
+  .progress { height: 2px; }
+  .layer { width: 1100px; }
+  .layer--far { width: 1320px; bottom: 200px; }
+  .layer--mid { bottom: 80px; }
+  .layer--front { bottom: -80px; }
+  .hero::after { height: 220px; }
+  .hero__floor { display: none; }
+  .intro { padding: 120px 0; }
+  .intro__inner { transform: none; padding: 0 24px; }
+  .intro__p { font-size: 24px; line-height: 30px; }
+  .features, .get, .live, .plans, .faq, .videos { padding: 80px 0; }
+  .live__panel { grid-template-columns: 1fr; }
+  .live__side { padding: 18px 16px 16px; }
+  .live__side .btn { margin-top: 24px; }
+  .tabs { grid-template-columns: repeat(2, 1fr); border-radius: 24px; }
+  .tab { font-size: 15px; height: 42px; }
+  .stage { height: 420px; }
+  .stage__slide { padding: 28px; }
+  .stage-bar__caption { font-size: 14px; }
+  .deck { position: relative; top: auto; grid-template-columns: 1fr; height: auto; margin-bottom: 20px; transform: none !important; filter: none !important; }
+  .deck--flip .deck__copy { order: 0; }
+  .deck__copy { padding: 32px 28px; }
+  .deck__title { margin-top: 28px; font-size: 26px; line-height: 32px; }
+  .deck__p { margin-top: 18px; }
+  .deck__foot { margin-top: 28px; }
+  .deck__media { height: 340px; }
+  .plans__grid { grid-template-columns: 1fr; }
+  .plan--raised { margin: 0; border-radius: 22px; }
+  .faq__grid { grid-template-columns: 1fr; }
+  .faq__card { margin-top: 20px; }
+  .faq__side { position: static; top: auto; }
+  .faq__tabs { flex-direction: row; }
+  .faq__tabs button { flex: 1; font-size: 14px; }
+  .qa summary { padding: 22px 22px; font-size: 15px; }
+  .qa__a { padding: 0 22px 22px; }
+  .videos__grid { grid-template-columns: 1fr; }
+  .cta { padding: 120px 0 110px; }
+  .cta__inner { grid-template-columns: 1fr; }
+  .cta__device { margin-top: 8px; }
+  .screen--cta { width: 100%; height: 420px; border-radius: 18px 18px 0 0; }
+  .screen--cta .screen__hero { padding-top: 56px; }
+  .cta__dunes { height: 300px; bottom: -10px; }
+  .cta__layer { width: 1100px; }
+  .cta__layer--mid { bottom: 40px; }
+  .cta__layer--front { bottom: -40px; }
+  .cta::after { height: 200px; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+
+/* ==========================================================================
+   LeadUp AI Design System v3 — skin layer (append-only)
+   Everything above this line is the reference stylesheet, ported 1:1 with the
+   DS token values remapped. The rules below are the only additions:
+   the brand wordmark, the mentor block, the plan badge, the DS primary
+   button, the DS-aligned mock-UI join pill, and the new #form section.
+   ========================================================================== */
+
+/* ---------- brand wordmark (212x60 white artwork, used as-is on dark) ---------- */
+.nav__brand img { width: auto; height: 22px; display: block; }
+.footer__brand img { width: auto; height: 30px; }
+
+/* ---------- mentor block (spec: author / mentor) ---------- */
+.mentor { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center; margin: 40px 0 0; padding-top: 28px; border-top: 1px solid var(--line); }
+.mentor img { width: 96px; height: 95px; border-radius: var(--r-2xl, 20px); object-fit: cover; background: var(--bg-3); border: 1px solid var(--line); }
+.mentor__text b { display: block; font-size: 17px; font-weight: 500; color: var(--fg); }
+.mentor__text span { display: block; margin-top: 6px; font-size: 14px; line-height: 1.55; color: var(--fg-2); }
+@media (max-width: 720px) {
+  .mentor { grid-template-columns: 72px 1fr; gap: 16px; }
+  .mentor img { width: 72px; height: 71px; }
+}
+
+/* ---------- DS primary button: 1px teal border + dark fill + teal text ---------- */
+.btn--primary { border: 1px solid var(--teal); background: var(--bg-4); color: var(--teal); }
+.btn--primary:hover { border-color: var(--teal-hover); color: var(--teal-hover); background: var(--bg-5); }
+.btn--primary:active { border-color: var(--teal-pressed); color: var(--teal-pressed); }
+.btn--block { width: 100%; justify-content: center; }
+.nav__cta.btn--primary { border: 1px solid var(--teal); background: var(--bg-4); color: var(--teal); }
+.nav__cta.btn--primary:hover { border-color: var(--teal-hover); color: var(--teal-hover); background: var(--bg-5); }
+.nav__sheet-cta.btn--primary { border: 1px solid var(--teal); background: var(--bg-4); color: var(--teal); }
+
+/* ---------- DS-aligned mock UI: teal border, dark fill (no large light fill) ---------- */
+.screen__join { background: var(--bg-4); border: 1px solid var(--teal); color: var(--teal); box-shadow: var(--shadow-1); }
+
+/* ---------- plan badge ---------- */
+.plan__badge { display: inline-flex; align-items: center; margin-left: 8px; padding: 2px 8px; border: 1px solid var(--teal); border-radius: var(--r-full, 999px); color: var(--teal); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+
+/* ---------- new section: #form ---------- */
+.formsec { padding: 120px 0; background: var(--bg-2); position: relative; }
+.formsec__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.formsec__head .h2 { margin-top: 22px; }
+.lead { margin-top: 24px; max-width: 46ch; font-size: 17px; line-height: 1.6; color: var(--fg-2); }
+.checks { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; }
+.checks li { position: relative; padding-left: 28px; font-size: 15px; line-height: 1.5; color: var(--fg-2); }
+.checks li::before { content: ""; position: absolute; left: 0; top: 2px; width: 16px; height: 16px; border-radius: var(--r-full, 999px); border: 1px solid var(--teal); }
+.checks li::after { content: ""; position: absolute; left: 5px; top: 6px; width: 5px; height: 8px; border-right: 1.5px solid var(--teal); border-bottom: 1.5px solid var(--teal); transform: rotate(40deg); }
+
+/* form card: --bg-2 section, --bg-3 card, 1px borders */
+.form { padding: 32px; background: var(--bg-3); border: 1px solid var(--line); border-radius: var(--r-2xl, 20px); box-shadow: var(--shadow-3); }
+.form__title { font-size: 20px; font-weight: 500; color: var(--fg); }
+.form__sub { margin-top: 6px; font-size: 14px; color: var(--fg-2); }
+.form__body { margin-top: 24px; display: grid; gap: 16px; }
+.field { display: grid; gap: 8px; }
+.field > label { font-size: 13px; color: var(--fg-3); }
+.field input, .field select { width: 100%; height: 48px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: var(--r-md, 12px); background: var(--bg-4); color: var(--fg); font: inherit; font-size: 15px; transition: border-color .2s var(--ease), box-shadow .2s var(--ease); }
+.field input::placeholder { color: var(--fg-4); }
+.field input:focus, .field select:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-tint); }
+.field.is-invalid input, .field.is-invalid select, .field.is-invalid .field--check { border-color: var(--danger); }
+.field__err { display: none; font-size: 12px; color: var(--danger); }
+.field.is-invalid .field__err { display: block; }
+.field--check { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; padding: 12px; border: 1px solid var(--line); border-radius: var(--r-md, 12px); }
+.field--check input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--teal); }
+.field--check label { font-size: 13px; line-height: 1.45; color: var(--fg-2); }
+.field--check a { color: var(--teal); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-msg { display: none; font-size: 14px; }
+.form-msg.is-ok, .form-msg.is-err { display: block; padding: 12px 14px; border-radius: var(--r-md, 12px); }
+.form-msg.is-ok { border: 1px solid var(--teal); background: var(--teal-tint); color: var(--teal); }
+.form-msg.is-err { border: 1px solid var(--danger); background: var(--danger-tint); color: var(--danger); }
+.form__tiny { font-size: 12px; line-height: 1.5; color: var(--fg-3); }
+.form__tiny a { color: var(--teal); }
+
+@media (max-width: 900px) {
+  .formsec { padding: 84px 0; }
+  .formsec__grid { grid-template-columns: 1fr; gap: 36px; }
+  .form { padding: 24px; }
+}
+
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><div class="progress__bar" data-progress></div><div class="progress__head" data-progress-head></div></div>
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="LeadUp AI — на главную">
+    <img src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60">
+  </a>
+  <nav class="nav__links" aria-label="Основная навигация">
+    <a href="#about">О сообществе</a>
+    <a href="#inside">Что внутри</a>
+    <a href="#get">Практикум</a>
+    <a href="#live">Эфиры</a>
+    <a href="#plans">Тарифы</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <div class="nav__right">
+    <a class="nav__login" href="#form" data-cta="nav_login">Войти</a>
+    <a class="nav__cta btn--primary" href="#form" data-cta="nav_cta">Записаться бесплатно</a>
+  </div>
+  <button class="nav__burger" aria-label="Меню" aria-expanded="false" data-burger>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</header>
+<div class="nav__sheet" data-sheet>
+  <a href="#about">О сообществе</a><a href="#inside">Что внутри</a><a href="#get">Практикум</a><a href="#live">Эфиры</a><a href="#plans">Тарифы</a><a href="#faq">Вопросы</a>
+  <a class="nav__sheet-cta btn--primary" href="#form" data-cta="nav_sheet_cta">Записаться бесплатно</a>
+</div>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <div class="hero__sky" aria-hidden="true"></div>
+  <img class="layer layer--far" data-rate="0.31" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiIHN0b3Atb3BhY2l0eT0iMC4xMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMC4yMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIwLDkwMCAwLDQ3MCAyMDAsNjUwIDQwMCw2MjAgNjAwLDU5MCA4MDAsNTYwIDEwMDAsNjIwIDEyMDAsNTkwIDE0MDAsNTYwIDE2MDAsNTMwIDE2MDAsOTAwIiBmaWxsPSJ1cmwoI2cpIi8+PHBvbHlsaW5lIHBvaW50cz0iMCw5MDAgMCw0NzAgMjAwLDY1MCA0MDAsNjIwIDYwMCw1OTAgODAwLDU2MCAxMDAwLDYyMCAxMjAwLDU5MCAxNDAwLDU2MCAxNjAwLDUzMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2wpIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="" aria-hidden="true">
+  <img class="layer layer--mid" data-rate="0.17" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMC4zNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIwLDkwMCAwLDUyMCAyMDAsNjQwIDQwMCw3NjAgNjAwLDYwMCA4MDAsNzIwIDEwMDAsNzYwIDEyMDAsNjAwIDE0MDAsNzIwIDE2MDAsNTYwIDE2MDAsOTAwIiBmaWxsPSJ1cmwoI2cpIi8+PHBvbHlsaW5lIHBvaW50cz0iMCw5MDAgMCw1MjAgMjAwLDY0MCA0MDAsNzYwIDYwMCw2MDAgODAwLDcyMCAxMDAwLDc2MCAxMjAwLDYwMCAxNDAwLDcyMCAxNjAwLDU2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2wpIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="" aria-hidden="true">
+  <div class="hero__content">
+    <div class="chip chip--solid reveal" data-delay="0"><span class="chip__dot"></span>Сообщество практиков ИИ · 2 400 выпускников</div>
+    <h1 class="hero__title reveal" data-delay="80"><span class="line"><span>Учись применять ИИ в работе</span></span><span class="line"><span>вместе с сообществом</span></span></h1>
+    <p class="hero__sub reveal" data-delay="180">Старт практикума 27 октября, 19:00 по Мадриду. Участие — 0 €.</p>
+    <div class="hero__cta reveal" data-delay="260"><a class="btn btn--primary" href="#form" data-cta="hero">Записаться бесплатно</a></div>
+  </div>
+  <div class="hero__device reveal" data-delay="380" data-rate="0.2">
+    <div class="device">
+      <div class="screen" data-screen>
+        <aside class="screen__side">
+          <div class="screen__search"><span></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+          <ul class="screen__nav">
+            <li class="is-active"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg>Сообщество</li>
+            <li><svg viewBox="0 0 24 24"><path d="M2 7l10-4 10 4-10 4z"/><path d="M6 9v5a6 6 0 0 0 12 0V9"/></svg>Обучение</li>
+            <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Календарь</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 2 5 5"/></svg>Участники</li>
+            <li><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10h4v10M14 20V4h4v16"/></svg>Лидеры</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v.5M12 11v5"/></svg>О проекте</li>
+          
+          </ul>
+        </aside>
+        <div class="screen__main">
+          <canvas class="screen__cover" data-cover aria-hidden="true"></canvas>
+          <div class="screen__hero">
+            <div class="screen__avatar"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzBGMTUxMiIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjE5IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMEU1QzciIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjYiIGZpbGw9IiMwMEU1QzciIG9wYWNpdHk9Ii44NSIvPjwvc3ZnPg==" alt=""></div>
+            <div class="screen__name">Сообщество LeadUp AI</div>
+            <div class="screen__members">
+              <span class="faces"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIzMiIgZmlsbD0iIzE0MUIxOCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMjciIHI9IjEyIiBmaWxsPSJoc2woNDAsMTglLDM0JSkiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjUwIiByPSIxNyIgZmlsbD0iaHNsKDQwLDE0JSw1MiUpIi8+PC9zdmc+" alt=""><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIzMiIgZmlsbD0iIzE0MUIxOCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMjciIHI9IjEyIiBmaWxsPSJoc2woMzIwLDE4JSwzNCUpIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSI1MCIgcj0iMTciIGZpbGw9ImhzbCgzMjAsMTQlLDUyJSkiLz48L3N2Zz4=" alt=""><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIzMiIgZmlsbD0iIzE0MUIxOCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMjciIHI9IjEyIiBmaWxsPSJoc2woMTgwLDE4JSwzNCUpIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSI1MCIgcj0iMTciIGZpbGw9ImhzbCgxODAsMTQlLDUyJSkiLz48L3N2Zz4=" alt=""></span>
+              2 400 участников
+            </div>
+            <div class="screen__join">Присоединиться</div>
+            <p class="screen__desc">Учись применять ИИ на своих задачах.<br>→ 4-дневный практикум: старт 27 октября, 0 €<br>→ Разбор кейсов каждую неделю<br>→ 2 400 участников рядом, когда застрял</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="layer layer--front" data-rate="0" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiIHN0b3Atb3BhY2l0eT0iMC4yMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMC40OCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIwLDkwMCAwLDU3MCAyMDAsNTcwIDQwMCw1NzAgNjAwLDU3MCA4MDAsNTcwIDEwMDAsNTcwIDEyMDAsNTcwIDE0MDAsNTcwIDE2MDAsNTcwIDE2MDAsOTAwIiBmaWxsPSJ1cmwoI2cpIi8+PHBvbHlsaW5lIHBvaW50cz0iMCw5MDAgMCw1NzAgMjAwLDU3MCA0MDAsNTcwIDYwMCw1NzAgODAwLDU3MCAxMDAwLDU3MCAxMjAwLDU3MCAxNDAwLDU3MCAxNjAwLDU3MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2wpIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="" aria-hidden="true">
+  <div class="hero__floor" aria-hidden="true"></div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section class="intro" id="about">
+  <div class="intro__inner">
+    <div class="chip reveal"><span class="chip__dot"></span>О сообществе</div>
+    <p class="intro__p" data-intro>LeadUp AI — сообщество практиков, которые применяют ИИ в работе. Курсы, живые эфиры, разборы и шаблоны в одном месте.</p>
+    <p class="intro__p" data-intro>Большинство учат ИИ в одиночку: по обзорам инструментов и веткам, которые пишут люди с чем-то на продажу. Здесь ты учишься у практиков, которые делают эту работу для клиентов каждую неделю, и у участников на шаг впереди.</p>
+    <p class="intro__p" data-intro>Технический бэкграунд не нужен. Владимир Нагин начинал в бизнес-роли, разобрался сам и построил сообщество вокруг одной идеи: если умеешь читать, уже можешь начать.</p>
+    <figure class="mentor reveal">
+      <img loading="lazy" decoding="async" src="../../assets/mentor-nagin.svg" alt="Владимир Нагин">
+      <figcaption class="mentor__text"><b>Владимир Нагин</b><span>Автор программы. 9 лет в автоматизации, ведёт разборы каждую неделю и разбирает задачи участников лично.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= CORE FEATURES ================= -->
+<section class="features" id="inside">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="chip"><span class="chip__dot"></span>Что внутри</div>
+        <h2 class="h2" data-type><span class="h2__a">Одно место, чтобы освоить ИИ</span><span class="h2__b">и применять его в работе.</span></h2>
+      </div>
+      <p class="section-head__p">В сообществе — практикум по ИИ, еженедельные разборы и сотни шаблонов промптов, сценариев и регламентов.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" data-tabs>
+      <button class="tab is-active" role="tab" data-tab="0">Практикум</button>
+      <button class="tab" role="tab" data-tab="1">Эфиры</button>
+      <button class="tab" role="tab" data-tab="2">Разборы</button>
+      <button class="tab" role="tab" data-tab="3">Шаблоны</button>
+    </div>
+
+    <div class="stage reveal" data-stage>
+      <img loading="lazy" decoding="async" class="stage__bg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDcwMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC41MCIgY3k9IjAuMzUiIHI9IjAuNzUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjEyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjcikiLz48cGF0aCBkPSJNNDAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTgwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0xMjAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE2MCAwVjcwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMjAwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0yNDAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI4MCAwVjcwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMzIwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zNjAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQwMCAwVjcwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNDQwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik00ODAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUyMCAwVjcwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNTYwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik02MDAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTY0MCAwVjcwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNjgwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik03MjAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc2MCAwVjcwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNODAwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04NDAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTg4MCAwVjcwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNOTIwIDBWNzAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik05NjAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTEwMDAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTEwNDAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTEwODAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTExMjAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTExNjAgMFY3MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDBIMTIwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA4MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDEyMEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE2MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDIwMEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI0MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDMyMEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDM2MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQwMEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ4MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDUyMEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDU2MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDYwMEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDY0MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDY4MEgxMjAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjwvc3ZnPg==" alt="" aria-hidden="true" data-parallax="0.08">
+      <div class="stage__slides">
+        <figure class="stage__slide is-active" data-slide="0"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc1MCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTBGMEQiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iciIgY3g9Ii4zIiBjeT0iLjI1IiByPSIuOCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAuMjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc1MCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc1MCIgZmlsbD0idXJsKCNyKSIvPjxyZWN0IHg9Ijk2IiB5PSIzMDAiIHdpZHRoPSIxMDA4IiBoZWlnaHQ9IjM3NSIgcng9IjE0IiBmaWxsPSJyZ2JhKDEwLDE1LDEzLC41NSkiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMTApIi8+PHJlY3QgeD0iMTY4IiB5PSIzNjAiIHdpZHRoPSI1NzYiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9InJnYmEoMjM3LDIzOSwyMzgsLjIyKSIvPjxyZWN0IHg9IjE2OCIgeT0iNDIwIiB3aWR0aD0iNzQ0IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xNCkiLz48cmVjdCB4PSIxNjgiIHk9IjQ4MCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzAwRTVDNyIgb3BhY2l0eT0iLjU1Ii8+PC9zdmc+" alt="Практикум LeadUp AI: модули от первого промпта до рабочего сценария."></figure>
+        <figure class="stage__slide" data-slide="1"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc1MCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC41MCIgY3k9IjAuNTAiIHI9IjAuNjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjE4Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3NTAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3NTAiIGZpbGw9InVybCgjcikiLz48ZyBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xNCkiPjxyZWN0IHg9IjkwIiB5PSIzMjAiIHdpZHRoPSI5NiIgaGVpZ2h0PSI2MCIgcng9IjgiLz48cmVjdCB4PSIzNDAiIHk9IjMyMCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjYwIiByeD0iOCIvPjxyZWN0IHg9IjU5MCIgeT0iMzIwIiB3aWR0aD0iOTYiIGhlaWdodD0iNjAiIHJ4PSI4Ii8+PHJlY3QgeD0iODQwIiB5PSIzMjAiIHdpZHRoPSI5NiIgaGVpZ2h0PSI2MCIgcng9IjgiLz48cmVjdCB4PSI5MCIgeT0iNDcwIiB3aWR0aD0iOTYiIGhlaWdodD0iNjAiIHJ4PSI4Ii8+PHJlY3QgeD0iMzQwIiB5PSI0NzAiIHdpZHRoPSI5NiIgaGVpZ2h0PSI2MCIgcng9IjgiLz48cmVjdCB4PSI1OTAiIHk9IjQ3MCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjYwIiByeD0iOCIvPjxyZWN0IHg9Ijg0MCIgeT0iNDcwIiB3aWR0aD0iOTYiIGhlaWdodD0iNjAiIHJ4PSI4Ii8+PC9nPjwvc3ZnPg==" alt="Участники сообщества на еженедельном разборе."></figure>
+        <figure class="stage__slide" data-slide="2"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDcwMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC41MCIgY3k9IjAuMzUiIHI9IjAuNTAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjIyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjcikiLz48cmVjdCB4PSIwIiB5PSI0NzAiIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjIzMCIgZmlsbD0icmdiYSgxMCwxNSwxMywuNTUpIi8+PGNpcmNsZSBjeD0iNjAwIiBjeT0iMzgwIiByPSI0NiIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMTYpIi8+PHJlY3QgeD0iNTYwIiB5PSI0MzAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMjAiIHJ4PSIxNiIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMTApIi8+PC9zdmc+" alt="Владимир Нагин на сцене LeadUp Live, февраль 2026."></figure>
+        <figure class="stage__slide stage__slide--grid" data-slide="3"><div class="qgrid"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDgwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJoc2woMjAwLDE2JSwxNiUpIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEEwRjBEIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNMjggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04NCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTEyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0xNDAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE2OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTk2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0yMjQgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI1MiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMjgwIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zMDggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMzNiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMzY0IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zOTIgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQyMCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNDQ4IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik00NzYgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUwNCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNTMyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik01NjAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU4OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNjE2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODRINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDExMkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTQwSDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxNjhINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE5Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjI0SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNTJINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4MEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzA4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzMzZINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDM2NEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzkySDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA0MjBINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0OEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDc2SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cmVjdCB4PSI1MSIgeT0iMTA1IiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxyZWN0IHg9IjUxIiB5PSIxODciIHdpZHRoPSI1MzciIGhlaWdodD0iNTciIHJ4PSIxMCIgZmlsbD0icmdiYSgyMCwyNywyNCwuOSkiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDgpIi8+PHJlY3QgeD0iNTEiIHk9IjI2OCIgd2lkdGg9IjUzNyIgaGVpZ2h0PSI1NyIgcng9IjEwIiBmaWxsPSJyZ2JhKDIwLDI3LDI0LC45KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wOCkiLz48cmVjdCB4PSI1MSIgeT0iMzUwIiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxjaXJjbGUgY3g9IjExNSIgY3k9IjM3OSIgcj0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBFNUM3IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="Доска лидеров потока, месяц 1: место 4."><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDgwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJoc2woMTY4LDE2JSwxNiUpIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEEwRjBEIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNMjggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04NCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTEyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0xNDAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE2OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTk2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0yMjQgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI1MiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMjgwIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zMDggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMzNiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMzY0IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zOTIgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQyMCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNDQ4IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik00NzYgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUwNCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNTMyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik01NjAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU4OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNjE2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODRINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDExMkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTQwSDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxNjhINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE5Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjI0SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNTJINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4MEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzA4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzMzZINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDM2NEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzkySDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA0MjBINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0OEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDc2SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cmVjdCB4PSI1MSIgeT0iMTA1IiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxyZWN0IHg9IjUxIiB5PSIxODciIHdpZHRoPSI1MzciIGhlaWdodD0iNTciIHJ4PSIxMCIgZmlsbD0icmdiYSgyMCwyNywyNCwuOSkiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDgpIi8+PHJlY3QgeD0iNTEiIHk9IjI2OCIgd2lkdGg9IjUzNyIgaGVpZ2h0PSI1NyIgcng9IjEwIiBmaWxsPSJyZ2JhKDIwLDI3LDI0LC45KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wOCkiLz48cmVjdCB4PSI1MSIgeT0iMzUwIiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxjaXJjbGUgY3g9IjExNSIgY3k9IjEzNCIgcj0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBFNUM3IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="Доска лидеров потока, месяц 2: место 1."><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDgwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJoc2woMTY4LDE2JSwxNiUpIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEEwRjBEIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNMjggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04NCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTEyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0xNDAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE2OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTk2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0yMjQgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI1MiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMjgwIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zMDggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMzNiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMzY0IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zOTIgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQyMCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNDQ4IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik00NzYgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUwNCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNTMyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik01NjAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU4OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNjE2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODRINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDExMkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTQwSDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxNjhINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE5Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjI0SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNTJINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4MEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzA4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzMzZINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDM2NEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzkySDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA0MjBINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0OEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDc2SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cmVjdCB4PSI1MSIgeT0iMTA1IiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxyZWN0IHg9IjUxIiB5PSIxODciIHdpZHRoPSI1MzciIGhlaWdodD0iNTciIHJ4PSIxMCIgZmlsbD0icmdiYSgyMCwyNywyNCwuOSkiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDgpIi8+PHJlY3QgeD0iNTEiIHk9IjI2OCIgd2lkdGg9IjUzNyIgaGVpZ2h0PSI1NyIgcng9IjEwIiBmaWxsPSJyZ2JhKDIwLDI3LDI0LC45KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wOCkiLz48cmVjdCB4PSI1MSIgeT0iMzUwIiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxjaXJjbGUgY3g9IjExNSIgY3k9IjEzNCIgcj0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBFNUM3IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="Доска лидеров потока, месяц 3: место 1."><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDgwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjQ4MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJoc2woMTkwLDE2JSwxNiUpIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEEwRjBEIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNMjggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04NCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTEyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0xNDAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE2OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMTk2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0yMjQgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI1MiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMjgwIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zMDggMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMzNiAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMzY0IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0zOTIgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQyMCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNDQ4IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik00NzYgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUwNCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNTMyIDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik01NjAgMFY0ODAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU4OCAwVjQ4MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNNjE2IDBWNDgwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODRINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDExMkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTQwSDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxNjhINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE5Nkg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjI0SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNTJINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDI4MEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzA4SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzMzZINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDM2NEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzkySDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA0MjBINjQwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0OEg2NDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDc2SDY0MCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cmVjdCB4PSI1MSIgeT0iMTA1IiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxyZWN0IHg9IjUxIiB5PSIxODciIHdpZHRoPSI1MzciIGhlaWdodD0iNTciIHJ4PSIxMCIgZmlsbD0icmdiYSgyMCwyNywyNCwuOSkiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDgpIi8+PHJlY3QgeD0iNTEiIHk9IjI2OCIgd2lkdGg9IjUzNyIgaGVpZ2h0PSI1NyIgcng9IjEwIiBmaWxsPSJyZ2JhKDIwLDI3LDI0LC45KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wOCkiLz48cmVjdCB4PSI1MSIgeT0iMzUwIiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjU3IiByeD0iMTAiIGZpbGw9InJnYmEoMjAsMjcsMjQsLjkpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA4KSIvPjxjaXJjbGUgY3g9IjExNSIgY3k9IjIxNiIgcj0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBFNUM3IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="Доска лидеров потока, месяц 4: место 2."></div></figure>
+      </div>
+    </div>
+    <div class="stage-bar reveal" data-stagebar>
+      <button class="stage-bar__btn" data-prev aria-label="Предыдущий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <div class="stage-bar__caption" data-caption>Практикум. Модули от первого промпта до рабочего сценария.</div>
+      <button class="stage-bar__btn" data-next aria-label="Следующий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT YOU GET ================= -->
+<section class="get" id="get">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="chip"><span class="chip__dot"></span>Что ты получаешь</div>
+        <h2 class="h2" data-type><span class="h2__a">Начни бесплатно.</span><span class="h2__b">Углубляйся настолько, насколько нужно.</span></h2>
+      </div>
+      <p class="section-head__p">Практикум — входная точка. Курс с ментором и командный формат — для тех, кто строит на этом работу или бизнес.</p>
+    </div>
+
+    <div class="stack" data-stack>
+      <article class="deck" data-deck>
+        <div class="deck__copy">
+          <div class="deck__label"><span class="chip__dot"></span>Практикум</div>
+          <h3 class="deck__title" data-type>4 дня — и первый рабочий сценарий.</h3>
+          <p class="deck__p">Старт 27 октября. Каждый день — короткая теория и задание, которое ты повторяешь на своих данных.</p>
+          <div class="deck__foot"><span class="cross"></span>Разбор заданий каждый день.</div>
+        </div>
+        <div class="deck__media">
+          <img loading="lazy" decoding="async" class="deck__bg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMTEwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC4zMCIgY3k9IjAuMjUiIHI9IjAuODAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjE2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjcikiLz48cGF0aCBkPSJNNDQgMFYxMTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTEzMiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE3NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTIyMCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI2NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMwOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM1MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM5NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ0MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ4NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUyOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU3MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTYxNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTY2MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTcwNCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc0OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc5MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTgzNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTg4MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDg4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxMzJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE3Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjIwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDMwOEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzUySDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzOTZIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0MEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDg0SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1MjhIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDU3Mkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNjE2SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA2NjBIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDcwNEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNzQ4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA3OTJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDgzNkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODgwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA5MjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDk2OEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTAxMkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTA1Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PC9zdmc+" alt="" aria-hidden="true">
+          <img loading="lazy" decoding="async" class="deck__shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc1MCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTBGMEQiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iciIgY3g9Ii4zIiBjeT0iLjI1IiByPSIuOCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAuMjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc1MCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc1MCIgZmlsbD0idXJsKCNyKSIvPjxyZWN0IHg9Ijk2IiB5PSIzMDAiIHdpZHRoPSIxMDA4IiBoZWlnaHQ9IjM3NSIgcng9IjE0IiBmaWxsPSJyZ2JhKDEwLDE1LDEzLC41NSkiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMTApIi8+PHJlY3QgeD0iMTY4IiB5PSIzNjAiIHdpZHRoPSI1NzYiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9InJnYmEoMjM3LDIzOSwyMzgsLjIyKSIvPjxyZWN0IHg9IjE2OCIgeT0iNDIwIiB3aWR0aD0iNzQ0IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xNCkiLz48cmVjdCB4PSIxNjgiIHk9IjQ4MCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzAwRTVDNyIgb3BhY2l0eT0iLjU1Ii8+PC9zdmc+" alt="Материалы практикума LeadUp AI.">
+        </div>
+      </article>
+      <article class="deck deck--flip" data-deck>
+        <div class="deck__copy">
+          <div class="deck__label"><span class="chip__dot"></span>Эфиры</div>
+          <h3 class="deck__title" data-type>Разборы с теми, кто делает.</h3>
+          <p class="deck__p">Приходи с задачей и уходи с решением. Живые эфиры ведут практики, каждую неделю.</p>
+          <div class="deck__foot"><span class="cross"></span>Не записи. Живое время.</div>
+        </div>
+        <div class="deck__media">
+          <img loading="lazy" decoding="async" class="deck__bg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMTEwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC43MCIgY3k9IjAuMzAiIHI9IjAuODAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjE2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjcikiLz48cGF0aCBkPSJNNDQgMFYxMTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTEzMiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE3NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTIyMCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI2NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMwOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM1MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM5NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ0MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ4NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUyOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU3MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTYxNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTY2MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTcwNCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc0OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc5MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTgzNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTg4MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDg4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxMzJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE3Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjIwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDMwOEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzUySDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzOTZIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0MEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDg0SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1MjhIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDU3Mkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNjE2SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA2NjBIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDcwNEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNzQ4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA3OTJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDgzNkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODgwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA5MjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDk2OEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTAxMkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTA1Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PC9zdmc+" alt="" aria-hidden="true">
+          <img loading="lazy" decoding="async" class="deck__shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDc1MCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC41MCIgY3k9IjAuNTAiIHI9IjAuNjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjE4Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3NTAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3NTAiIGZpbGw9InVybCgjcikiLz48ZyBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xNCkiPjxyZWN0IHg9IjkwIiB5PSIzMjAiIHdpZHRoPSI5NiIgaGVpZ2h0PSI2MCIgcng9IjgiLz48cmVjdCB4PSIzNDAiIHk9IjMyMCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjYwIiByeD0iOCIvPjxyZWN0IHg9IjU5MCIgeT0iMzIwIiB3aWR0aD0iOTYiIGhlaWdodD0iNjAiIHJ4PSI4Ii8+PHJlY3QgeD0iODQwIiB5PSIzMjAiIHdpZHRoPSI5NiIgaGVpZ2h0PSI2MCIgcng9IjgiLz48cmVjdCB4PSI5MCIgeT0iNDcwIiB3aWR0aD0iOTYiIGhlaWdodD0iNjAiIHJ4PSI4Ii8+PHJlY3QgeD0iMzQwIiB5PSI0NzAiIHdpZHRoPSI5NiIgaGVpZ2h0PSI2MCIgcng9IjgiLz48cmVjdCB4PSI1OTAiIHk9IjQ3MCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjYwIiByeD0iOCIvPjxyZWN0IHg9Ijg0MCIgeT0iNDcwIiB3aWR0aD0iOTYiIGhlaWdodD0iNjAiIHJ4PSI4Ii8+PC9nPjwvc3ZnPg==" alt="Участники еженедельного разбора LeadUp AI.">
+        </div>
+      </article>
+      <article class="deck" data-deck>
+        <div class="deck__copy">
+          <div class="deck__label"><span class="chip__dot"></span>Разборы</div>
+          <h3 class="deck__title" data-type>Комнаты, где встречается сообщество.</h3>
+          <p class="deck__p">Воркшопы, сборки и разговоры после. Онлайн и офлайн.</p>
+          <div class="deck__foot"><span class="cross"></span>LeadUp Live, встречи, сцены.</div>
+        </div>
+        <div class="deck__media">
+          <img loading="lazy" decoding="async" class="deck__bg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMTEwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC4zMCIgY3k9IjAuMjUiIHI9IjAuODAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjE2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjcikiLz48cGF0aCBkPSJNNDQgMFYxMTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTEzMiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE3NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTIyMCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI2NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMwOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM1MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM5NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ0MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ4NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUyOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU3MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTYxNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTY2MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTcwNCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc0OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc5MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTgzNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTg4MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDg4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxMzJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE3Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjIwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDMwOEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzUySDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzOTZIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0MEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDg0SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1MjhIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDU3Mkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNjE2SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA2NjBIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDcwNEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNzQ4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA3OTJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDgzNkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODgwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA5MjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDk2OEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTAxMkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTA1Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PC9zdmc+" alt="" aria-hidden="true">
+          <img loading="lazy" decoding="async" class="deck__shot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDcwMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC41MCIgY3k9IjAuMzUiIHI9IjAuNTAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjIyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjcikiLz48cmVjdCB4PSIwIiB5PSI0NzAiIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjIzMCIgZmlsbD0icmdiYSgxMCwxNSwxMywuNTUpIi8+PGNpcmNsZSBjeD0iNjAwIiBjeT0iMzgwIiByPSI0NiIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMTYpIi8+PHJlY3QgeD0iNTYwIiB5PSI0MzAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMjAiIHJ4PSIxNiIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMTApIi8+PC9zdmc+" alt="Разбор LeadUp Live, июль 2026.">
+        </div>
+      </article>
+      <article class="deck deck--flip" data-deck>
+        <div class="deck__copy">
+          <div class="deck__label"><span class="chip__dot"></span>Шаблоны</div>
+          <h3 class="deck__title" data-type>Инструменты, которые не нужно собирать заново.</h3>
+          <p class="deck__p">Библиотека промптов, сценариев и регламентов: 240 шаблонов и обновления каждый месяц.</p>
+          <div class="deck__foot"><span class="cross"></span>240 шаблонов. Обновляем каждый месяц.</div>
+        </div>
+        <div class="deck__media">
+          <img loading="lazy" decoding="async" class="deck__bg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMTEwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC43MCIgY3k9IjAuMzAiIHI9IjAuODAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjE2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjExMDAiIGZpbGw9InVybCgjcikiLz48cGF0aCBkPSJNNDQgMFYxMTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik04OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTEzMiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTE3NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTIyMCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTI2NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTMwOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM1MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTM5NiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ0MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTQ4NCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTUyOCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTU3MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTYxNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTY2MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTcwNCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc0OCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTc5MiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTgzNiAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTg4MCAwVjExMDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDg4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAxMzJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDE3Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMjIwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAyNjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDMwOEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMzUySDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCAzOTZIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDQ0MEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNDg0SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA1MjhIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDU3Mkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNjE2SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA2NjBIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDcwNEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgNzQ4SDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA3OTJIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDgzNkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgODgwSDkwMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4wNikiLz48cGF0aCBkPSJNMCA5MjRIOTAwIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjA2KSIvPjxwYXRoIGQ9Ik0wIDk2OEg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTAxMkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PHBhdGggZD0iTTAgMTA1Nkg5MDAiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMDYpIi8+PC9zdmc+" alt="" aria-hidden="true">
+          <img loading="lazy" decoding="async" class="deck__shot deck__shot--tall" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NjAgMTAwMCIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIxMDAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTBGMEQiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iciIgY3g9Ii4zIiBjeT0iLjI1IiByPSIuOCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAuMTgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHdpZHRoPSI3NjAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNyKSIvPjxyZWN0IHg9IjYxIiB5PSI0MDAiIHdpZHRoPSI2MzgiIGhlaWdodD0iNTAwIiByeD0iMTQiIGZpbGw9InJnYmEoMTAsMTUsMTMsLjU1KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMCkiLz48cmVjdCB4PSIxMDYiIHk9IjQ4MCIgd2lkdGg9IjM2NSIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMjIpIi8+PHJlY3QgeD0iMTA2IiB5PSI1NjAiIHdpZHRoPSI0NzEiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9InJnYmEoMjM3LDIzOSwyMzgsLjE0KSIvPjxyZWN0IHg9IjEwNiIgeT0iNjQwIiB3aWR0aD0iMjI4IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjMDBFNUM3IiBvcGFjaXR5PSIuNTUiLz48L3N2Zz4=" alt="Библиотека шаблонов LeadUp AI.">
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AIS LIVE ================= -->
+<section class="live" id="live">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="chip"><span class="chip__dot"></span>Эфиры</div>
+        <h2 class="h2" data-type><span class="h2__a">LeadUp Live</span><span class="h2__b">Наши эфиры, онлайн и офлайн.</span></h2>
+      </div>
+      <p class="section-head__p">Живые эфиры и разборы с теми, кто применяет ИИ в работе. На первый эфир в июле 2026 записались больше 1 500 человек.</p>
+    </div>
+    <div class="live__panel reveal">
+      <a class="live__media" href="#form" data-cta="live_media"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDcyMCIgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNDFCMTgiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iIzBGMTUxMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJyIiBjeD0iMC41MCIgY3k9IjAuNDUiIHI9IjAuNzAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwLjE4Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDBFNUM3IiBzdG9wLW9wYWNpdHk9IjAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjZykiLz48cmVjdCB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI3MjAiIGZpbGw9InVybCgjcikiLz48ZyBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xMikiPjxjaXJjbGUgY3g9IjIwMCIgY3k9IjMwMCIgcj0iMzQiLz48Y2lyY2xlIGN4PSIzODAiIGN5PSIzMDAiIHI9IjM0Ii8+PGNpcmNsZSBjeD0iNTYwIiBjeT0iMzAwIiByPSIzNCIvPjxjaXJjbGUgY3g9Ijc0MCIgY3k9IjMwMCIgcj0iMzQiLz48Y2lyY2xlIGN4PSI5MjAiIGN5PSIzMDAiIHI9IjM0Ii8+PGNpcmNsZSBjeD0iMTEwMCIgY3k9IjMwMCIgcj0iMzQiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSI0NzAiIHI9IjM0Ii8+PGNpcmNsZSBjeD0iMzgwIiBjeT0iNDcwIiByPSIzNCIvPjxjaXJjbGUgY3g9IjU2MCIgY3k9IjQ3MCIgcj0iMzQiLz48Y2lyY2xlIGN4PSI3NDAiIGN5PSI0NzAiIHI9IjM0Ii8+PGNpcmNsZSBjeD0iOTIwIiBjeT0iNDcwIiByPSIzNCIvPjxjaXJjbGUgY3g9IjExMDAiIGN5PSI0NzAiIHI9IjM0Ii8+PC9nPjwvc3ZnPg==" width="1280" height="720" alt="Участники эфира LeadUp Live, июль 2026."></a>
+      <div class="live__side">
+        <p class="live__label">Скоро</p>
+        <ul class="live__rows">
+          <li data-until="2026-10-27T17:00:00Z"><span class="live__when">27 октября, 19:00</span><span class="live__what">Практикум: день 1</span><span class="live__where">Онлайн</span></li>
+          <li data-until="2026-10-28T17:00:00Z"><span class="live__when">28 октября, 19:00</span><span class="live__what">Практикум: день 2</span><span class="live__where">Онлайн</span></li>
+          <li data-until="2026-10-29T17:00:00Z"><span class="live__when">29 октября, 19:00</span><span class="live__what">Практикум: день 3</span><span class="live__where">Онлайн</span></li>
+          <li data-until="2026-10-30T17:00:00Z"><span class="live__when">30 октября, 19:00</span><span class="live__what">Практикум: день 4</span><span class="live__where">Онлайн</span></li>
+        
+        </ul>
+        <a class="btn btn--ghost" href="#form" data-cta="live_cta">Записаться бесплатно</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANS ================= -->
+<section class="plans" id="plans">
+  <div class="container">
+    <div class="reveal">
+      <div class="chip"><span class="chip__dot"></span>Тарифы</div>
+      <h2 class="h2 h2--single" data-type>Выбери, как учиться.</h2>
+    </div>
+    <div class="plans__grid reveal">
+      <div class="plan">
+        <div class="plan__label">Практикум</div>
+        <div class="plan__price"><b>0 €</b></div>
+        <p class="plan__blurb">Всё, чтобы попробовать и понять, как это работает у тебя.</p>
+        <a class="btn btn--ghost" href="#form" data-cta="plan_free">Записаться бесплатно</a>
+        <ul class="plan__rows">
+          <li><i></i>4 дня живых разборов: 27–30 октября</li>
+          <li><i></i>Первые рабочие сценарии в ИИ</li>
+          <li><i></i>Шаблоны промптов и сценариев</li>
+          <li><i></i>Чат участников потока</li>
+          <li><i></i>Записи всех дней</li>
+          <li><i></i>2 400 выпускников рядом</li>
+        </ul>
+      </div>
+      <div class="plan plan--raised">
+        <div class="plan__label">Курс с ментором<span class="plan__badge">Популярный</span></div>
+        <div class="plan__price"><b>399 €</b><span>было 599 €</span></div>
+        <p class="plan__blurb">Для тех, кто хочет довести ИИ до рабочего инструмента.</p>
+        <a class="btn btn--primary" href="#form" data-cta="plan_course">Забронировать место</a>
+        <ul class="plan__rows">
+          <li><i></i>Всё из практикума</li>
+          <li><i></i>8 недель занятий и разборов</li>
+          <li><i></i>Личный созвон с ментором раз в неделю</li>
+          <li><i></i>Проверка домашних заданий</li>
+          <li><i></i>Разбор твоих процессов на живых эфирах</li>
+          <li><i></i>Доступ к записям на год</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <div class="plan__label">Команда<span class="plan__badge">Для команд</span></div>
+        <div class="plan__price"><b>899 €</b><span>было 1 299 €</span></div>
+        <p class="plan__blurb">Для команд, которым нужен общий подход к работе с ИИ.</p>
+        <a class="btn btn--ghost" href="#form" data-cta="plan_team">Обсудить программу</a>
+        <ul class="plan__rows">
+          <li><i></i>Всё из курса с ментором</li>
+          <li><i></i>До 5 участников из одной команды</li>
+          <li><i></i>Разбор ваших процессов и регламентов</li>
+          <li><i></i>Чек-лист внедрения и шаблон регламента</li>
+          <li><i></i>Сопровождение 12 недель</li>
+          <li><i></i>Счёт и закрывающие документы</li>
+        </ul>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="chip"><span class="chip__dot"></span>Вопросы</div>
+        <h2 class="h2 h2--single" data-type>Ответы на вопросы,<br>которые задают чаще всего.</h2>
+      </div>
+      <p class="section-head__p">Как работает сообщество, что добавляет курс с ментором и что нужно от тебя на практикуме.</p>
+    </div>
+    <div class="faq__grid reveal">
+      <div class="faq__side">
+        <div class="faq__tabs" data-faqtabs><button class="is-active" data-faqtab="general">Практикум</button>
+          <button data-faqtab="plus">Курс</button>
+          <button data-faqtab="cert">Оплата и доступ</button>
+        
+        </div>
+        <div class="faq__card"><h4>Остались вопросы?</h4>
+          <p>Напиши на hello@leadup.guru или оставь заявку — ответим до оплаты.</p>
+          <a href="#form" data-cta="faq_ask">Оставить заявку →</a>
+        
+        </div>
+      </div>
+      <div class="faq__list" data-faqlist>
+        <div class="faq__set is-active" data-faqset="general">
+          <details class="qa" open><summary>Что такое сообщество LeadUp AI?<span class="qa__chev"></span></summary><div class="qa__a">Сообщество практиков, которые применяют ИИ в работе: 2 400 выпускников, живые разборы каждую неделю и библиотека сценариев. Ведёт его Владимир Нагин.</div></details>
+          <details class="qa"><summary>Практикум правда бесплатный?<span class="qa__chev"></span></summary><div class="qa__a">Да. 4 дня живых эфиров, участие — 0 €, карту не спрашиваем. Курс с ментором — отдельный тариф, если захочешь глубже.</div></details>
+          <details class="qa"><summary>Нужен ли технический опыт?<span class="qa__chev"></span></summary><div class="qa__a">Нет. Большинство приходят из маркетинга, продаж и операционных ролей. Начинаем с того, что можно повторить за вечер.</div></details>
+          <details class="qa"><summary>Какие инструменты разбираем?<span class="qa__chev"></span></summary><div class="qa__a">ChatGPT, Claude, Gemini, n8n, Claude Code и то, что появилось за последний месяц. Материалы обновляем вместе с инструментами.</div></details>
+          <details class="qa"><summary>Где всё происходит?<span class="qa__chev"></span></summary><div class="qa__a">Эфиры — в Zoom, записи и материалы — в личном кабинете. Чат потока остаётся с тобой после окончания.</div></details>
+          <details class="qa"><summary>Как записаться?<span class="qa__chev"></span></summary><div class="qa__a">Оставь имя и e-mail в форме ниже. Пришлём программу и ссылку на первый эфир — на это уйдёт минута.</div></details>
+        </div>
+        <div class="faq__set" data-faqset="plus">
+          <details class="qa" open><summary>Что даёт курс с ментором?<span class="qa__chev"></span></summary><div class="qa__a">8 недель занятий, разбор твоих задач, проверка домашних заданий и личный созвон с ментором каждую неделю.</div></details>
+          <details class="qa"><summary>Сколько стоит?<span class="qa__chev"></span></summary><div class="qa__a">399 € вместо 599 € для потока, который стартует 27 октября. Есть рассрочка на 2 платежа.</div></details>
+          <details class="qa"><summary>Кому подойдёт?<span class="qa__chev"></span></summary><div class="qa__a">Тем, кто хочет довести ИИ до рабочего инструмента: автоматизировать рутину, ускорить отчёты, собрать сценарии для клиентов.</div></details>
+        </div>
+        <div class="faq__set" data-faqset="cert">
+          <details class="qa" open><summary>Как оплатить?<span class="qa__chev"></span></summary><div class="qa__a">Картой или по счёту. Для компаний пришлём счёт и закрывающие документы.</div></details>
+          <details class="qa"><summary>Что с рассрочкой?<span class="qa__chev"></span></summary><div class="qa__a">Курс с ментором можно разделить на 2 платежа без наценки. Напиши об этом в заявке — предложим вариант.</div></details>
+          <details class="qa"><summary>Сколько доступны записи?<span class="qa__chev"></span></summary><div class="qa__a">Записи практикума — навсегда, курс с ментором — год с доступом к обновлениям. Оставить заявку можно в форме выше.</div></details>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEOS ================= -->
+<section class="videos" id="videos">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="chip"><span class="chip__dot"></span>Разборы</div>
+        <h2 class="h2 h2--single" data-type>Практические разборы каждую неделю.</h2>
+        <p class="videos__intro">Три записи прошлых разборов — бесплатно, без регистрации.</p>
+      </div>
+      <a class="section-head__link" href="#form" data-cta="videos_cta">Записаться на эфир →</a>
+    </div>
+    <div class="videos__grid reveal">
+      <a class="vcard" href="#form" data-cta="video_1"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDcyMCIgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTBGMEQiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iciIgY3g9Ii43OCIgY3k9Ii4yIiByPSIuNyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJoc2woMTY4LDQ1JSw0NSUpIiBzdG9wLW9wYWNpdHk9Ii4zNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iaHNsKDE2OCw0NSUsNDUlKSIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2cpIi8+PHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI3IpIi8+PGNpcmNsZSBjeD0iNjQwIiBjeT0iMjc0IiByPSIxMTUiIGZpbGw9InJnYmEoMTAsMTUsMTMsLjcyKSIgc3Ryb2tlPSIjMDBFNUM3IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNNjAyIDIyMyBsNDMgMTAxIGwtNDMgLTEwMSB6IiBmaWxsPSIjMDBFNUM3Ii8+PHJlY3QgeD0iMTUzIiB5PSI0NDYiIHdpZHRoPSI2NDAiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9InJnYmEoMjM3LDIzOSwyMzgsLjE4KSIvPjxyZWN0IHg9IjE1MyIgeT0iNDYyIiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjYiIHJ4PSIzIiBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xOCkiLz48cmVjdCB4PSIxNTMiIHk9IjQ3OCIgd2lkdGg9IjQzNSIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMTgpIi8+PC9zdmc+" alt="Превью разбора про ИИ-агентов на n8n"><h3>Собираем ИИ-агента на n8n с нуля</h3><div class="vcard__meta">8 часов · разбор целиком</div></a>
+      <a class="vcard" href="#form" data-cta="video_2"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDcyMCIgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTBGMEQiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iciIgY3g9Ii43OCIgY3k9Ii4yIiByPSIuNyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJoc2woMjAwLDQ1JSw0NSUpIiBzdG9wLW9wYWNpdHk9Ii4zNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iaHNsKDIwMCw0NSUsNDUlKSIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2cpIi8+PHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI3IpIi8+PGNpcmNsZSBjeD0iNjQwIiBjeT0iMjc0IiByPSIxMTUiIGZpbGw9InJnYmEoMTAsMTUsMTMsLjcyKSIgc3Ryb2tlPSIjMDBFNUM3IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNNjAyIDIyMyBsNDMgMTAxIGwtNDMgLTEwMSB6IiBmaWxsPSIjMDBFNUM3Ii8+PHJlY3QgeD0iMTUzIiB5PSI0NDYiIHdpZHRoPSI2NDAiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9InJnYmEoMjM3LDIzOSwyMzgsLjE4KSIvPjxyZWN0IHg9IjE1MyIgeT0iNDYyIiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjYiIHJ4PSIzIiBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xOCkiLz48cmVjdCB4PSIxNTMiIHk9IjQ3OCIgd2lkdGg9IjQzNSIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMTgpIi8+PC9zdmc+" alt="Превью разбора про Claude Code"><h3>Claude Code в работе: от задачи до результата</h3><div class="vcard__meta">10 часов · разбор целиком</div></a>
+      <a class="vcard" href="#form" data-cta="video_3"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDcyMCIgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTBGMEQiLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0iciIgY3g9Ii43OCIgY3k9Ii4yIiByPSIuNyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJoc2woMjYyLDQ1JSw0NSUpIiBzdG9wLW9wYWNpdHk9Ii4zNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iaHNsKDI2Miw0NSUsNDUlKSIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2cpIi8+PHJlY3Qgd2lkdGg9IjEyODAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI3IpIi8+PGNpcmNsZSBjeD0iNjQwIiBjeT0iMjc0IiByPSIxMTUiIGZpbGw9InJnYmEoMTAsMTUsMTMsLjcyKSIgc3Ryb2tlPSIjMDBFNUM3IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNNjAyIDIyMyBsNDMgMTAxIGwtNDMgLTEwMSB6IiBmaWxsPSIjMDBFNUM3Ii8+PHJlY3QgeD0iMTUzIiB5PSI0NDYiIHdpZHRoPSI2NDAiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9InJnYmEoMjM3LDIzOSwyMzgsLjE4KSIvPjxyZWN0IHg9IjE1MyIgeT0iNDYyIiB3aWR0aD0iNTM3IiBoZWlnaHQ9IjYiIHJ4PSIzIiBmaWxsPSJyZ2JhKDIzNywyMzksMjM4LC4xOCkiLz48cmVjdCB4PSIxNTMiIHk9IjQ3OCIgd2lkdGg9IjQzNSIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0icmdiYSgyMzcsMjM5LDIzOCwuMTgpIi8+PC9zdmc+" alt="Превью разбора про ассистентов и ботов"><h3>Ассистенты и боты: что окупается в 2026</h3><div class="vcard__meta">2 часа · разбор целиком</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORM ================= -->
+<section class="formsec" id="form" aria-labelledby="form-title">
+  <div class="container">
+    <div class="formsec__grid">
+      <div class="formsec__head reveal">
+        <div class="chip"><span class="chip__dot"></span>Записаться</div>
+        <h2 class="h2 h2--single" id="form-title">Забронировать место в потоке</h2>
+        <p class="lead">Старт практикума 27 октября, в потоке 12 мест. Оставь заявку — пришлём программу, расскажем, как всё устроено, и зафиксируем за тобой место.</p>
+        <ul class="checks">
+          <li>Ответим в рабочие дни, обычно в тот же день</li>
+          <li>Консультация 20 минут до оплаты</li>
+          <li>Загрузка 6–8 часов в неделю, всё по записям</li>
+        </ul>
+      </div>
+      <div class="form reveal">
+        <p class="form__title">Заявка на практикум «ИИ в работе»</p>
+        <p class="form__sub">Данные нужны только для связи по заявке.</p>
+        <form id="reg-form" class="form__body" novalidate>
+          <div class="field" data-field="name">
+            <label for="f-name">Имя</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Как к тебе обращаться" required>
+            <span class="field__err">Напиши, как к тебе обращаться</span>
+          </div>
+          <div class="field" data-field="email">
+            <label for="f-email">E-mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+            <span class="field__err">Проверь адрес: нужен формат you@example.com</span>
+          </div>
+          <div class="field">
+            <label for="f-contact">Telegram или WhatsApp — не обязательно</label>
+            <input id="f-contact" name="contact" type="text" autocomplete="off" placeholder="@nickname или +34…">
+          </div>
+          <div class="field">
+            <label for="f-plan">Тариф</label>
+            <select id="f-plan" name="plan">
+              <option value="ещё выбираю">Ещё выбираю</option>
+              <option value="практикум — 0 €">Практикум — 0 €</option>
+              <option value="курс с ментором — 399 €">Курс с ментором — 399 €</option>
+              <option value="команда — 899 €">Команда — 899 €</option>
+            </select>
+          </div>
+          <div class="field hp" aria-hidden="true">
+            <label for="f-hp">Не заполняй это поле</label>
+            <input id="f-hp" name="company_website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field" data-field="consent">
+            <div class="field--check">
+              <input id="f-consent" name="consent" type="checkbox" required>
+              <label for="f-consent">Согласен на обработку данных и связь по заявке. Политику конфиденциальности пришлём вместе с ответом.</label>
+            </div>
+            <span class="field__err">Отметь согласие — без него не сможем связаться</span>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit" data-cta="form_submit">Забронировать место</button>
+          <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+          <p class="form__tiny">Если форма не отправилась, напиши на <a href="mailto:hello@leadup.guru">hello@leadup.guru</a> — забронируем место вручную.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="join">
+  <div class="cta__inner container">
+    <div class="cta__copy reveal">
+      <h2 class="h2 h2--single" data-type>Начни там, где начали<br>2 400 человек.</h2>
+      <p>Участие в практикуме — 0 €, ставить ничего не нужно. Приходи на первый эфир и посмотри, как это работает, когда рядом такие же, как ты.</p>
+      <a class="btn btn--primary" href="#form" data-cta="final_cta">Записаться бесплатно</a>
+    </div>
+    <div class="cta__device reveal">
+      <div class="screen screen--cta" data-screen>
+        <aside class="screen__side">
+          <div class="screen__search"><span></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+          <ul class="screen__nav">
+            <li class="is-active"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg>Сообщество</li>
+            <li><svg viewBox="0 0 24 24"><path d="M2 7l10-4 10 4-10 4z"/><path d="M6 9v5a6 6 0 0 0 12 0V9"/></svg>Обучение</li>
+            <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Календарь</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 2 5 5"/></svg>Участники</li>
+            <li><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10h4v10M14 20V4h4v16"/></svg>Лидеры</li>
+          
+          </ul>
+        </aside>
+        <div class="screen__main">
+          <canvas class="screen__cover" data-cover aria-hidden="true"></canvas>
+          <div class="screen__hero">
+            <div class="screen__avatar"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzBGMTUxMiIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjE5IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMEU1QzciIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjYiIGZpbGw9IiMwMEU1QzciIG9wYWNpdHk9Ii44NSIvPjwvc3ZnPg==" alt=""></div>
+            <div class="screen__name">Сообщество LeadUp AI</div>
+            <div class="screen__members"><span class="faces"><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIzMiIgZmlsbD0iIzE0MUIxOCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMjciIHI9IjEyIiBmaWxsPSJoc2woMzAwLDE4JSwzNCUpIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSI1MCIgcj0iMTciIGZpbGw9ImhzbCgzMDAsMTQlLDUyJSkiLz48L3N2Zz4=" alt=""><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIzMiIgZmlsbD0iIzE0MUIxOCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMjciIHI9IjEyIiBmaWxsPSJoc2woMjAsMTglLDM0JSkiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjUwIiByPSIxNyIgZmlsbD0iaHNsKDIwLDE0JSw1MiUpIi8+PC9zdmc+" alt=""><img loading="lazy" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIzMiIgZmlsbD0iIzE0MUIxOCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMjciIHI9IjEyIiBmaWxsPSJoc2woMjYwLDE4JSwzNCUpIi8+PGNpcmNsZSBjeD0iMzIiIGN5PSI1MCIgcj0iMTciIGZpbGw9ImhzbCgyNjAsMTQlLDUyJSkiLz48L3N2Zz4=" alt=""></span>2 400 участников</div>
+            <div class="screen__join">Присоединиться</div>
+            <p class="screen__desc">Учись применять ИИ на своих задачах.<br>→ 4-дневный практикум: старт 27 октября, 0 €<br>→ Разбор кейсов каждую неделю</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img loading="lazy" decoding="async" class="cta__dunes" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDcwMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iNzAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiIHN0b3Atb3BhY2l0eT0iMC4xOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMC40MCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIwLDcwMCAwLDIyMCAyMDAsMjg3IDQwMCwzNTMgNjAwLDQyMCA4MDAsNDg3IDEwMDAsMzUzIDEyMDAsNDIwIDE0MDAsNDg3IDE2MDAsNTUzIDE2MDAsNzAwIiBmaWxsPSJ1cmwoI2cpIi8+PHBvbHlsaW5lIHBvaW50cz0iMCw3MDAgMCwyMjAgMjAwLDI4NyA0MDAsMzUzIDYwMCw0MjAgODAwLDQ4NyAxMDAwLDM1MyAxMjAwLDQyMCAxNDAwLDQ4NyAxNjAwLDU1MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2wpIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="" aria-hidden="true">
+  <img loading="lazy" decoding="async" class="cta__layer cta__layer--mid" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMC4zNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIwLDkwMCAwLDUyMCAyMDAsNjQwIDQwMCw3NjAgNjAwLDYwMCA4MDAsNzIwIDEwMDAsNzYwIDEyMDAsNjAwIDE0MDAsNzIwIDE2MDAsNTYwIDE2MDAsOTAwIiBmaWxsPSJ1cmwoI2cpIi8+PHBvbHlsaW5lIHBvaW50cz0iMCw5MDAgMCw1MjAgMjAwLDY0MCA0MDAsNzYwIDYwMCw2MDAgODAwLDcyMCAxMDAwLDc2MCAxMjAwLDYwMCAxNDAwLDcyMCAxNjAwLDU2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2wpIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="" aria-hidden="true">
+  <img loading="lazy" decoding="async" class="cta__layer cta__layer--front" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjI0MjAiIHN0b3Atb3BhY2l0eT0iMC4yMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBBMEYwRCIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImwiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMEU1QzciIHN0b3Atb3BhY2l0eT0iMC40OCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwRTVDNyIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBvbHlnb24gcG9pbnRzPSIwLDkwMCAwLDU3MCAyMDAsNTcwIDQwMCw1NzAgNjAwLDU3MCA4MDAsNTcwIDEwMDAsNTcwIDEyMDAsNTcwIDE0MDAsNTcwIDE2MDAsNTcwIDE2MDAsOTAwIiBmaWxsPSJ1cmwoI2cpIi8+PHBvbHlsaW5lIHBvaW50cz0iMCw5MDAgMCw1NzAgMjAwLDU3MCA0MDAsNTcwIDYwMCw1NzAgODAwLDU3MCAxMDAwLDU3MCAxMjAwLDU3MCAxNDAwLDU3MCAxNjAwLDU3MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2wpIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="" aria-hidden="true">
+</section>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img loading="lazy" decoding="async" src="../../assets/leadup-logo.svg" alt="LeadUp AI" width="212" height="60">
+      <p>Сообщество практиков, которые применяют ИИ в работе. 2 400 выпускников.</p>
+    </div>
+        <div class="footer__col"><h5>Программа</h5><a href="#get">Практикум</a><a href="#plans">Курс с ментором</a><a href="#live">Эфиры</a><a href="#videos">Разборы</a></div>
+    <div class="footer__col"><h5>О нас</h5><a href="#about">О сообществе</a><a href="#inside">Что внутри</a><a href="#faq">Вопросы</a></div>
+    <div class="footer__col"><h5>Связь</h5><a href="mailto:hello@leadup.guru">hello@leadup.guru</a><a href="#form" data-cta="policy">Политика конфиденциальности</a></div>
+  </div>
+  <div class="container footer__bottom"><span>© 2026 LeadUp AI</span><span>ad.leadup.guru</span></div>
+  <div class="container footer__terms" aria-label="Условия доступа">
+    <p>Материалы LeadUp AI — уроки, шаблоны, сценарии, разборы и записи эфиров — защищены авторским правом и предназначены для личного использования участником программы.</p>
+    <p>Их нельзя копировать, публиковать, передавать третьим лицам, перепродавать или использовать для коммерческого обучения без письменного разрешения.</p>
+    <p>Нарушение этих условий может привести к ограничению доступа и применению предусмотренных законом мер.</p>
+  
+  </div>
+</footer>
+
+</main>
+
+<script>
+(function(){var e=`1.3.26`;function t(e,t,n){return Math.max(e,Math.min(t,n))}function n(e,t,n){return(1-n)*e+n*t}function r(e,t,r,i){return n(e,t,1-Math.exp(-r*i))}function i(e,t){return(e%t+t)%t}var a=class{isRunning=!1;value=0;from=0;to=0;currentTime=0;lerp;duration;easing;onUpdate;advance(e){if(!this.isRunning)return;let n=!1;if(this.duration&&this.easing){this.currentTime+=e;let r=t(0,this.currentTime/this.duration,1);n=r>=1;let i=n?1:this.easing(r);this.value=this.from+(this.to-this.from)*i}else this.lerp?(this.value=r(this.value,this.to,this.lerp*60,e),Math.round(this.value)===Math.round(this.to)&&(this.value=this.to,n=!0)):(this.value=this.to,n=!0);n&&this.stop(),this.onUpdate?.(this.value,n)}stop(){this.isRunning=!1}fromTo(e,t,{lerp:n,duration:r,easing:i,onStart:a,onUpdate:o}){this.from=this.value=e,this.to=t,this.lerp=n,this.duration=r,this.easing=i,this.currentTime=0,this.isRunning=!0,a?.(),this.onUpdate=o}};function o(e,t){let n;return function(...r){clearTimeout(n),n=setTimeout(()=>{n=void 0,e.apply(this,r)},t)}}var s=class{width=0;height=0;scrollHeight=0;scrollWidth=0;debouncedResize;wrapperResizeObserver;contentResizeObserver;constructor(e,t,{autoResize:n=!0,debounce:r=250}={}){this.wrapper=e,this.content=t,n&&(this.debouncedResize=o(this.resize,r),this.wrapper instanceof Window?window.addEventListener(`resize`,this.debouncedResize):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){this.wrapperResizeObserver?.disconnect(),this.contentResizeObserver?.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener(`resize`,this.debouncedResize)}resize=()=>{this.onWrapperResize(),this.onContentResize()};onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)};onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)};get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}},c=class{events={};emit(e,...t){let n=this.events[e]||[];for(let e=0,r=n.length;e<r;e++)n[e]?.(...t)}on(e,t){return this.events[e]?this.events[e].push(t):this.events[e]=[t],()=>{this.events[e]=this.events[e]?.filter(e=>t!==e)}}off(e,t){this.events[e]=this.events[e]?.filter(e=>t!==e)}destroy(){this.events={}}};let l={passive:!1};function u(e,t){return e===1?16.666666666666668:e===2?t:1}var d=class{touchStart={x:0,y:0};lastDelta={x:0,y:0};window={width:0,height:0};emitter=new c;constructor(e,t={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=t,window.addEventListener(`resize`,this.onWindowResize),this.onWindowResize(),this.element.addEventListener(`wheel`,this.onWheel,l),this.element.addEventListener(`touchstart`,this.onTouchStart,l),this.element.addEventListener(`touchmove`,this.onTouchMove,l),this.element.addEventListener(`touchend`,this.onTouchEnd,l)}on(e,t){return this.emitter.on(e,t)}destroy(){this.emitter.destroy(),window.removeEventListener(`resize`,this.onWindowResize),this.element.removeEventListener(`wheel`,this.onWheel,l),this.element.removeEventListener(`touchstart`,this.onTouchStart,l),this.element.removeEventListener(`touchmove`,this.onTouchMove,l),this.element.removeEventListener(`touchend`,this.onTouchEnd,l)}onTouchStart=e=>{let{clientX:t,clientY:n}=e.targetTouches?e.targetTouches[0]:e;this.touchStart.x=t,this.touchStart.y=n,this.lastDelta={x:0,y:0},this.emitter.emit(`scroll`,{deltaX:0,deltaY:0,event:e})};onTouchMove=e=>{let{clientX:t,clientY:n}=e.targetTouches?e.targetTouches[0]:e,r=-(t-this.touchStart.x)*this.options.touchMultiplier,i=-(n-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=t,this.touchStart.y=n,this.lastDelta={x:r,y:i},this.emitter.emit(`scroll`,{deltaX:r,deltaY:i,event:e})};onTouchEnd=e=>{this.emitter.emit(`scroll`,{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:e})};onWheel=e=>{let{deltaX:t,deltaY:n,deltaMode:r}=e,i=u(r,this.window.width),a=u(r,this.window.height);t*=i,n*=a,t*=this.options.wheelMultiplier,n*=this.options.wheelMultiplier,this.emitter.emit(`scroll`,{deltaX:t,deltaY:n,event:e})};onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}}};let f=e=>Math.min(1,1.001-2**(-10*e));var p=class{_isScrolling=!1;_isStopped=!1;_isLocked=!1;_preventNextNativeScrollEvent=!1;_resetVelocityTimeout=null;_rafId=null;_isDraggingSelection=!1;reducedMotionMediaQuery=window.matchMedia(`(prefers-reduced-motion: reduce)`);isTouching;isIos;time=0;userData={};lastVelocity=0;velocity=0;direction=0;options;targetScroll;animatedScroll;animate=new a;emitter=new c;dimensions;virtualScroll;constructor({wrapper:t=window,content:n=document.documentElement,eventsTarget:r=t,smoothWheel:i=!0,syncTouch:a=!1,syncTouchLerp:o=.075,touchInertiaExponent:c=1.7,duration:l,easing:u,lerp:p=.1,infinite:m=!1,orientation:h=`vertical`,gestureOrientation:g=h===`horizontal`?`both`:`vertical`,touchMultiplier:_=1,wheelMultiplier:v=1,autoResize:y=!0,prevent:b,virtualScroll:x,overscroll:S=!0,autoRaf:C=!1,anchors:w=!1,autoToggle:T=!1,allowNestedScroll:E=!1,__experimental__naiveDimensions:D=!1,naiveDimensions:O=D,stopInertiaOnNavigate:k=!1,respectReducedMotion:A=!0}={}){window.lenisVersion=e,window.lenis||(window.lenis={}),window.lenis.version=e,h===`horizontal`&&(window.lenis.horizontal=!0),a===!0&&(window.lenis.touch=!0),this.isIos=/(iPad|iPhone|iPod)/g.test(navigator.userAgent),(!t||t===document.documentElement)&&(t=window),typeof l==`number`&&typeof u!=`function`?u=f:typeof u==`function`&&typeof l!=`number`&&(l=1),this.options={wrapper:t,content:n,eventsTarget:r,smoothWheel:i,syncTouch:a,syncTouchLerp:o,touchInertiaExponent:c,duration:l,easing:u,lerp:p,infinite:m,gestureOrientation:g,orientation:h,touchMultiplier:_,wheelMultiplier:v,autoResize:y,prevent:b,virtualScroll:x,overscroll:S,autoRaf:C,anchors:w,autoToggle:T,allowNestedScroll:E,naiveDimensions:O,stopInertiaOnNavigate:k,respectReducedMotion:A},this.dimensions=new s(t,n,{autoResize:y}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener(`scroll`,this.onNativeScroll),this.options.wrapper.addEventListener(`scrollend`,this.onScrollEnd,{capture:!0}),(this.options.anchors||this.options.stopInertiaOnNavigate)&&this.options.wrapper.addEventListener(`click`,this.onClick),this.options.wrapper.addEventListener(`pointerdown`,this.onPointerDown),this.virtualScroll=new d(r,{touchMultiplier:_,wheelMultiplier:v}),this.virtualScroll.on(`scroll`,this.onVirtualScroll),this.options.autoToggle&&(this.checkOverflow(),this.rootElement.addEventListener(`transitionend`,this.onTransitionEnd)),this.options.autoRaf&&(this._rafId=requestAnimationFrame(this.raf))}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener(`scroll`,this.onNativeScroll),this.options.wrapper.removeEventListener(`scrollend`,this.onScrollEnd,{capture:!0}),this.options.wrapper.removeEventListener(`pointerdown`,this.onPointerDown),(this.options.anchors||this.options.stopInertiaOnNavigate)&&this.options.wrapper.removeEventListener(`click`,this.onClick),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName(),this._rafId&&cancelAnimationFrame(this._rafId)}on(e,t){return this.emitter.on(e,t)}off(e,t){return this.emitter.off(e,t)}onScrollEnd=e=>{e instanceof CustomEvent||(this.isScrolling===`smooth`||this.isScrolling===!1)&&e.stopPropagation()};dispatchScrollendEvent=()=>{this.options.wrapper.dispatchEvent(new CustomEvent(`scrollend`,{bubbles:this.options.wrapper===window,detail:{lenisScrollEnd:!0}}))};get overflow(){let e=this.isHorizontal?`overflow-x`:`overflow-y`;return getComputedStyle(this.rootElement)[e]}checkOverflow(){[`hidden`,`clip`].includes(this.overflow)?this.internalStop():this.internalStart()}onTransitionEnd=e=>{e.propertyName?.includes(`overflow`)&&e.target===this.rootElement&&this.checkOverflow()};setScroll(e){this.isHorizontal?this.options.wrapper.scrollTo({left:e,behavior:`instant`}):this.options.wrapper.scrollTo({top:e,behavior:`instant`})}onClick=e=>{let t=e.composedPath().filter(e=>e instanceof HTMLAnchorElement&&e.href).map(e=>new URL(e.href)),n=new URL(window.location.href);if(this.options.anchors){let e=t.find(e=>n.host===e.host&&n.pathname===e.pathname&&e.hash);if(e){let t=typeof this.options.anchors==`object`&&this.options.anchors?this.options.anchors:void 0,n=decodeURIComponent(e.hash);this.scrollTo(n,t);return}}if(this.options.stopInertiaOnNavigate&&t.some(e=>n.host===e.host&&n.pathname!==e.pathname)){this.reset();return}};onPointerDown=e=>{e.button===1&&this.reset()};isTouchOnSelectionHandle(e){let t=window.getSelection();if(!t||t.isCollapsed||t.rangeCount===0)return!1;let n=e.targetTouches[0]??e.changedTouches[0];if(!n)return!1;let r=t.getRangeAt(0).getClientRects();if(r.length===0)return!1;let i=r[0],a=r[r.length-1],o=Math.hypot(n.clientX-i.left,n.clientY-i.top)<=40,s=Math.hypot(n.clientX-a.right,n.clientY-a.bottom)<=40;return o||s}onVirtualScroll=e=>{if(typeof this.options.virtualScroll==`function`&&this.options.virtualScroll(e)===!1)return;let{deltaX:t,deltaY:n,event:r}=e;if(this.emitter.emit(`virtual-scroll`,{deltaX:t,deltaY:n,event:r}),r.ctrlKey||r.lenisStopPropagation)return;let i=r.type.includes(`touch`),a=r.type.includes(`wheel`);if(i&&this.isIos&&(r.type===`touchstart`&&(this._isDraggingSelection=this.isTouchOnSelectionHandle(r)),this._isDraggingSelection)){r.type===`touchend`&&(this._isDraggingSelection=!1);return}this.isTouching=r.type===`touchstart`||r.type===`touchmove`;let o=t===0&&n===0;if(this.options.syncTouch&&i&&r.type===`touchstart`&&o&&!this.isStopped&&!this.isLocked){this.reset();return}let s=this.options.gestureOrientation===`vertical`&&n===0||this.options.gestureOrientation===`horizontal`&&t===0;if(o||s)return;let c=r.composedPath();c=c.slice(0,c.indexOf(this.rootElement));let l=this.options.prevent,u=Math.abs(t)>=Math.abs(n)?`horizontal`:`vertical`;if(c.find(e=>e instanceof HTMLElement&&(typeof l==`function`&&l?.(e)||e.hasAttribute?.(`data-lenis-prevent`)||u===`vertical`&&e.hasAttribute?.(`data-lenis-prevent-vertical`)||u===`horizontal`&&e.hasAttribute?.(`data-lenis-prevent-horizontal`)||i&&e.hasAttribute?.(`data-lenis-prevent-touch`)||a&&e.hasAttribute?.(`data-lenis-prevent-wheel`)||this.options.allowNestedScroll&&this.hasNestedScroll(e,{deltaX:t,deltaY:n}))))return;if(this.isStopped||this.isLocked){r.cancelable&&r.preventDefault();return}if(!(this.options.syncTouch&&i||this.options.smoothWheel&&a)){this.isScrolling=`native`,this.animate.stop(),r.lenisStopPropagation=!0;return}let d=n;this.options.gestureOrientation===`both`?d=Math.abs(n)>Math.abs(t)?n:t:this.options.gestureOrientation===`horizontal`&&(d=t),(!this.options.overscroll||this.options.infinite||this.options.wrapper!==window&&this.limit>0&&(this.animatedScroll>0&&this.animatedScroll<this.limit||this.animatedScroll===0&&n>0||this.animatedScroll===this.limit&&n<0))&&(r.lenisStopPropagation=!0),r.cancelable&&r.preventDefault();let f=i&&this.options.syncTouch,p=i&&r.type===`touchend`;p&&(d=Math.sign(d)*Math.abs(this.velocity)**this.options.touchInertiaExponent),this.scrollTo(this.targetScroll+d,{programmatic:!1,...f?{lerp:p?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}})};resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit(`scroll`,this)}onNativeScroll=()=>{if(this._resetVelocityTimeout!==null&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent){this._preventNextNativeScrollEvent=!1;return}if(this.isScrolling===!1||this.isScrolling===`native`){let e=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-e,this.direction=Math.sign(this.animatedScroll-e),this.isStopped||(this.isScrolling=`native`),this.emit(),this.velocity!==0&&(this._resetVelocityTimeout=setTimeout(()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()},400))}};reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){if(this.isStopped){if(this.options.autoToggle){this.rootElement.style.removeProperty(`overflow`);return}this.internalStart()}}internalStart(){this.isStopped&&(this.reset(),this.isStopped=!1,this.emit())}stop(){if(!this.isStopped){if(this.options.autoToggle){this.rootElement.style.setProperty(`overflow`,`clip`);return}this.internalStop()}}internalStop(){this.isStopped||(this.reset(),this.isStopped=!0,this.emit())}raf=e=>{let t=e-(this.time||e);this.time=e,this.animate.advance(t*.001),this.options.autoRaf&&(this._rafId=requestAnimationFrame(this.raf))};scrollTo(e,{offset:n=0,immediate:r=!1,lock:i=!1,programmatic:a=!0,lerp:o=a?this.options.lerp:void 0,duration:s=a?this.options.duration:void 0,easing:c=a?this.options.easing:void 0,onStart:l,onComplete:u,force:d=!1,userData:p}={}){if(this.prefersReducedMotion&&(a?r=!0:(o=1,s=void 0,c=void 0)),(this.isStopped||this.isLocked)&&!d)return;let m=e,h=n;if(typeof m==`string`&&[`top`,`left`,`start`,`#`].includes(m))m=0;else if(typeof m==`string`&&[`bottom`,`right`,`end`].includes(m))m=this.limit;else{let e=null;if(typeof m==`string`?(e=m.startsWith(`#`)?document.getElementById(m.slice(1)):document.querySelector(m),e||(m===`#top`?m=0:console.warn(`Lenis: Target not found`,m))):m instanceof HTMLElement&&m?.nodeType&&(e=m),e){if(this.options.wrapper!==window){let e=this.rootElement.getBoundingClientRect();h-=this.isHorizontal?e.left:e.top}let t=e.getBoundingClientRect(),n=getComputedStyle(e),r=this.isHorizontal?Number.parseFloat(n.scrollMarginLeft):Number.parseFloat(n.scrollMarginTop),i=getComputedStyle(this.rootElement),a=this.isHorizontal?Number.parseFloat(i.scrollPaddingLeft):Number.parseFloat(i.scrollPaddingTop);m=(this.isHorizontal?t.left:t.top)+this.animatedScroll-(Number.isNaN(r)?0:r)-(Number.isNaN(a)?0:a)}}if(typeof m==`number`){if(m+=h,this.options.infinite){if(a){this.targetScroll=this.animatedScroll=this.scroll;let e=m-this.animatedScroll;e>this.limit/2?m-=this.limit:e<-this.limit/2&&(m+=this.limit)}}else m=t(0,m,this.limit);if(m===this.targetScroll){l?.(this),u?.(this);return}if(this.userData=p??{},r){this.animatedScroll=this.targetScroll=m,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),u?.(this),this.userData={},requestAnimationFrame(()=>{this.dispatchScrollendEvent()});return}a||(this.targetScroll=m),typeof s==`number`&&typeof c!=`function`?c=f:typeof c==`function`&&typeof s!=`number`&&(s=1),this.animate.fromTo(this.animatedScroll,m,{duration:s,easing:c,lerp:o,onStart:()=>{i&&(this.isLocked=!0),this.isScrolling=`smooth`,l?.(this)},onUpdate:(e,t)=>{this.isScrolling=`smooth`,this.lastVelocity=this.velocity,this.velocity=e-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=e,this.setScroll(this.scroll),a&&(this.targetScroll=e),t||this.emit(),t&&(this.reset(),this.emit(),u?.(this),this.userData={},requestAnimationFrame(()=>{this.dispatchScrollendEvent()}),this.preventNextNativeScrollEvent())}})}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame(()=>{this._preventNextNativeScrollEvent=!1})}hasNestedScroll(e,{deltaX:t,deltaY:n}){let r=Date.now();e._lenis||={};let i=e._lenis,a,o,s,c,l,u,d,f,p,m;if(r-(i.time??0)>2e3){i.time=Date.now();let t=window.getComputedStyle(e);if(i.computedStyle=t,a=[`auto`,`overlay`,`scroll`].includes(t.overflowX),o=[`auto`,`overlay`,`scroll`].includes(t.overflowY),l=[`auto`].includes(t.overscrollBehaviorX),u=[`auto`].includes(t.overscrollBehaviorY),i.hasOverflowX=a,i.hasOverflowY=o,!(a||o))return!1;d=e.scrollWidth,f=e.scrollHeight,p=e.clientWidth,m=e.clientHeight,s=d>p,c=f>m,i.isScrollableX=s,i.isScrollableY=c,i.scrollWidth=d,i.scrollHeight=f,i.clientWidth=p,i.clientHeight=m,i.hasOverscrollBehaviorX=l,i.hasOverscrollBehaviorY=u}else s=i.isScrollableX,c=i.isScrollableY,a=i.hasOverflowX,o=i.hasOverflowY,d=i.scrollWidth,f=i.scrollHeight,p=i.clientWidth,m=i.clientHeight,l=i.hasOverscrollBehaviorX,u=i.hasOverscrollBehaviorY;if(!(a&&s||o&&c))return!1;let h=Math.abs(t)>=Math.abs(n)?`horizontal`:`vertical`,g,_,v,y,b,x;if(h===`horizontal`)g=Math.round(e.scrollLeft),_=d-p,v=t,y=a,b=s,x=l;else if(h===`vertical`)g=Math.round(e.scrollTop),_=f-m,v=n,y=o,b=c,x=u;else return!1;return!x&&(g>=_||g<=0)?!0:(v>0?g<_:g>0)&&y&&b}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?`x`:`y`]}get isHorizontal(){return this.options.orientation===`horizontal`}get actualScroll(){let e=this.options.wrapper;return this.isHorizontal?e.scrollX??e.scrollLeft:e.scrollY??e.scrollTop}get scroll(){return this.options.infinite?i(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return this.limit===0?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(e){this._isScrolling!==e&&(this._isScrolling=e,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(e){this._isStopped!==e&&(this._isStopped=e,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(e){this._isLocked!==e&&(this._isLocked=e,this.updateClassName())}get isSmooth(){return this.isScrolling===`smooth`}get prefersReducedMotion(){return this.options.respectReducedMotion&&this.reducedMotionMediaQuery.matches}get className(){let e=`lenis`;return this.options.autoToggle&&(e+=` lenis-autoToggle`),this.isStopped&&(e+=` lenis-stopped`),this.isLocked&&(e+=` lenis-locked`),this.isScrolling&&(e+=` lenis-scrolling`),this.isScrolling===`smooth`&&(e+=` lenis-smooth`),e}updateClassName(){this.cleanUpClassName(),this.className.split(` `).forEach(e=>{this.rootElement.classList.add(e)})}cleanUpClassName(){for(let e of Array.from(this.rootElement.classList))(e===`lenis`||e.startsWith(`lenis-`))&&this.rootElement.classList.remove(e)}};globalThis.Lenis=p,globalThis.Lenis.prototype=p.prototype})();
+//# sourceMappingURL=lenis.min.js.map
+</script>
+<script>
+window.__LANDING__ = {
+  landing_id: 'ai-community',
+  variant_id: 'v1',
+  page_lang: 'ru',
+  webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
+  consent_text_version: '2026-10-privacy-v1',
+  pixel_id: '28714651278203294'
+};
+(function () {
+  'use strict';
+  var CFG = (typeof window.__LANDING__ !== 'undefined' && window.__LANDING__) ? window.__LANDING__ : {
+    landing_id: 'ai-community',
+    variant_id: 'v1',
+    page_lang: 'ru',
+    webhook: 'https://n8n.flowstudio.cloud/webhook/landing-leads',
+    consent_text_version: '2026-10-privacy-v1',
+    pixel_id: '28714651278203294'
+  };
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var BEH = reduce ? 'auto' : 'smooth';
+  var FT_KEY = 'lu_ft_' + CFG.landing_id;
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
+
+  function eid() {
+    return 'lu-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+  }
+
+  function getCookie(name) {
+    var m = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[2]) : '';
+  }
+
+  function firstTouch() {
+    var out = {};
+    var stored = null;
+    try { stored = JSON.parse(window.localStorage.getItem(FT_KEY) || 'null'); } catch (e) { stored = null; }
+    var fromUrl = {};
+    var qs = window.location.search || '';
+    if (qs) {
+      try {
+        var p = new URLSearchParams(qs);
+        UTM_KEYS.forEach(function (k) { if (p.get(k)) { fromUrl[k] = p.get(k); } });
+      } catch (e) {}
+    }
+    if (!stored && Object.keys(fromUrl).length) {
+      stored = fromUrl;
+      stored.landing_page = window.location.pathname;
+      stored.landing_url = window.location.href;
+      stored.first_seen = new Date().toISOString();
+      try { window.localStorage.setItem(FT_KEY, JSON.stringify(stored)); } catch (e) {}
+    }
+    UTM_KEYS.forEach(function (k) { out[k] = (stored && stored[k]) || fromUrl[k] || ''; });
+    out.first_landing_page = (stored && stored.landing_page) || window.location.pathname;
+    out.landing_url_first = (stored && stored.landing_url) || window.location.href;
+    return out;
+  }
+
+  function fbcFromFbclid() {
+    var m = (window.location.search || '').match(/[?&]fbclid=([^&#]+)/);
+    if (!m) { return ''; }
+    return 'fb.1.' + Date.now() + '.' + decodeURIComponent(m[1]);
+  }
+
+  function buildPayload(event, extra) {
+    var id = eid();
+    var payload = Object.assign({
+      event_name: event,
+      event_id: id,
+      landing_id: CFG.landing_id,
+      variant_id: CFG.variant_id,
+      page_lang: CFG.page_lang,
+      page_url: window.location.href,
+      referrer: document.referrer || '',
+      client_ts: new Date().toISOString(),
+      consent_text_version: CFG.consent_text_version,
+      fbp: getCookie('_fbp'),
+      fbc: getCookie('_fbc') || fbcFromFbclid()
+    }, firstTouch(), extra || {});
+    window.__LAST_EVENT__ = payload;
+    return payload;
+  }
+
+  function push(body) {
+    try {
+      return fetch(CFG.webhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        keepalive: true,
+        mode: 'cors'
+      });
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  }
+
+  /* --- Meta Pixel --- */
+  if (CFG.pixel_id) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', CFG.pixel_id);
+    fbq('track', 'PageView');
+  }
+  function px(eventName, params, eventId, kind) {
+    if (!window.fbq) { return; }
+    try {
+      var args = [kind || 'trackCustom', eventName, params || {}];
+      if (eventId) { args.push({ eventID: eventId }); }
+      window.fbq.apply(null, args);
+    } catch (e) {}
+  }
+
+  function send(event, extra) {
+    var body = buildPayload(event, extra);
+    px(event, { content_name: CFG.landing_id + '/' + CFG.variant_id }, body.event_id);
+    push(body).catch(function () {});
+    return body;
+  }
+
+  /* --- аккордеоны --- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-acc]'), function (acc) {
+    Array.prototype.forEach.call(acc.querySelectorAll('.acc__item'), function (item) {
+      var btn = item.querySelector('.acc__btn');
+      var panel = item.querySelector('.acc__panel');
+      if (!btn || !panel) { return; }
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      item.classList.toggle('is-open', open);
+      panel.hidden = !open;
+      btn.addEventListener('click', function () {
+        var next = !(btn.getAttribute('aria-expanded') === 'true');
+        btn.setAttribute('aria-expanded', next ? 'true' : 'false');
+        item.classList.toggle('is-open', next);
+        panel.hidden = !next;
+      });
+    });
+  });
+
+  /* --- преимущества: активная карточка --- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-adv]'), function (root) {
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[data-adv-tab]'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('[data-adv-panel]'));
+    if (!tabs.length || !panels.length) { return; }
+    function select(i) {
+      tabs.forEach(function (t, idx) {
+        var on = idx === i;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (p, idx) {
+        p.classList.toggle('is-active', idx === i);
+        p.hidden = idx !== i;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (ev) {
+        var n = null;
+        if (ev.key === 'ArrowRight' || ev.key === 'ArrowDown') { n = (i + 1) % tabs.length; }
+        else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp') { n = (i - 1 + tabs.length) % tabs.length; }
+        else if (ev.key === 'Home') { n = 0; }
+        else if (ev.key === 'End') { n = tabs.length - 1; }
+        if (n !== null) { ev.preventDefault(); select(n); tabs[n].focus(); }
+      });
+    });
+    select(tabs.findIndex(function (t) { return t.classList.contains('is-active'); }) || 0);
+  });
+
+  /* --- слайдеры --- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-slider]'), function (sl) {
+    var track = sl.querySelector('[data-track]');
+    var prev = sl.querySelector('[data-slide="-1"]');
+    var next = sl.querySelector('[data-slide="1"]');
+    if (!track) { return; }
+    function step() {
+      var item = track.querySelector('.slider__item');
+      return item ? item.getBoundingClientRect().width + 12 : Math.round(track.clientWidth * 0.8);
+    }
+    function update() {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      if (prev) { prev.disabled = track.scrollLeft <= 2; }
+      if (next) { next.disabled = track.scrollLeft >= max; }
+    }
+    if (prev) { prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: BEH }); }); }
+    if (next) { next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: BEH }); }); }
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
+  /* --- плавный скролл по CTA --- */
+  document.addEventListener('click', function (ev) {
+    var t = ev.target.closest ? ev.target.closest('[data-scroll]') : null;
+    if (!t) { return; }
+    var sel = t.getAttribute('data-scroll');
+    var el = sel ? document.querySelector(sel) : null;
+    if (!el) { return; }
+    ev.preventDefault();
+    if (sel === '#top') { window.scrollTo({ top: 0, behavior: BEH }); return; }
+    el.scrollIntoView({ behavior: BEH, block: 'start' });
+    if (sel === '#form') {
+      var title = document.getElementById('form-title');
+      if (title) {
+        title.setAttribute('tabindex', '-1');
+        window.setTimeout(function () { try { title.focus({ preventScroll: true }); } catch (e) {} }, reduce ? 0 : 650);
+      }
+    }
+  });
+
+  /* --- фиксация кликов по CTA --- */
+  document.addEventListener('click', function (ev) {
+    var t = ev.target.closest ? ev.target.closest('[data-cta]') : null;
+    if (!t) { return; }
+    send('cta_click', { cta: t.getAttribute('data-cta'), block: t.closest('section') ? t.closest('section').id : '' });
+  }, true);
+
+  /* --- компактный хедер --- */
+  var header = document.getElementById('siteHeader');
+  function onScroll() {
+    if (header) { header.classList.toggle('is-compact', window.scrollY > 24); }
+    updateBar();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* --- мобильная CTA-полоса --- */
+  var bar = document.getElementById('mobCta');
+  var formSection = document.getElementById('form');
+  var mq = window.matchMedia('(min-width: 768px)');
+  var hideTimer = null;
+  function updateBar() {
+    if (!bar) { return; }
+    if (mq.matches) { bar.hidden = true; return; }
+    var past = window.scrollY > 380;
+    var formNear = false;
+    if (formSection) {
+      var r = formSection.getBoundingClientRect();
+      formNear = r.top < window.innerHeight * 0.85;
+    }
+    var show = past && !formNear;
+    if (show) {
+      if (hideTimer) { window.clearTimeout(hideTimer); hideTimer = null; }
+      bar.hidden = false;
+      window.requestAnimationFrame(function () { bar.classList.remove('is-hidden'); });
+    } else {
+      bar.classList.add('is-hidden');
+      if (hideTimer) { window.clearTimeout(hideTimer); }
+      hideTimer = window.setTimeout(function () { bar.hidden = true; }, reduce ? 0 : 260);
+    }
+  }
+  if (mq.addEventListener) { mq.addEventListener('change', updateBar); }
+
+  /* --- форма --- */
+  var regForm = document.getElementById('reg-form');
+  var formMsg = document.getElementById('form-msg');
+  var started = false;
+
+  if (regForm) {
+    regForm.addEventListener('focusin', function () {
+      if (started) { return; }
+      started = true;
+      send('form_start', {});
+    });
+
+    regForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      if (regForm.dataset.sending === '1') { return; }
+      if (regForm.company_website && regForm.company_website.value) { return; }
+
+      var invalid = [];
+      function mark(field, input, msg) {
+        if (field) { field.classList.add('is-invalid'); }
+        if (input) { input.setAttribute('aria-invalid', 'true'); }
+        invalid.push(msg);
+      }
+      Array.prototype.forEach.call(regForm.querySelectorAll('.field'), function (f) {
+        f.classList.remove('is-invalid');
+      });
+      Array.prototype.forEach.call(regForm.querySelectorAll('[aria-invalid]'), function (i) {
+        i.removeAttribute('aria-invalid');
+      });
+      if (formMsg) { formMsg.className = 'form-msg'; formMsg.textContent = ''; }
+
+      var nameInput = regForm.elements.name;
+      var emailInput = regForm.elements.email;
+      var consentInput = regForm.elements.consent;
+      var nameField = nameInput ? nameInput.closest('.field') : null;
+      var emailField = emailInput ? emailInput.closest('.field') : null;
+      var consentField = consentInput ? consentInput.closest('.field') : null;
+
+      if (!nameInput || nameInput.value.trim().length < 2) { mark(nameField, nameInput, 'name'); }
+      var mail = emailInput ? emailInput.value.trim() : '';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail)) { mark(emailField, emailInput, 'email'); }
+      if (!consentInput || !consentInput.checked) { mark(consentField, consentInput, 'consent'); }
+
+      if (invalid.length) {
+        send('form_error', { reason: 'validation', fields: invalid });
+        if (formMsg) {
+          formMsg.className = 'form-msg is-err';
+          formMsg.textContent = 'Проверь отмеченные поля: имя, почту и согласие на обработку данных.';
+        }
+        var firstField = regForm.querySelector('.field.is-invalid input');
+        if (firstField) { firstField.focus(); }
+        return;
+      }
+
+      var btn = regForm.querySelector('[type="submit"]');
+      var body = buildPayload('lead', {
+        form_name: 'reg-form',
+        name: nameInput.value.trim(),
+        email: mail,
+        contact: regForm.elements.contact ? regForm.elements.contact.value.trim() : '',
+        plan: regForm.elements.plan ? regForm.elements.plan.value : '',
+        consent: true,
+        honeypot: regForm.company_website ? regForm.company_website.value : '',
+        value: 0,
+        currency: 'EUR',
+        content_name: CFG.landing_id + '/' + CFG.variant_id
+      });
+
+      regForm.dataset.sending = '1';
+      if (btn) { btn.disabled = true; btn.textContent = 'Отправляем…'; }
+
+      push(body).then(function (res) {
+        if (!res || !res.ok) { throw new Error('bad status'); }
+        px('Lead', { value: 0, currency: 'EUR', content_name: CFG.landing_id + '/' + CFG.variant_id, content_type: 'product' }, body.event_id, 'track');
+        if (formMsg) {
+          formMsg.className = 'form-msg is-ok';
+          formMsg.textContent = 'Готово: заявка у нас. Ответим на почту в рабочие дни.';
+        }
+        regForm.reset();
+      }).catch(function () {
+        send('form_error', { reason: 'network' });
+        if (formMsg) {
+          formMsg.className = 'form-msg is-err';
+          formMsg.textContent = 'Не получилось отправить заявку. Попробуй ещё раз или напиши на hello@leadup.guru.';
+        }
+      }).then(function () {
+        regForm.dataset.sending = '';
+        if (btn) { btn.disabled = false; btn.textContent = 'Забронировать место'; }
+      });
+    });
+  }
+
+  /* --- первый экран --- */
+  send('page_view', { screen: 'hero' });
+  onScroll();
+})();
+</script>
+<script>
+/* AI Automation Society landing · scroll engine
+   Smooth scroll (Lenis) + five-speed hero parallax + scroll-linked intro +
+   stacked decks + product-screen gradient. Everything derives from one
+   scroll value so it can be driven by hand for verification: window.__ais.render(y). */
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = () => innerWidth < 900;
+
+  /* ---------- smooth scroll ---------- */
+  let lenis = null;
+  if (window.Lenis && !reduced) {
+    // Keep the smooth feel, but follow wheel input more closely so the page
+    // does not continue drifting long after the visitor stops scrolling.
+    lenis = new Lenis({ lerp: 0.14, wheelMultiplier: 1, smoothWheel: true });
+    const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+    lenis.on('scroll', (e) => onScroll(e.scroll));
+  }
+  addEventListener('scroll', () => { if (!lenis) onScroll(scrollY); }, { passive: true });
+
+  // On phones the scroll is native and can fire several events per frame; fold them into one render per frame.
+  let queued = null, rafId = 0;
+  function onScroll(y) {
+    if (!isMobile()) { render(y); return; }
+    queued = y;
+    if (!rafId) rafId = requestAnimationFrame(() => { rafId = 0; render(queued); });
+  }
+
+  /* ---------- hero parallax ---------- */
+  const hero = $('.hero');
+  const layers = $$('.layer').map((el) => ({ el, rate: parseFloat(el.dataset.rate || '0') }));
+  const device = $('.hero__device');
+  const deviceRate = device ? parseFloat(device.dataset.rate || '0.2') : 0;
+  const stageBg = $('.stage__bg');
+  const dunes = $('.cta__dunes');
+  const ctaMid = $('.cta__layer--mid');
+  const ctaFront = $('.cta__layer--front');
+  const nav = $('#nav');
+
+  /* ---------- intro highlight ---------- */
+  const intros = $$('[data-intro]');
+
+  /* ---------- stacked decks ---------- */
+  const decks = $$('[data-deck]');
+
+  /* ---------- progress bar ---------- */
+  const progress = $('.progress');
+  const bar = $('[data-progress]');
+  const head = $('[data-progress-head]');
+
+  // measured once, and again on resize or when the document grows (lazy images, fonts)
+  let heroH = 0, docH = 1;
+  function measure() {
+    heroH = hero ? hero.offsetHeight : 0;
+    docH = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  }
+  measure();
+  addEventListener('resize', measure);
+  addEventListener('load', measure);
+  if ('ResizeObserver' in window) new ResizeObserver(measure).observe(document.body);
+
+  const driftEls = [
+    { el: stageBg, rate: 0.08, centered: false },
+    { el: dunes, rate: 0.18, centered: false },
+    { el: ctaMid, rate: 0.09, centered: true },
+    { el: ctaFront, rate: 0.02, centered: true },
+  ].filter((d) => d.el).map((d) => ({ ...d, near: true }));
+
+  // Only measure and composite scroll effects while their section is close to
+  // the viewport. The effect itself is unchanged; offscreen work is skipped.
+  let introNear = true, decksNear = true;
+  function observeNear(el, setNear, rootMargin = '100% 0px') {
+    if (!el || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver((entries) => setNear(entries[0].isIntersecting), { rootMargin }).observe(el);
+  }
+  observeNear($('.intro'), (near) => { introNear = near; });
+  observeNear($('.stack'), (near) => {
+    decksNear = near;
+    $('.stack')?.classList.toggle('is-near', near);
+  });
+  driftEls.forEach((d) => observeNear(d.el.parentElement, (near) => {
+    d.near = near;
+    d.el.style.willChange = near ? '' : 'auto';
+  }));
+
+  function render(y) {
+    if (nav) nav.classList.toggle('is-scrolled', y > 40);
+    const p = Math.min(1, Math.max(0, y / docH));
+    if (bar) bar.style.transform = `scaleX(${p.toFixed(4)})`;
+    if (head) head.style.transform = `translateX(${(p * innerWidth).toFixed(1)}px)`;
+    if (progress) progress.classList.toggle('is-on', y > 8);
+    if (reduced) return;
+    const mobile = isMobile();
+    const vh = innerHeight;
+
+    // ---- read phase: every layout read happens before any write, so the frame lays out once ----
+    const introRects = introNear ? intros.map((el) => el.getBoundingClientRect()) : null;
+    const deckRects = (decksNear && !mobile && decks.length) ? decks.map((el) => el.getBoundingClientRect()) : null;
+    const activeDrifts = driftEls.filter((d) => d.near);
+    const driftRects = activeDrifts.map((d) => d.el.parentElement.getBoundingClientRect());
+
+    // ---- write phase ----
+    if (hero && y < heroH + 200) {
+      for (const l of layers) l.el.style.transform = `translate(-50%, ${y * l.rate}px)`;
+      if (device) device.style.transform = `translateY(${y * deviceRate}px)`;
+    }
+
+    // intro: the paragraph nearest the middle of the viewport reads white
+    if (introRects) {
+      for (let i = 0; i < intros.length; i++) {
+        const r = introRects[i];
+        if (r.bottom < -200 || r.top > vh + 200) continue;
+        const c = r.top + r.height / 2;
+        const d = Math.abs(c - vh * 0.5) / (vh * 0.42);
+        const o = Math.max(0.22, 1 - Math.max(0, d - 0.1) * 1.3);
+        intros[i].style.opacity = o.toFixed(3);
+      }
+    }
+
+    // decks: as the next card climbs over, the one beneath settles back
+    if (deckRects) {
+      for (let i = 0; i < decks.length; i++) {
+        const el = decks[i];
+        if (!decks[i + 1]) { el.style.transform = ''; el.style.filter = ''; continue; }
+        const r = deckRects[i], nr = deckRects[i + 1];
+        const pr = clamp((r.bottom - nr.top) / r.height, 0, 1);
+        el.style.transform = `scale(${(1 - pr * 0.05).toFixed(4)})`;
+        el.style.filter = `brightness(${(1 - pr * 0.45).toFixed(3)})`;
+      }
+    }
+
+    // gentle drift on the big backgrounds, only while their section is near the viewport
+    for (let i = 0; i < activeDrifts.length; i++) {
+      const r = driftRects[i];
+      if (r.bottom < -vh || r.top > vh * 2) continue;
+      const center = r.top + r.height / 2 - vh / 2;
+      const ty = (-center * activeDrifts[i].rate).toFixed(1);
+      activeDrifts[i].el.style.transform = activeDrifts[i].centered ? `translate(-50%, ${ty}px)` : `translateY(${ty}px)`;
+    }
+  }
+
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  /* ---------- dated rows (AIS Live schedule): drop a row once its event is over ---------- */
+  $$('[data-until]').forEach((el) => { if (Date.now() > Date.parse(el.dataset.until)) el.remove(); });
+
+  /* ---------- reveal on enter ---------- */
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduced) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        const el = e.target;
+        const delay = parseInt(el.dataset.delay || '0', 10);
+        setTimeout(() => el.classList.add('is-in'), delay);
+        io.unobserve(el);
+      }
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('is-in'));
+  }
+
+  /* ---------- typed headlines ---------- */
+  const typed = $$('[data-type]');
+  function splitChars(el) {
+    const walk = (node) => {
+      for (const child of [...node.childNodes]) {
+        if (child.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          const words = child.textContent.split(/(\s+)/);
+          for (const w of words) {
+            if (!w) continue;
+            if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(' ')); continue; }
+            const ws = document.createElement('span'); ws.className = 'w';
+            for (const ch of w) { const s = document.createElement('span'); s.className = 'ch'; s.textContent = ch; ws.appendChild(s); }
+            frag.appendChild(ws);
+          }
+          child.replaceWith(frag);
+        } else if (child.nodeType === 1 && child.tagName !== 'BR') walk(child);
+      }
+    };
+    walk(el);
+    $$('.ch', el).forEach((s, i) => { s.style.transitionDelay = `${Math.min(i * 22, 1400)}ms`; });
+  }
+  if (!reduced) {
+    typed.forEach(splitChars);
+    const tio = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-typed'); tio.unobserve(e.target); }
+    }, { threshold: 0.4 });
+    typed.forEach((el) => tio.observe(el));
+  } else typed.forEach((el) => el.classList.add('is-typed'));
+
+  /* ---------- feature tabs ---------- */
+  const tabs = $$('[data-tab]');
+  const slides = $$('[data-slide]');
+  const caption = $('[data-caption]');
+  const captions = [
+    'Практикум. Модули от первого промпта до рабочего сценария.',
+    'Еженедельный эфир. Живые участники, живые вопросы.',
+    'Основатель LeadUp AI Владимир Нагин на сцене. LeadUp Live, февраль 2026.',
+    'Доска лидеров потока, четвёртый месяц подряд.',
+  ];
+  let active = 0, timer = null;
+  function show(i, user) {
+    active = (i + slides.length) % slides.length;
+    tabs.forEach((t, k) => t.classList.toggle('is-active', k === active));
+    slides.forEach((s, k) => s.classList.toggle('is-active', k === active));
+    if (caption) caption.textContent = captions[active];
+    if (user) restart();
+  }
+  function restart() { clearInterval(timer); timer = setInterval(() => show(active + 1), 4500); }
+  tabs.forEach((t) => t.addEventListener('click', () => show(parseInt(t.dataset.tab, 10), true)));
+  $('[data-prev]')?.addEventListener('click', () => show(active - 1, true));
+  $('[data-next]')?.addEventListener('click', () => show(active + 1, true));
+  if (slides.length && !reduced) {
+    const carousel = $('[data-stage]');
+    if ('IntersectionObserver' in window && carousel) {
+      new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) restart();
+        else clearInterval(timer);
+      }, { rootMargin: '200px 0px' }).observe(carousel);
+    } else restart();
+  }
+
+  /* ---------- faq ---------- */
+  $$('[data-faqtab]').forEach((b) => b.addEventListener('click', () => {
+    $$('[data-faqtab]').forEach((x) => x.classList.toggle('is-active', x === b));
+    $$('[data-faqset]').forEach((s) => s.classList.toggle('is-active', s.dataset.faqset === b.dataset.faqtab));
+  }));
+
+  /* ---------- mobile menu ---------- */
+  const burger = $('[data-burger]'), sheet = $('[data-sheet]');
+  burger?.addEventListener('click', () => {
+    const open = sheet.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  sheet?.addEventListener('click', (e) => { if (e.target.tagName === 'A') sheet.classList.remove('is-open'); });
+
+  /* ---------- anchor links through Lenis ---------- */
+  $$('a[href^="#"]').forEach((a) => a.addEventListener('click', (e) => {
+    const t = $(a.getAttribute('href'));
+    if (!t) return;
+    e.preventDefault();
+    if (lenis) lenis.scrollTo(t, { offset: -70, duration: 1.4 }); else t.scrollIntoView({ behavior: 'smooth' });
+  }));
+
+  /* ---------- product screen: live gradient cover ---------- */
+  function cover(canvas) {
+    const ctx = canvas.getContext('2d');
+    const blobs = [
+      { x: 0.25, y: 0.35, r: 0.58, c: [0, 229, 199], s: 0.00075, ph: 0, ax: 0.32, ay: 0.26 },
+      { x: 0.75, y: 0.30, r: 0.52, c: [236, 242, 255], s: 0.00062, ph: 2.1, ax: 0.30, ay: 0.30 },
+      { x: 0.55, y: 0.75, r: 0.62, c: [64, 150, 210], s: 0.00048, ph: 4.0, ax: 0.34, ay: 0.22 },
+      { x: 0.18, y: 0.82, r: 0.48, c: [120, 210, 240], s: 0.00069, ph: 1.2, ax: 0.28, ay: 0.30 },
+      { x: 0.85, y: 0.80, r: 0.50, c: [10, 20, 34], s: 0.00055, ph: 3.1, ax: 0.26, ay: 0.24 },
+    ];
+    let w = 0, h = 0;
+    // phones draw at 1/8 scale with no CSS blur (the upscale is soft enough) and at 30fps; desktop keeps 1/2 scale + blur
+    const size = () => { const r = canvas.getBoundingClientRect(); const d = isMobile() ? 8 : 2; w = canvas.width = Math.max(2, Math.round(r.width / d)); h = canvas.height = Math.max(2, Math.round(r.height / d)); };
+    size(); addEventListener('resize', size);
+    let last = 0, frameId = 0, running = false, near = true;
+    function frame(t) {
+      frameId = 0;
+      if (!running || document.hidden) return;
+      if (isMobile() && t - last < 30) { frameId = requestAnimationFrame(frame); return; }
+      last = t;
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = '#0a0c10'; ctx.fillRect(0, 0, w, h);
+      ctx.globalCompositeOperation = 'lighter';
+      for (const b of blobs) {
+        const x = (b.x + Math.sin(t * b.s + b.ph) * b.ax + Math.sin(t * b.s * 0.37 + b.ph * 2) * 0.08) * w;
+        const y = (b.y + Math.cos(t * b.s * 1.3 + b.ph) * b.ay + Math.cos(t * b.s * 0.53) * 0.06) * h;
+        const r = b.r * Math.max(w, h);
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+        g.addColorStop(0, `rgba(${b.c[0]},${b.c[1]},${b.c[2]},0.62)`);
+        g.addColorStop(1, `rgba(${b.c[0]},${b.c[1]},${b.c[2]},0)`);
+        ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+      }
+      frameId = requestAnimationFrame(frame);
+    }
+    function start() {
+      if (running || reduced || document.hidden) return;
+      running = true;
+      last = 0;
+      frameId = requestAnimationFrame(frame);
+    }
+    function stop() {
+      running = false;
+      if (frameId) cancelAnimationFrame(frameId);
+      frameId = 0;
+    }
+    if (reduced) {
+      running = true;
+      frame(4000);
+      stop();
+    } else if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        near = entries[0].isIntersecting;
+        if (near) start(); else stop();
+      }, { rootMargin: '400px 0px' }).observe(canvas);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stop(); else if (near) start();
+      });
+    } else start();
+    canvas.__frame = frame;
+    canvas.__stop = stop;
+  }
+  $$('[data-cover]').forEach(cover);
+
+  /* ---------- boot ---------- */
+  render(scrollY);
+  window.__ais = { render, lenis, show };
+})();
+</script>
+</body>
+</html>
